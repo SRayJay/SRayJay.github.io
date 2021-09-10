@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>solution | NotEnough</title>
+
+<meta name="generator" content="Hugo Eureka 0.8.2" />
+<link rel="stylesheet" href="https://www.notenough.top/css/eureka.min.css">
+<script defer src="https://www.notenough.top/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
+  integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="Eureka is a elegant and powerful theme for Hugo.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Categories",
+      "item":"https://www.notenough.top/categories/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"solution",
+      "item":"https://www.notenough.top/categories/solution/"}]
+}
+</script>
+
+
+
+
+<script type="application/ld+json">
+{
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "itemListElement":[{
+            "@type":"ListItem",
+            "position":  1 ,
+            "name": "Koa搭建静态资源文件服务器及图片上传接口的实现",
+            "description": "\u003cp\u003e场景：前端需要上传图片到服务器，保存在固定目录下，并返回一个外部可访问的 url 给客户端。\u003c/p\u003e\n\u003cp\u003e需要的工具：koa-body，koa-static, path\u003c/p\u003e",
+            "url": "https://www.notenough.top/posts/koa-static/"
+        },{
+            "@type":"ListItem",
+            "position":  2 ,
+            "name": "前端解决跨域",
+            "description": "\u003cp\u003e重新整理了下 Vue 的接口去跨域的事，其实就两个地方实际生效，其他地方乱写端口什么的反倒是阻碍了。这边展示 Vue3+Vite 的例子：\u003c/p\u003e",
+            "url": "https://www.notenough.top/posts/%E5%89%8D%E7%AB%AF%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/"
+        },{
+            "@type":"ListItem",
+            "position":  3 ,
+            "name": "Vue@路径别名设置",
+            "description": "路径别名，省去相对路径的麻烦，直接用@views 来作为路径开头更加的方便\nVue2+Vue-Cli 写法 在 vue.config.js 里写入\nmodule.exports = { ... chainWebpack: config =\u0026gt; { config.resolve.symlinks(true) config.resolve.alias .set('@', resolve('src')) .set('@assets', resolve('src/assets')) .set('@components', resolve('src/components')) .set('@views', resolve('src/views')) } }  Vue3+Vite+Ts 写法 // vite.config.js resolve:{ alias: { \u0026quot;@\u0026quot;: path.resolve(__dirname, \u0026quot;src\u0026quot;), \u0026quot;@V\u0026quot;: path.resolve(__dirname, \u0026quot;src/views\u0026quot;), \u0026quot;@C\u0026quot;: path.resolve(__dirname,\u0026quot;src/components\u0026quot;) } } } // tsconfig.json \u0026quot;paths\u0026quot;:{ \u0026quot;@/*\u0026quot;:[\u0026quot;./src/*\u0026quot;], \u0026quot;@V/*\u0026quot;:[\u0026quot;./src/views/*\u0026quot;], \u0026quot;@C/*\u0026quot;:[\u0026quot;./src/components/*\u0026quot;] }  ",
+            "url": "https://www.notenough.top/posts/vue-%E8%B7%AF%E5%BE%84/"
+        },{
+            "@type":"ListItem",
+            "position":  4 ,
+            "name": "Vue2自动注册组件",
+            "description": "Vue 的组件要在其他地方使用得通过这三步\n\u0026lt;template\u0026gt; ... \u0026lt;vuexxx/\u0026gt; ... \u0026lt;/template\u0026gt; import vuexxx from '@components/vuexxx' export default{ ... components:[ vuexxx ] }  注册起来比较的繁琐。\n这里记录一种自动注册的方式，把下面代码写入 global.js 放在 components 文件夹里。\nimport Vue from 'vue' function capitalizeFirstLetter(string) { return string.charAt(0).toUpperCase() + string.slice(1) } const requireComponent = require.context('.', true, /\\.vue$/) requireComponent.keys().forEach((fileName) =\u0026gt; { const componentConfig = requireComponent(fileName) const componentName = capitalizeFirstLetter( fileName.replace(/^\\.\\//, '').replace(/\\.\\w+$/, '') // 因为得到的filename格式是：'./componentX.vue',所以去掉头和尾保留真正的文件名 ) Vue.component(componentName, componentConfig.default || componentConfig) })  ",
+            "url": "https://www.notenough.top/posts/vue%E8%87%AA%E5%8A%A8%E6%B3%A8%E5%86%8C%E7%BB%84%E4%BB%B6/"
+        },{
+            "@type":"ListItem",
+            "position":  5 ,
+            "name": "垂直居中方案",
+            "description": "\u003cp\u003e**可以用一个自然高度的容器吗？**给容器加上相等的上下内边距让内容居中。\u003c/p\u003e\n\u003cp\u003e**容器需要指定高度或者避免使用内边距吗？**对容器使用 display：table-cell 和 vertical-align:middle。\u003c/p\u003e",
+            "url": "https://www.notenough.top/posts/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%96%B9%E6%A1%88/"
+        },{
+            "@type":"ListItem",
+            "position":  6 ,
+            "name": "展开按钮总结",
+            "description": "需求：一段文本，不定长，需要在页面中有展开按钮，假如它少于固定行，展示按钮不可见，假如多于固定行，则出现按钮，点击后，显示全部长度。\nhtml 部分 \u0026lt;div ref=\u0026quot;content_text\u0026quot; :class=\u0026quot;{book_intro_content_all:!content_haveMore,book_intro_content:content_haveMore}\u0026quot; \u0026gt; {{ BookInfo.book_intro }} \u0026lt;/div\u0026gt; \u0026lt;div v-if=\u0026quot;content_haveMore\u0026quot; class=\u0026quot;more\u0026quot; @click=\u0026quot;getMore\u0026quot;\u0026gt;--展开--\u0026lt;/div\u0026gt;  首先定义两个样式类，一个是展开后高度自适应的情况，一个是未展开的固定行数（少于还是自适应大小，多于就是固定行数）\ncss 部分 .book_intro_content { width: 635px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 10; font-size: 14px; margin-top: 15px; text-align: left; text-indent: 2em; line-height: 1.5; } .book_intro_content_all { width: 635px; font-size: 14px; margin-top: 15px; text-align: left; text-indent: 2em; line-height: 1.5; }  主要就是第一个做了个多余文本打点处理，还有固定行数，第二个就是纯自适应。\njs 部分 data:function(){ return { content_haveMore: false//很重要，判断原本文本需要的高度，如果为true，就统一到限定行了 } }, created:function(){ this.$nextTick(()=\u0026gt;{ this.change_content_haveMore() }) }, methods:{ change_content_haveMore: function() { console.",
+            "url": "https://www.notenough.top/posts/zhankai/"
+        },{
+            "@type":"ListItem",
+            "position":  7 ,
+            "name": "ubuntu安装卡死及关机卡死解决方法",
+            "description": "\u003ch2 id=\"ubuntu-安装界面卡住\"\u003eUbuntu 安装界面卡住\u003c/h2\u003e\n\u003cp\u003e给笔记本安装 ubuntu 的时候一直有这个问题，在安装界面就直接卡死，鼠标能动，但啥都不能点。\u003c/p\u003e\n\u003cp\u003e实际上是由于我的显卡是 GTX1060，是在 1050ti 以上，而 ubuntu 与 n 卡的高版本兼容性不好才导致卡死。\u003c/p\u003e",
+            "url": "https://www.notenough.top/posts/ubuntu2/"
+        },{
+            "@type":"ListItem",
+            "position":  8 ,
+            "name": "WinRAR破解",
+            "description": "WinRAR 64 位软件的破解方法 1、新建一个文本文档\n2、在文档里输入：\nRAR registration data wncn Unlimited Company License UID=1b064ef8b57de3ae9b52 64122122509b52e35fd885373b214a4a64cc2fc1284b77ed14fa20 66ebfca6509f9813b32960fce6cb5ffde62890079861be57638717 7131ced835ed65cc743d9777f2ea71a8e32c7e593cf66794343565 b41bcf56929486b8bcdac33d50ecf7739960627351a9ef03353a0e 592b327cd80645472f0ee622d1915028a9e05298e593db36384f0f f46afd5fed9b0bd095d1788266b81494b976f78fb1c551ca60a054 b17ad853ab902058b42c6887e1b3d40e0b45abf37de02106056887  3、把文本文档重命名为“rarreg.key”（引号里的内容）\n4、把这个文件放到 winRAR 安装目录下即可\n5、破解完成",
+            "url": "https://www.notenough.top/posts/winrar-pojie/"
+        },{
+            "@type":"ListItem",
+            "position":  9 ,
+            "name": "安装Win10无法找到现有分区",
+            "description": "昨天给固态安装 win10 系统，本想用机械硬盘迁移系统到固态里去，但一直给我报错，“操作系统分区至少要预留 800MB 空间”。\n这叫什么话?大把的空间呢，然后上网找也没找到解决方案。最后只要重新装了，反正盘里没东西。\n但是给安装 win10 时又出错了，先是在 u 盘里点击 win10 的 iso 文件，却告知有磁盘未能识别，于是发现自己确实有一些系统盘莫名其妙连名字都没一个全删了。\n然后安装时选择安装在哪个盘上时报错了：“我们无法创建新的分区，也找不到现有的分区”，明明两个分配好的分区都空空的摆在那却无法用？\n我当时 500GB 的固态分了两个区，都会报错，于是我删除了一个区，另外一个区就可以装了，大概问题在于要留出未分配空间。这样问题就解决了，但还是奇怪百度经验里他们装系统怎么就不需要预留未分配空间？",
+            "url": "https://www.notenough.top/posts/win10error/"
+        },{
+            "@type":"ListItem",
+            "position":  10 ,
+            "name": "margin塌陷和合并",
+            "description": "\u003ch2 id=\"margin-塌陷\"\u003eMargin 塌陷\u003c/h2\u003e\n\u003cpre\u003e\u003ccode\u003e\u0026lt;div class=\u0026quot;wrap\u0026quot;\u0026gt;\n    \u0026lt;div class=\u0026quot;content\u0026quot;\u0026gt;\u0026lt;/div\u0026gt;\n\u0026lt;/div\u0026gt;\n\u003c/code\u003e\u003c/pre\u003e",
+            "url": "https://www.notenough.top/posts/marginbug/"
+        }
+    ]
+}
+</script><meta property="og:title" content="solution | NotEnough" />
+<meta property="og:type" content="website" />
+
+
+<meta property="og:image" content="https://www.notenough.top/images/icon.png">
+
+
+<meta property="og:url" content="https://www.notenough.top/categories/solution/" />
+
+
+
+
+
+<meta property="og:description" content="Eureka is a elegant and powerful theme for Hugo." />
+
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="NotEnough" />
+
+
+
+
+
+
+<meta property="og:updated_time" content="2021-08-30T23:30:51&#43;08:00" />
+
+
+
+<meta property="article:section" content="categories" />
+
+
+<link rel="alternate" type="application/rss+xml" href="https://www.notenough.top/categories/solution/index.xml" title="NotEnough" />
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">NotEnough</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">About</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Posts</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Docs</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+<article class="mx-6 my-8">
+    <h1 class="font-bold text-3xl text-primary-text">solution</h1>
+    
+</article>
+<div class="bg-secondary-bg rounded px-6">
+    <div class="overflow-hidden divide-y">
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/koa-static/" class="font-bold text-xl hover:text-eureka">Koa搭建静态资源文件服务器及图片上传接口的实现</a>
+</div>
+<div class="content">
+  场景：前端需要上传图片到服务器，保存在固定目录下，并返回一个外部可访问的 url 给客户端。
+需要的工具：koa-body，koa-static, path
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-08-30</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/solution/" class="hover:text-eureka">solution</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/%E5%89%8D%E7%AB%AF%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/" class="font-bold text-xl hover:text-eureka">前端解决跨域</a>
+</div>
+<div class="content">
+  重新整理了下 Vue 的接口去跨域的事，其实就两个地方实际生效，其他地方乱写端口什么的反倒是阻碍了。这边展示 Vue3&#43;Vite 的例子：
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-07-14</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/solution/" class="hover:text-eureka">solution</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/vue-%E8%B7%AF%E5%BE%84/" class="font-bold text-xl hover:text-eureka">Vue@路径别名设置</a>
+</div>
+<div class="content">
+  路径别名，省去相对路径的麻烦，直接用@views 来作为路径开头更加的方便
+Vue2&#43;Vue-Cli 写法 在 vue.config.js 里写入
+module.exports = { ... chainWebpack: config =&gt; { config.resolve.symlinks(true) config.resolve.alias .set(&#39;@&#39;, resolve(&#39;src&#39;)) .set(&#39;@assets&#39;, resolve(&#39;src/assets&#39;)) .set(&#39;@components&#39;, resolve(&#39;src/components&#39;)) .set(&#39;@views&#39;, resolve(&#39;src/views&#39;)) } }  Vue3&#43;Vite&#43;Ts 写法 // vite.config.js resolve:{ alias: { &#34;@&#34;: path.resolve(__dirname, &#34;src&#34;), &#34;@V&#34;: path.resolve(__dirname, &#34;src/views&#34;), &#34;@C&#34;: path.resolve(__dirname,&#34;src/components&#34;) } } } // tsconfig.json &#34;paths&#34;:{ &#34;@/*&#34;:[&#34;./src/*&#34;], &#34;@V/*&#34;:[&#34;./src/views/*&#34;], &#34;@C/*&#34;:[&#34;./src/components/*&#34;] }  
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-06-06</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/solution/" class="hover:text-eureka">solution</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/vue%E8%87%AA%E5%8A%A8%E6%B3%A8%E5%86%8C%E7%BB%84%E4%BB%B6/" class="font-bold text-xl hover:text-eureka">Vue2自动注册组件</a>
+</div>
+<div class="content">
+  Vue 的组件要在其他地方使用得通过这三步
+&lt;template&gt; ... &lt;vuexxx/&gt; ... &lt;/template&gt; import vuexxx from &#39;@components/vuexxx&#39; export default{ ... components:[ vuexxx ] }  注册起来比较的繁琐。
+这里记录一种自动注册的方式，把下面代码写入 global.js 放在 components 文件夹里。
+import Vue from &#39;vue&#39; function capitalizeFirstLetter(string) { return string.charAt(0).toUpperCase() &#43; string.slice(1) } const requireComponent = require.context(&#39;.&#39;, true, /\.vue$/) requireComponent.keys().forEach((fileName) =&gt; { const componentConfig = requireComponent(fileName) const componentName = capitalizeFirstLetter( fileName.replace(/^\.\//, &#39;&#39;).replace(/\.\w&#43;$/, &#39;&#39;) // 因为得到的filename格式是：&#39;./componentX.vue&#39;,所以去掉头和尾保留真正的文件名 ) Vue.component(componentName, componentConfig.default || componentConfig) })  
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-06-06</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/solution/" class="hover:text-eureka">solution</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%96%B9%E6%A1%88/" class="font-bold text-xl hover:text-eureka">垂直居中方案</a>
+</div>
+<div class="content">
+  **可以用一个自然高度的容器吗？**给容器加上相等的上下内边距让内容居中。
+**容器需要指定高度或者避免使用内边距吗？**对容器使用 display：table-cell 和 vertical-align:middle。
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-03-10</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/solution/" class="hover:text-eureka">solution</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/zhankai/" class="font-bold text-xl hover:text-eureka">展开按钮总结</a>
+</div>
+<div class="content">
+  需求：一段文本，不定长，需要在页面中有展开按钮，假如它少于固定行，展示按钮不可见，假如多于固定行，则出现按钮，点击后，显示全部长度。
+html 部分 &lt;div ref=&#34;content_text&#34; :class=&#34;{book_intro_content_all:!content_haveMore,book_intro_content:content_haveMore}&#34; &gt; {{ BookInfo.book_intro }} &lt;/div&gt; &lt;div v-if=&#34;content_haveMore&#34; class=&#34;more&#34; @click=&#34;getMore&#34;&gt;--展开--&lt;/div&gt;  首先定义两个样式类，一个是展开后高度自适应的情况，一个是未展开的固定行数（少于还是自适应大小，多于就是固定行数）
+css 部分 .book_intro_content { width: 635px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 10; font-size: 14px; margin-top: 15px; text-align: left; text-indent: 2em; line-height: 1.5; } .book_intro_content_all { width: 635px; font-size: 14px; margin-top: 15px; text-align: left; text-indent: 2em; line-height: 1.5; }  主要就是第一个做了个多余文本打点处理，还有固定行数，第二个就是纯自适应。
+js 部分 data:function(){ return { content_haveMore: false//很重要，判断原本文本需要的高度，如果为true，就统一到限定行了 } }, created:function(){ this.$nextTick(()=&gt;{ this.change_content_haveMore() }) }, methods:{ change_content_haveMore: function() { console.
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2020-12-15</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/solution/" class="hover:text-eureka">solution</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/ubuntu2/" class="font-bold text-xl hover:text-eureka">ubuntu安装卡死及关机卡死解决方法</a>
+</div>
+<div class="content">
+  Ubuntu 安装界面卡住 给笔记本安装 ubuntu 的时候一直有这个问题，在安装界面就直接卡死，鼠标能动，但啥都不能点。
+实际上是由于我的显卡是 GTX1060，是在 1050ti 以上，而 ubuntu 与 n 卡的高版本兼容性不好才导致卡死。
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-08-12</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/solution/" class="hover:text-eureka">solution</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/winrar-pojie/" class="font-bold text-xl hover:text-eureka">WinRAR破解</a>
+</div>
+<div class="content">
+  WinRAR 64 位软件的破解方法 1、新建一个文本文档
+2、在文档里输入：
+RAR registration data wncn Unlimited Company License UID=1b064ef8b57de3ae9b52 64122122509b52e35fd885373b214a4a64cc2fc1284b77ed14fa20 66ebfca6509f9813b32960fce6cb5ffde62890079861be57638717 7131ced835ed65cc743d9777f2ea71a8e32c7e593cf66794343565 b41bcf56929486b8bcdac33d50ecf7739960627351a9ef03353a0e 592b327cd80645472f0ee622d1915028a9e05298e593db36384f0f f46afd5fed9b0bd095d1788266b81494b976f78fb1c551ca60a054 b17ad853ab902058b42c6887e1b3d40e0b45abf37de02106056887  3、把文本文档重命名为“rarreg.key”（引号里的内容）
+4、把这个文件放到 winRAR 安装目录下即可
+5、破解完成
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-02-21</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/solution/" class="hover:text-eureka">solution</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/win10error/" class="font-bold text-xl hover:text-eureka">安装Win10无法找到现有分区</a>
+</div>
+<div class="content">
+  昨天给固态安装 win10 系统，本想用机械硬盘迁移系统到固态里去，但一直给我报错，“操作系统分区至少要预留 800MB 空间”。
+这叫什么话?大把的空间呢，然后上网找也没找到解决方案。最后只要重新装了，反正盘里没东西。
+但是给安装 win10 时又出错了，先是在 u 盘里点击 win10 的 iso 文件，却告知有磁盘未能识别，于是发现自己确实有一些系统盘莫名其妙连名字都没一个全删了。
+然后安装时选择安装在哪个盘上时报错了：“我们无法创建新的分区，也找不到现有的分区”，明明两个分配好的分区都空空的摆在那却无法用？
+我当时 500GB 的固态分了两个区，都会报错，于是我删除了一个区，另外一个区就可以装了，大概问题在于要留出未分配空间。这样问题就解决了，但还是奇怪百度经验里他们装系统怎么就不需要预留未分配空间？
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-02-17</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/solution/" class="hover:text-eureka">solution</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/marginbug/" class="font-bold text-xl hover:text-eureka">margin塌陷和合并</a>
+</div>
+<div class="content">
+  Margin 塌陷 &lt;div class=&#34;wrap&#34;&gt; &lt;div class=&#34;content&#34;&gt;&lt;/div&gt; &lt;/div&gt; 
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-02-04</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/solution/" class="hover:text-eureka">solution</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+</div>
+
+
+</div>
+
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>ubuntu安装卡死及关机卡死解决方法 | NotEnough</title>
+
+<meta name="generator" content="Hugo Eureka 0.8.2" />
+<link rel="stylesheet" href="https://www.notenough.top/css/eureka.min.css">
+<script defer src="https://www.notenough.top/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
+  integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="Ubuntu 安装界面卡住
+给笔记本安装 ubuntu 的时候一直有这个问题，在安装界面就直接卡死，鼠标能动，但啥都不能点。
+实际上是由于我的显卡是 GTX1060，是在 1050ti 以上，而 ubuntu 与 n 卡的高版本兼容性不好才导致卡死。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Posts",
+      "item":"https://www.notenough.top/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"ubuntu安装卡死及关机卡死解决方法",
+      "item":"https://www.notenough.top/posts/ubuntu2/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.notenough.top/posts/ubuntu2/"
+    },
+    "headline": "ubuntu安装卡死及关机卡死解决方法 | NotEnough","datePublished": "2019-08-12T12:17:43+08:00",
+    "dateModified": "2019-08-12T12:17:43+08:00",
+    "wordCount":  80 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "C. Wang",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.notenough.top/images/icon.png"
+        }
+        },
+    "description": "\u003ch2 id=\u0022ubuntu-安装界面卡住\u0022\u003eUbuntu 安装界面卡住\u003c\/h2\u003e\n\u003cp\u003e给笔记本安装 ubuntu 的时候一直有这个问题，在安装界面就直接卡死，鼠标能动，但啥都不能点。\u003c\/p\u003e\n\u003cp\u003e实际上是由于我的显卡是 GTX1060，是在 1050ti 以上，而 ubuntu 与 n 卡的高版本兼容性不好才导致卡死。\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="ubuntu安装卡死及关机卡死解决方法 | NotEnough" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://www.notenough.top/images/icon.png">
+
+
+<meta property="og:url" content="https://www.notenough.top/posts/ubuntu2/" />
+
+
+
+
+<meta property="og:description" content="Ubuntu 安装界面卡住
+给笔记本安装 ubuntu 的时候一直有这个问题，在安装界面就直接卡死，鼠标能动，但啥都不能点。
+实际上是由于我的显卡是 GTX1060，是在 1050ti 以上，而 ubuntu 与 n 卡的高版本兼容性不好才导致卡死。" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="NotEnough" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2019-08-12T12:17:43&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2019-08-12T12:17:43&#43;08:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="Ubuntu" />
+
+<meta property="article:tag" content="Linux" />
+
+
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">NotEnough</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">About</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">Posts</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Docs</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">ubuntu安装卡死及关机卡死解决方法</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-08-12</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/solution/" class="hover:text-eureka">solution</a>
+        
+    </div>
+    
+
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <h2 id="ubuntu-安装界面卡住">Ubuntu 安装界面卡住</h2>
+<p>给笔记本安装 ubuntu 的时候一直有这个问题，在安装界面就直接卡死，鼠标能动，但啥都不能点。</p>
+<p>实际上是由于我的显卡是 GTX1060，是在 1050ti 以上，而 ubuntu 与 n 卡的高版本兼容性不好才导致卡死。</p>
+<p>这时候的处理方法是：</p>
+<p>1.在系统选择安装 ubuntu 界面，选到 install ubuntu，但不要按 enter 键进入，而是按 E。</p>
+<p>2.这时候进入一个界面，找到 quiet splash 后面的“&mdash;”，把它删除，并改成“nomodeset”，然后按 F10 启动，按正常步骤安装 ubuntu。</p>
+<p>3.安装完成后它会提示要重启电脑，这次选择 ubuntu，还是按 E 进入一个编辑界面，找到 splash 那一行，把它后面的删除即可（仅该行），再按 F10 启动。</p>
+<h2 id="ubuntu-关机卡死">Ubuntu 关机卡死</h2>
+<p>一按关机就全屏卡死，这个问题的原因还是因为显卡版本高了（据说 19.04 版本没这个问题）</p>
+<p>解决办法：</p>
+<p>1.进入 ubuntu，点开软件和更新，打开 ubuntu 软件，找到下载自，后面选择 aliyun 的源。然后点退出，这时候它会要求你下载相应的包之类的，下载就好。</p>
+<p>2.下载完后回到前面的界面，点击附加驱动，加载完成后，选择来自 NVIDIA 的驱动，作为专用驱动，然后点击应用更改就好了。</p>
+<hr>
+<p>今天大费周章才安装上双系统，有点笨，好在最后搞好了也没必要再重新配 windows 的环境。</p>
+<p>原来的固态 250g，只用作 win10，现在用一块 480g 的固态，一半做 ubuntu，另一半打算沿用之前的系统。不巧的是，我电脑只有一个固态位。虽然重装系统会很简单，但一个全新的系统要做的事就很多了。</p>
+<p>最后我做的是，用 wepe 的 CFI 备份还原工具，先复制我的固态整个磁盘到一个镜像文件，然后换另一块固态，再还原到新固态上，<strong>还原是覆盖还原，会先格式化新固态上。按理说新固态是空的不影响，我当时却事先安装了 ubuntu，于是重复了第二遍安装</strong></p>
+<p>还原之后会发现启动不了，电脑会蓝屏报错，这是引导的问题。</p>
+<p>还是用 wepe 工具，里面有个 UEFI 引导修复，由 disk genuines 工具可看到系统盘的 ESP 分区的盘符，在这里就选择这个盘符，系统根目录选择 C：windows（盘符根据实际情况来，我当时还原在了 M），然后修复引导就行了。</p>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://www.notenough.top/tags/ubuntu/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Ubuntu</a>
+    
+    <a href="https://www.notenough.top/tags/linux/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Linux</a>
+    
+</div>
+        
+        
+        
+
+
+        
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://www.notenough.top/posts/gomoku/" class="block">RGB灯带做棋盘的双人五子棋游戏</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://www.notenough.top/posts/vuenote2/" class="block">VueNote2</a>
+        
+    </div>
+</div>
+
+        
+
+
+
+    </div>
+    
+
+    
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>

@@ -4,9 +4,9 @@ date: 2021-09-10T09:44:45+08:00
 draft: false
 categories: note
 tags:
-  - vite
-  - webpack
-  - esbuild
+  - Vite
+  - Webpack
+  - ESbuild
 ---
 
 ## 一、前言

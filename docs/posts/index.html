@@ -79,6 +79,54 @@
             "name": "yarn和npm的区别",
             "description": "\u003ch3 id=\"yarn-是什么\"\u003eYarn 是什么？\u003c/h3\u003e\n\u003cp\u003eyarn 是为弥补 npm 的一些缺陷而出现的用以代替 npm 的 js 包管理工具。\u003c/p\u003e\n\u003cp\u003enpm 的一些人尽皆知的不足:\u003c/p\u003e",
             "url": "https://www.notenough.top/posts/yarn%E5%92%8Cnpm%E7%9A%84%E5%8C%BA%E5%88%AB/"
+        },{
+            "@type":"ListItem",
+            "position":  3 ,
+            "name": "Koa搭建静态资源文件服务器及图片上传接口的实现",
+            "description": "\u003cp\u003e场景：前端需要上传图片到服务器，保存在固定目录下，并返回一个外部可访问的 url 给客户端。\u003c/p\u003e\n\u003cp\u003e需要的工具：koa-body，koa-static, path\u003c/p\u003e",
+            "url": "https://www.notenough.top/posts/koa-static/"
+        },{
+            "@type":"ListItem",
+            "position":  4 ,
+            "name": "Vue3新特性",
+            "description": "\u003ch2 id=\"一vue30-六大亮点\"\u003e一、Vue3.0 六大亮点\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003ePerformance：性能比 Vue2.x 快 1.2~2 倍\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eTree shaking support：按需编译，体积比 Vue2.x 更小\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e",
+            "url": "https://www.notenough.top/posts/vue3/"
+        },{
+            "@type":"ListItem",
+            "position":  5 ,
+            "name": "Vue3.2新特性",
+            "description": "\u003ch3 id=\"1-新的-sfc-特性\"\u003e1. 新的 SFC 特性\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ccode\u003e\u0026lt;script setup\u0026gt;\u003c/code\u003e是一种编译时语法糖，可在 SFC 内使用 Composition API 时极大地提升工作效率\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003e\u0026lt;style\u0026gt; v-bind\u003c/code\u003e在 SFC\u003ccode\u003e\u0026lt;style\u0026gt;\u003c/code\u003e标签内启用组件状态驱动的动态 CSS 值\u003c/li\u003e\n\u003c/ul\u003e",
+            "url": "https://www.notenough.top/posts/vue3-2/"
+        },{
+            "@type":"ListItem",
+            "position":  6 ,
+            "name": "前端解决跨域",
+            "description": "\u003cp\u003e重新整理了下 Vue 的接口去跨域的事，其实就两个地方实际生效，其他地方乱写端口什么的反倒是阻碍了。这边展示 Vue3+Vite 的例子：\u003c/p\u003e",
+            "url": "https://www.notenough.top/posts/%E5%89%8D%E7%AB%AF%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/"
+        },{
+            "@type":"ListItem",
+            "position":  7 ,
+            "name": "Vue@路径别名设置",
+            "description": "路径别名，省去相对路径的麻烦，直接用@views 来作为路径开头更加的方便\nVue2+Vue-Cli 写法 在 vue.config.js 里写入\nmodule.exports = { ... chainWebpack: config =\u0026gt; { config.resolve.symlinks(true) config.resolve.alias .set('@', resolve('src')) .set('@assets', resolve('src/assets')) .set('@components', resolve('src/components')) .set('@views', resolve('src/views')) } }  Vue3+Vite+Ts 写法 // vite.config.js resolve:{ alias: { \u0026quot;@\u0026quot;: path.resolve(__dirname, \u0026quot;src\u0026quot;), \u0026quot;@V\u0026quot;: path.resolve(__dirname, \u0026quot;src/views\u0026quot;), \u0026quot;@C\u0026quot;: path.resolve(__dirname,\u0026quot;src/components\u0026quot;) } } } // tsconfig.json \u0026quot;paths\u0026quot;:{ \u0026quot;@/*\u0026quot;:[\u0026quot;./src/*\u0026quot;], \u0026quot;@V/*\u0026quot;:[\u0026quot;./src/views/*\u0026quot;], \u0026quot;@C/*\u0026quot;:[\u0026quot;./src/components/*\u0026quot;] }  ",
+            "url": "https://www.notenough.top/posts/vue-%E8%B7%AF%E5%BE%84/"
+        },{
+            "@type":"ListItem",
+            "position":  8 ,
+            "name": "Vue2自动注册组件",
+            "description": "Vue 的组件要在其他地方使用得通过这三步\n\u0026lt;template\u0026gt; ... \u0026lt;vuexxx/\u0026gt; ... \u0026lt;/template\u0026gt; import vuexxx from '@components/vuexxx' export default{ ... components:[ vuexxx ] }  注册起来比较的繁琐。\n这里记录一种自动注册的方式，把下面代码写入 global.js 放在 components 文件夹里。\nimport Vue from 'vue' function capitalizeFirstLetter(string) { return string.charAt(0).toUpperCase() + string.slice(1) } const requireComponent = require.context('.', true, /\\.vue$/) requireComponent.keys().forEach((fileName) =\u0026gt; { const componentConfig = requireComponent(fileName) const componentName = capitalizeFirstLetter( fileName.replace(/^\\.\\//, '').replace(/\\.\\w+$/, '') // 因为得到的filename格式是：'./componentX.vue',所以去掉头和尾保留真正的文件名 ) Vue.component(componentName, componentConfig.default || componentConfig) })  ",
+            "url": "https://www.notenough.top/posts/vue%E8%87%AA%E5%8A%A8%E6%B3%A8%E5%86%8C%E7%BB%84%E4%BB%B6/"
+        },{
+            "@type":"ListItem",
+            "position":  9 ,
+            "name": "ES6笔记",
+            "description": "\u003ch2 id=\"一let-和-var-的区别以及-const\"\u003e一、let 和 var 的区别以及 const\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003elet 声明的变量\u003cstrong\u003e只在所在块中生效\u003c/strong\u003e；\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003elet 声明的变量可以解决 var 与 for 循环结合使用产生的无法取得最新变量值的问题（以往都需要通过闭包来解决这个问题）；\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e",
+            "url": "https://www.notenough.top/posts/es6/"
+        },{
+            "@type":"ListItem",
+            "position":  10 ,
+            "name": "排序算法总结",
+            "description": "\u003ch3 id=\"归并排序\"\u003e归并排序\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e归并排序（MERGE-SORT）是利用归并的思想实现的排序方法，该算法采用经典的分治（divide-and-conquer）策略（分治法将问题分(divide)成一些小的问题然后递归求解，而治(conquer)的阶段则将分的阶段得到的各答案\u0026quot;修补\u0026quot;在一起，即分而治之)。\u003c/li\u003e\n\u003c/ul\u003e",
+            "url": "https://www.notenough.top/posts/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/"
         }
     ]
 }
@@ -280,11 +328,361 @@ npm 的一些人尽皆知的不足:
 </div>
   </div>
   
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/koa-static/" class="font-bold text-xl hover:text-eureka">Koa搭建静态资源文件服务器及图片上传接口的实现</a>
+</div>
+<div class="content">
+  场景：前端需要上传图片到服务器，保存在固定目录下，并返回一个外部可访问的 url 给客户端。
+需要的工具：koa-body，koa-static, path
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-08-30</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/solution/" class="hover:text-eureka">solution</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/vue3/" class="font-bold text-xl hover:text-eureka">Vue3新特性</a>
+</div>
+<div class="content">
+  一、Vue3.0 六大亮点   Performance：性能比 Vue2.x 快 1.2~2 倍
+  Tree shaking support：按需编译，体积比 Vue2.x 更小
+ 
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-08-26</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>3分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/vue3-2/" class="font-bold text-xl hover:text-eureka">Vue3.2新特性</a>
+</div>
+<div class="content">
+  1. 新的 SFC 特性  &lt;script setup&gt;是一种编译时语法糖，可在 SFC 内使用 Composition API 时极大地提升工作效率 &lt;style&gt; v-bind在 SFC&lt;style&gt;标签内启用组件状态驱动的动态 CSS 值 
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-08-26</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>2分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/%E5%89%8D%E7%AB%AF%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/" class="font-bold text-xl hover:text-eureka">前端解决跨域</a>
+</div>
+<div class="content">
+  重新整理了下 Vue 的接口去跨域的事，其实就两个地方实际生效，其他地方乱写端口什么的反倒是阻碍了。这边展示 Vue3&#43;Vite 的例子：
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-07-14</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/solution/" class="hover:text-eureka">solution</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/vue-%E8%B7%AF%E5%BE%84/" class="font-bold text-xl hover:text-eureka">Vue@路径别名设置</a>
+</div>
+<div class="content">
+  路径别名，省去相对路径的麻烦，直接用@views 来作为路径开头更加的方便
+Vue2&#43;Vue-Cli 写法 在 vue.config.js 里写入
+module.exports = { ... chainWebpack: config =&gt; { config.resolve.symlinks(true) config.resolve.alias .set(&#39;@&#39;, resolve(&#39;src&#39;)) .set(&#39;@assets&#39;, resolve(&#39;src/assets&#39;)) .set(&#39;@components&#39;, resolve(&#39;src/components&#39;)) .set(&#39;@views&#39;, resolve(&#39;src/views&#39;)) } }  Vue3&#43;Vite&#43;Ts 写法 // vite.config.js resolve:{ alias: { &#34;@&#34;: path.resolve(__dirname, &#34;src&#34;), &#34;@V&#34;: path.resolve(__dirname, &#34;src/views&#34;), &#34;@C&#34;: path.resolve(__dirname,&#34;src/components&#34;) } } } // tsconfig.json &#34;paths&#34;:{ &#34;@/*&#34;:[&#34;./src/*&#34;], &#34;@V/*&#34;:[&#34;./src/views/*&#34;], &#34;@C/*&#34;:[&#34;./src/components/*&#34;] }  
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-06-06</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/solution/" class="hover:text-eureka">solution</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/vue%E8%87%AA%E5%8A%A8%E6%B3%A8%E5%86%8C%E7%BB%84%E4%BB%B6/" class="font-bold text-xl hover:text-eureka">Vue2自动注册组件</a>
+</div>
+<div class="content">
+  Vue 的组件要在其他地方使用得通过这三步
+&lt;template&gt; ... &lt;vuexxx/&gt; ... &lt;/template&gt; import vuexxx from &#39;@components/vuexxx&#39; export default{ ... components:[ vuexxx ] }  注册起来比较的繁琐。
+这里记录一种自动注册的方式，把下面代码写入 global.js 放在 components 文件夹里。
+import Vue from &#39;vue&#39; function capitalizeFirstLetter(string) { return string.charAt(0).toUpperCase() &#43; string.slice(1) } const requireComponent = require.context(&#39;.&#39;, true, /\.vue$/) requireComponent.keys().forEach((fileName) =&gt; { const componentConfig = requireComponent(fileName) const componentName = capitalizeFirstLetter( fileName.replace(/^\.\//, &#39;&#39;).replace(/\.\w&#43;$/, &#39;&#39;) // 因为得到的filename格式是：&#39;./componentX.vue&#39;,所以去掉头和尾保留真正的文件名 ) Vue.component(componentName, componentConfig.default || componentConfig) })  
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-06-06</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/solution/" class="hover:text-eureka">solution</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/es6/" class="font-bold text-xl hover:text-eureka">ES6笔记</a>
+</div>
+<div class="content">
+  一、let 和 var 的区别以及 const   let 声明的变量只在所在块中生效；
+  let 声明的变量可以解决 var 与 for 循环结合使用产生的无法取得最新变量值的问题（以往都需要通过闭包来解决这个问题）；
+ 
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-05-21</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>4分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" class="font-bold text-xl hover:text-eureka">排序算法总结</a>
+</div>
+<div class="content">
+  归并排序  归并排序（MERGE-SORT）是利用归并的思想实现的排序方法，该算法采用经典的分治（divide-and-conquer）策略（分治法将问题分(divide)成一些小的问题然后递归求解，而治(conquer)的阶段则将分的阶段得到的各答案&#34;修补&#34;在一起，即分而治之)。 
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-03-17</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>2分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
 </div>
 
 
 </div>
 
+    <ul class="pagination pagination-default">
+      <li class="page-item disabled">
+        <a href="#" aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item disabled">
+        <a href="#" aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item active">
+        <a href="#" aria-current="page" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/4/" aria-label="Page 4" class="page-link" role="button">4</a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/4/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
 
       </div>
     </div>

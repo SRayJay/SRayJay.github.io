@@ -85,9 +85,39 @@
     "itemListElement":[{
             "@type":"ListItem",
             "position":  1 ,
-            "name": "Markdown Syntax Guide",
-            "description": "Sample article showcasing basic Markdown syntax and formatting for HTML elements.",
-            "url": "https://www.notenough.top/posts/markdown-syntax/"
+            "name": "css陋习和误区",
+            "description": "常常出现按钮中文字高度不对之类的事，平时老是喜欢给这些元素设定宽高，假如内容变化，则要调整宽高，实际上应该让宽高自动适应内容，然后给内容设定 padding 和 margin\n  一些并列元素总想着用 div，万物皆可 div，实际上 ul 和 li 更好用些。\n  加载 cdn 文件，script 标签应该要带上 async 属性，异步加载 cdn，不阻塞文本流的解析。\n  \u0026ndash;待更新",
+            "url": "https://www.notenough.top/posts/css%E9%99%8B%E4%B9%A0%E5%92%8C%E8%AF%AF%E5%8C%BA/"
+        },{
+            "@type":"ListItem",
+            "position":  2 ,
+            "name": "垂直居中方案",
+            "description": "\u003cp\u003e**可以用一个自然高度的容器吗？**给容器加上相等的上下内边距让内容居中。\u003c/p\u003e\n\u003cp\u003e**容器需要指定高度或者避免使用内边距吗？**对容器使用 display：table-cell 和 vertical-align:middle。\u003c/p\u003e",
+            "url": "https://www.notenough.top/posts/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%96%B9%E6%A1%88/"
+        },{
+            "@type":"ListItem",
+            "position":  3 ,
+            "name": "《深入解析css》笔记",
+            "description": "\u003ch3 id=\"第一章层叠优先级和继承\"\u003e第一章：层叠、优先级和继承\u003c/h3\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003e优先级：！important\u0026gt;行内样式\u0026gt;id 选择器\u0026gt;类选择器\u0026gt;标签选择器\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e两条经验法则：选择器少用 id；少用!important。\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e使用 inherit 属性使元素属性继承自父元素，方便修改。\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e",
+            "url": "https://www.notenough.top/posts/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90css%E7%AC%94%E8%AE%B0/"
+        },{
+            "@type":"ListItem",
+            "position":  4 ,
+            "name": "《css揭秘》笔记",
+            "description": "\u003cp\u003e粗读了《css 揭秘》这本书，里面提到的很多技巧和操作暂时用不到，可以在用到时当工具书看，目前对我有帮助的几个技巧做了个笔记。\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003e尽量使用相对单位。line-height 与 font-size 的比例而不要使用绝对值。em 单位（相对于当前元素的字体大小）可以在修改字体尺寸同时修改其他的数值。rem 则是根据根元素的字体大小。vw 单位是窗口宽度的 1%，因此需要某个元素在浏览器窗口改变时保持一定的比例，就用 vw 作单位。vh 则是窗口高度的 1%。\u003c/li\u003e\n\u003c/ol\u003e",
+            "url": "https://www.notenough.top/posts/css%E6%8F%AD%E7%A7%98%E7%AC%94%E8%AE%B0/"
+        },{
+            "@type":"ListItem",
+            "position":  5 ,
+            "name": "margin塌陷和合并",
+            "description": "\u003ch2 id=\"margin-塌陷\"\u003eMargin 塌陷\u003c/h2\u003e\n\u003cpre\u003e\u003ccode\u003e\u0026lt;div class=\u0026quot;wrap\u0026quot;\u0026gt;\n    \u0026lt;div class=\u0026quot;content\u0026quot;\u0026gt;\u0026lt;/div\u0026gt;\n\u0026lt;/div\u0026gt;\n\u003c/code\u003e\u003c/pre\u003e",
+            "url": "https://www.notenough.top/posts/marginbug/"
+        },{
+            "@type":"ListItem",
+            "position":  6 ,
+            "name": "CSS笔记",
+            "description": "\u003ch2 id=\"一如何创建-css\"\u003e一、如何创建 CSS\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e内联样式：也叫\u003cstrong\u003e行间样式\u003c/strong\u003e在标签后面写上 style={\u0026hellip;}就可以，但仅限于这个标签产生样式作用\u003c/li\u003e\n\u003cli\u003e内部样式表：当单个文档需要特殊的样式时，就应该使用内部样式表。可以使用\u003ccode\u003e\u0026lt;style\u0026gt;\u003c/code\u003e 标签在文档头部定义内部样式表.\u003c/li\u003e\n\u003cli\u003e外部样式表：在 html 的 head 标签内加上 link 标签，href 的值就是 css 文件的路径，但是.css 文件内不能包含任何 html 标签。\u003c/li\u003e\n\u003c/ol\u003e",
+            "url": "https://www.notenough.top/posts/cssnote/"
         }
     ]
 }
@@ -122,7 +152,7 @@
 
 
 
-<meta property="og:updated_time" content="2019-03-11T00:00:00&#43;00:00" />
+<meta property="og:updated_time" content="2021-03-14T12:04:10&#43;08:00" />
 
 
 
@@ -213,17 +243,102 @@
   
   <div class="w-full ">
     <div class="mb-4">
-  <a href="https://www.notenough.top/posts/markdown-syntax/" class="font-bold text-xl hover:text-eureka">Markdown Syntax Guide</a>
+  <a href="https://www.notenough.top/posts/css%E9%99%8B%E4%B9%A0%E5%92%8C%E8%AF%AF%E5%8C%BA/" class="font-bold text-xl hover:text-eureka">css陋习和误区</a>
 </div>
 <div class="content">
-  This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
+  常常出现按钮中文字高度不对之类的事，平时老是喜欢给这些元素设定宽高，假如内容变化，则要调整宽高，实际上应该让宽高自动适应内容，然后给内容设定 padding 和 margin
+  一些并列元素总想着用 div，万物皆可 div，实际上 ul 和 li 更好用些。
+  加载 cdn 文件，script 标签应该要带上 async 属性，异步加载 cdn，不阻塞文本流的解析。
+  –待更新
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-03-14</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%96%B9%E6%A1%88/" class="font-bold text-xl hover:text-eureka">垂直居中方案</a>
+</div>
+<div class="content">
+  **可以用一个自然高度的容器吗？**给容器加上相等的上下内边距让内容居中。
+**容器需要指定高度或者避免使用内边距吗？**对容器使用 display：table-cell 和 vertical-align:middle。
 
 </div>
 
 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2019-03-11</span>
+        <span>2021-03-10</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/solution/" class="hover:text-eureka">solution</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90css%E7%AC%94%E8%AE%B0/" class="font-bold text-xl hover:text-eureka">《深入解析css》笔记</a>
+</div>
+<div class="content">
+  第一章：层叠、优先级和继承   优先级：！important&gt;行内样式&gt;id 选择器&gt;类选择器&gt;标签选择器
+  两条经验法则：选择器少用 id；少用!important。
+  使用 inherit 属性使元素属性继承自父元素，方便修改。
+ 
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-03-10</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -234,22 +349,129 @@
     <div class="mr-6 my-2">
         <i class="fas fa-folder mr-1"></i>
         
-        <a href="https://www.notenough.top/categories/themes/" class="hover:text-eureka">themes</a>
-        
-        
-        <span>, </span>
-        <a href="https://www.notenough.top/categories/syntax/" class="hover:text-eureka">syntax</a>
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
         
     </div>
     
 
     
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/css%E6%8F%AD%E7%A7%98%E7%AC%94%E8%AE%B0/" class="font-bold text-xl hover:text-eureka">《css揭秘》笔记</a>
+</div>
+<div class="content">
+  粗读了《css 揭秘》这本书，里面提到的很多技巧和操作暂时用不到，可以在用到时当工具书看，目前对我有帮助的几个技巧做了个笔记。
+ 尽量使用相对单位。line-height 与 font-size 的比例而不要使用绝对值。em 单位（相对于当前元素的字体大小）可以在修改字体尺寸同时修改其他的数值。rem 则是根据根元素的字体大小。vw 单位是窗口宽度的 1%，因此需要某个元素在浏览器窗口改变时保持一定的比例，就用 vw 作单位。vh 则是窗口高度的 1%。 
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
-        <i class="fas fa-th-list mr-1"></i>
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-03-09</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
         
-        <a href="https://www.notenough.top/series/themes-guide/" class="hover:text-eureka">Themes Guide</a>
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
         
     </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/marginbug/" class="font-bold text-xl hover:text-eureka">margin塌陷和合并</a>
+</div>
+<div class="content">
+  Margin 塌陷 &lt;div class=&#34;wrap&#34;&gt; &lt;div class=&#34;content&#34;&gt;&lt;/div&gt; &lt;/div&gt; 
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-02-04</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/solution/" class="hover:text-eureka">solution</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/cssnote/" class="font-bold text-xl hover:text-eureka">CSS笔记</a>
+</div>
+<div class="content">
+  一、如何创建 CSS  内联样式：也叫行间样式在标签后面写上 style={…}就可以，但仅限于这个标签产生样式作用 内部样式表：当单个文档需要特殊的样式时，就应该使用内部样式表。可以使用&lt;style&gt; 标签在文档头部定义内部样式表. 外部样式表：在 html 的 head 标签内加上 link 标签，href 的值就是 css 文件的路径，但是.css 文件内不能包含任何 html 标签。 
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-01-25</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>2分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
     
 </div>
 
@@ -271,8 +493,7 @@
   </main>
   <footer class="pl-scrollbar">
     <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
-    <p class="text-sm text-tertiary-text">&copy; 2021 <a href="https://www.wangchucheng.com/">C. Wang</a> and <a href="https://www.ruiqima.com/">R. Ma</a>
- &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
 </div></div>
   </footer>
 </body>

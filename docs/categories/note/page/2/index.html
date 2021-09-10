@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>note | NotEnough</title>
+
+<meta name="generator" content="Hugo Eureka 0.8.2" />
+<link rel="stylesheet" href="https://www.notenough.top/css/eureka.min.css">
+<script defer src="https://www.notenough.top/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
+  integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="Eureka is a elegant and powerful theme for Hugo.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Categories",
+      "item":"https://www.notenough.top/categories/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"note",
+      "item":"https://www.notenough.top/categories/note/"}]
+}
+</script>
+
+
+
+
+<script type="application/ld+json">
+{
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "itemListElement":[{
+            "@type":"ListItem",
+            "position":  1 ,
+            "name": "正则表达式小结",
+            "description": "\u003cp\u003e正则表达式是由一个字符序列形成的搜索模式。可以用来搜索也可以用来替换。\u003c/p\u003e\n\u003cblockquote\u003e\n\u003cp\u003e语法：/正则表达式主体/修饰符(可选)\u003c/p\u003e\n\u003c/blockquote\u003e\n\u003cp\u003e//是定界符，内容则是需要查找或替换的内容。比如/runoob/就是查找 runoob 这个词\u003c/p\u003e",
+            "url": "https://www.notenough.top/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B0%8F%E7%BB%93/"
+        },{
+            "@type":"ListItem",
+            "position":  2 ,
+            "name": "Python爬取用户所有博客",
+            "description": "\u003cp\u003eCSDN 的爬取比较简单，没有知乎那种反爬虫需要 ip 代理模拟登录那么麻烦。在确认一个用户之后，找到目录的 url，再通过 css 选择器找到每一篇博客的 url 再分别保存为 markdown 格式。\u003c/p\u003e",
+            "url": "https://www.notenough.top/posts/python%E7%88%AC%E5%8F%96csdn/"
+        },{
+            "@type":"ListItem",
+            "position":  3 ,
+            "name": "VueNote2",
+            "description": "\u003ch2 id=\"vue-实例购物车\"\u003eVue 实例——购物车\u003c/h2\u003e\n\u003cp\u003e之前照书上题目打得一个例子，模拟一个购物车，要求选中商品再计算总价。\u003c/p\u003e\n\u003cp\u003e1.对于每个条目，给其 list 对象中加入一条 chose：false 表示其初始状态是非选中的，然后再 html 中该条目的 checkbox 中用 v-model 绑定该条目的 chose 值。当其 checkbox 选中后会将 chose 值变为真。首先实现了一个数据绑定。\u003c/p\u003e",
+            "url": "https://www.notenough.top/posts/vuenote2/"
+        },{
+            "@type":"ListItem",
+            "position":  4 ,
+            "name": "VueNote1",
+            "description": "\u003cp\u003e每个 vue 应用都需要实例化 vue\u003c/p\u003e\n\u003cp\u003e对于 html 中 id 为 app 的元素，对其实例化。\u003c/p\u003e",
+            "url": "https://www.notenough.top/posts/vuenote/"
+        },{
+            "@type":"ListItem",
+            "position":  5 ,
+            "name": "JavaScript基础",
+            "description": "\u003cp\u003e1.在标签中填写 onclick 事件调用函数时，不是 onclick=函数名， 而是 onclick=\u0026ldquo;函数名+()\u0026rdquo;\u003c/p\u003e\n\u003cp\u003e2.script 中用到的函数中带 document.write 会覆盖之前的文本。\u003c/p\u003e\n\u003cp\u003e3.js 输出数据：\u003c/p\u003e",
+            "url": "https://www.notenough.top/posts/jsnote/"
+        },{
+            "@type":"ListItem",
+            "position":  6 ,
+            "name": "FlutterNote3",
+            "description": "\u003ch1 id=\"flutter-导航\"\u003eFlutter 导航\u003c/h1\u003e\n\u003ch2 id=\"父子级导航页面的跳转\"\u003e父子级导航页面的跳转\u003c/h2\u003e\n\u003cp\u003e因为 app 中包含不止一个界面，void main()后面不能用箭头函数，需要设定首页。\u003c/p\u003e\n\u003cp\u003e对于每个页面，用 class 分别定义，页面作为 home，return 的是 Scaffold 类，当然也可以是其他。在按钮上添加跳转到另一个页面的功能。\u003c/p\u003e",
+            "url": "https://www.notenough.top/posts/flutternote3/"
+        },{
+            "@type":"ListItem",
+            "position":  7 ,
+            "name": "FlutterNote2",
+            "description": "\u003ch1 id=\"flutter-布局\"\u003eFlutter 布局\u003c/h1\u003e\n\u003ch2 id=\"水平布局\"\u003e水平布局\u003c/h2\u003e\n\u003cp\u003ebody:Row()中间内容比如说要放上按钮，直接 new 一个 RaisedButton，它的宽高是固定的，如果在它外面套上一个 Expanded(),子元素再放按钮，就能达到自适应长度的效果，不至于边上漏出一块白的那么丑。\u003c/p\u003e",
+            "url": "https://www.notenough.top/posts/flutternote2/"
+        },{
+            "@type":"ListItem",
+            "position":  8 ,
+            "name": "FlutterNote1",
+            "description": "\u003ch1 id=\"flutter-基本结构\"\u003eFlutter 基本结构\u003c/h1\u003e\n\u003cp\u003e以一个 helloworld 程序展示一个 flutter 应用的基本结构。\u003c/p\u003e",
+            "url": "https://www.notenough.top/posts/flutternote1/"
+        },{
+            "@type":"ListItem",
+            "position":  9 ,
+            "name": "CSS笔记",
+            "description": "\u003ch2 id=\"一如何创建-css\"\u003e一、如何创建 CSS\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e内联样式：也叫\u003cstrong\u003e行间样式\u003c/strong\u003e在标签后面写上 style={\u0026hellip;}就可以，但仅限于这个标签产生样式作用\u003c/li\u003e\n\u003cli\u003e内部样式表：当单个文档需要特殊的样式时，就应该使用内部样式表。可以使用\u003ccode\u003e\u0026lt;style\u0026gt;\u003c/code\u003e 标签在文档头部定义内部样式表.\u003c/li\u003e\n\u003cli\u003e外部样式表：在 html 的 head 标签内加上 link 标签，href 的值就是 css 文件的路径，但是.css 文件内不能包含任何 html 标签。\u003c/li\u003e\n\u003c/ol\u003e",
+            "url": "https://www.notenough.top/posts/cssnote/"
+        },{
+            "@type":"ListItem",
+            "position":  10 ,
+            "name": "Python爬虫笔记",
+            "description": "\u003cp\u003e爬虫分为四个步骤，首先获取数据，然后解析数据，再提取数据，最后是存储数据\u003c/p\u003e",
+            "url": "https://www.notenough.top/posts/pythonnote2/"
+        }
+    ]
+}
+</script><meta property="og:title" content="note | NotEnough" />
+<meta property="og:type" content="website" />
+
+
+<meta property="og:image" content="https://www.notenough.top/images/icon.png">
+
+
+<meta property="og:url" content="https://www.notenough.top/categories/note/" />
+
+
+
+
+
+<meta property="og:description" content="Eureka is a elegant and powerful theme for Hugo." />
+
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="NotEnough" />
+
+
+
+
+
+
+<meta property="og:updated_time" content="2021-09-10T09:44:45&#43;08:00" />
+
+
+
+<meta property="article:section" content="categories" />
+
+
+<link rel="alternate" type="application/rss+xml" href="https://www.notenough.top/categories/note/index.xml" title="NotEnough" />
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">NotEnough</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">About</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Posts</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Docs</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+<article class="mx-6 my-8">
+    <h1 class="font-bold text-3xl text-primary-text">note</h1>
+    
+</article>
+<div class="bg-secondary-bg rounded px-6">
+    <div class="overflow-hidden divide-y">
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B0%8F%E7%BB%93/" class="font-bold text-xl hover:text-eureka">正则表达式小结</a>
+</div>
+<div class="content">
+  正则表达式是由一个字符序列形成的搜索模式。可以用来搜索也可以用来替换。
+ 语法：/正则表达式主体/修饰符(可选)
+ //是定界符，内容则是需要查找或替换的内容。比如/runoob/就是查找 runoob 这个词
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-09-22</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/python%E7%88%AC%E5%8F%96csdn/" class="font-bold text-xl hover:text-eureka">Python爬取用户所有博客</a>
+</div>
+<div class="content">
+  CSDN 的爬取比较简单，没有知乎那种反爬虫需要 ip 代理模拟登录那么麻烦。在确认一个用户之后，找到目录的 url，再通过 css 选择器找到每一篇博客的 url 再分别保存为 markdown 格式。
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-09-11</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/vuenote2/" class="font-bold text-xl hover:text-eureka">VueNote2</a>
+</div>
+<div class="content">
+  Vue 实例——购物车 之前照书上题目打得一个例子，模拟一个购物车，要求选中商品再计算总价。
+1.对于每个条目，给其 list 对象中加入一条 chose：false 表示其初始状态是非选中的，然后再 html 中该条目的 checkbox 中用 v-model 绑定该条目的 chose 值。当其 checkbox 选中后会将 chose 值变为真。首先实现了一个数据绑定。
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-06-03</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>2分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/vuenote/" class="font-bold text-xl hover:text-eureka">VueNote1</a>
+</div>
+<div class="content">
+  每个 vue 应用都需要实例化 vue
+对于 html 中 id 为 app 的元素，对其实例化。
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-05-27</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>3分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/jsnote/" class="font-bold text-xl hover:text-eureka">JavaScript基础</a>
+</div>
+<div class="content">
+  1.在标签中填写 onclick 事件调用函数时，不是 onclick=函数名， 而是 onclick=“函数名&#43;()”
+2.script 中用到的函数中带 document.write 会覆盖之前的文本。
+3.js 输出数据：
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-05-26</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/flutternote3/" class="font-bold text-xl hover:text-eureka">FlutterNote3</a>
+</div>
+<div class="content">
+  Flutter 导航 父子级导航页面的跳转 因为 app 中包含不止一个界面，void main()后面不能用箭头函数，需要设定首页。
+对于每个页面，用 class 分别定义，页面作为 home，return 的是 Scaffold 类，当然也可以是其他。在按钮上添加跳转到另一个页面的功能。
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-05-19</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/flutternote2/" class="font-bold text-xl hover:text-eureka">FlutterNote2</a>
+</div>
+<div class="content">
+  Flutter 布局 水平布局 body:Row()中间内容比如说要放上按钮，直接 new 一个 RaisedButton，它的宽高是固定的，如果在它外面套上一个 Expanded(),子元素再放按钮，就能达到自适应长度的效果，不至于边上漏出一块白的那么丑。
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-05-13</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/flutternote1/" class="font-bold text-xl hover:text-eureka">FlutterNote1</a>
+</div>
+<div class="content">
+  Flutter 基本结构 以一个 helloworld 程序展示一个 flutter 应用的基本结构。
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-05-03</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>2分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/cssnote/" class="font-bold text-xl hover:text-eureka">CSS笔记</a>
+</div>
+<div class="content">
+  一、如何创建 CSS  内联样式：也叫行间样式在标签后面写上 style={…}就可以，但仅限于这个标签产生样式作用 内部样式表：当单个文档需要特殊的样式时，就应该使用内部样式表。可以使用&lt;style&gt; 标签在文档头部定义内部样式表. 外部样式表：在 html 的 head 标签内加上 link 标签，href 的值就是 css 文件的路径，但是.css 文件内不能包含任何 html 标签。 
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-01-25</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>2分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/pythonnote2/" class="font-bold text-xl hover:text-eureka">Python爬虫笔记</a>
+</div>
+<div class="content">
+  爬虫分为四个步骤，首先获取数据，然后解析数据，再提取数据，最后是存储数据
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-01-18</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+</div>
+
+
+</div>
+
+    <ul class="pagination pagination-default">
+      <li class="page-item">
+        <a href="/categories/note/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/note/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/note/" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item active">
+        <a href="#" aria-current="page" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/note/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/note/page/3/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/note/page/3/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>
