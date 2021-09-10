@@ -34,5 +34,23 @@
       <description></description>
     </item>
     
+    <item>
+      <title>npm</title>
+      <link>https://www.notenough.top/tags/npm/</link>
+      <pubDate>Tue, 07 Sep 2021 20:44:18 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/tags/npm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yarn</title>
+      <link>https://www.notenough.top/tags/yarn/</link>
+      <pubDate>Tue, 07 Sep 2021 20:44:18 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/tags/yarn/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
