@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on NotEnough</title>
-    <link>/authors/</link>
+    <link>http://www.notenough.top/authors/</link>
     <description>Recent content in Authors on NotEnough</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;C. Wang&lt;/a&gt; and &lt;a href=&#34;https://www.ruiqima.com/&#34;&gt;R. Ma&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Wed, 31 Mar 2021 13:11:22 +0800</lastBuildDate><atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Mar 2021 13:11:22 +0800</lastBuildDate><atom:link href="http://www.notenough.top/authors/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Example Author</title>
-      <link>/authors/example-author/</link>
+      <link>http://www.notenough.top/authors/example-author/</link>
       <pubDate>Wed, 31 Mar 2021 13:11:22 +0800</pubDate>
       
-      <guid>/authors/example-author/</guid>
+      <guid>http://www.notenough.top/authors/example-author/</guid>
       <description>Details Nunc pellentesque vitae:
  Morbi accumsan nibh efficitur diam molestie, non dignissim diam facilisis. Donec dignissim leo in mollis faucibus. Donec blandit lacus a pellentesque fermentum.  Donec mollis sollicitudin:
  Nunc dictum purus ornare purus consectetur, eu pellentesque massa ullamcorper. Aliquam eu leo vitae justo aliquam tincidunt. Fusce non massa id augue interdum feugiat sed et nulla. Vivamus molestie augue in tristique laoreet.  </description>
@@ -22,10 +22,10 @@
     
     <item>
       <title>Hugo Authors</title>
-      <link>/authors/hugo-authors/</link>
+      <link>http://www.notenough.top/authors/hugo-authors/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/authors/hugo-authors/</guid>
+      <guid>http://www.notenough.top/authors/hugo-authors/</guid>
       <description>Vestibulum vel arcu Donec interdum justo sed posuere imperdiet. Quisque nec mauris eu erat mattis egestas in vitae nisl. Sed nisl augue, congue sed quam quis, tempor tempus nibh. Pellentesque accumsan in quam a interdum. Morbi iaculis venenatis lacinia. Mauris quis nisl vitae nisi mollis placerat id vel ligula. Integer vitae arcu ac leo iaculis rhoncus id vitae dolor. Fusce quis nisl tincidunt, vulputate dolor quis, mollis massa. Donec congue velit at risus cursus, eu auctor dolor rhoncus.</description>
     </item>
     
