@@ -107,7 +107,7 @@
             "@type":"ListItem",
             "position":  7 ,
             "name": "展开按钮总结",
-            "description": "需求：一段文本，不定长，需要在页面中有展开按钮，假如它少于固定行，展示按钮不可见，假如多于固定行，则出现按钮，点击后，显示全部长度。\nhtml 部分 \u0026lt;div ref=\u0026quot;content_text\u0026quot; :class=\u0026quot;{book_intro_content_all:!content_haveMore,book_intro_content:content_haveMore}\u0026quot; \u0026gt; {{ BookInfo.book_intro }} \u0026lt;/div\u0026gt; \u0026lt;div v-if=\u0026quot;content_haveMore\u0026quot; class=\u0026quot;more\u0026quot; @click=\u0026quot;getMore\u0026quot;\u0026gt;--展开--\u0026lt;/div\u0026gt;  首先定义两个样式类，一个是展开后高度自适应的情况，一个是未展开的固定行数（少于还是自适应大小，多于就是固定行数）\ncss 部分 .book_intro_content { width: 635px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 10; font-size: 14px; margin-top: 15px; text-align: left; text-indent: 2em; line-height: 1.5; } .book_intro_content_all { width: 635px; font-size: 14px; margin-top: 15px; text-align: left; text-indent: 2em; line-height: 1.5; }  主要就是第一个做了个多余文本打点处理，还有固定行数，第二个就是纯自适应。\njs 部分 data:function(){ return { content_haveMore: false//很重要，判断原本文本需要的高度，如果为true，就统一到限定行了 } }, created:function(){ this.$nextTick(()=\u0026gt;{ this.change_content_haveMore() }) }, methods:{ change_content_haveMore: function() { console.",
+            "description": "\u003cp\u003e需求：一段文本，不定长，需要在页面中有展开按钮，假如它少于固定行，展示按钮不可见，假如多于固定行，则出现按钮，点击后，显示全部长度。\u003c/p\u003e",
             "url": "https://www.notenough.top/posts/zhankai/"
         },{
             "@type":"ListItem",
@@ -501,9 +501,7 @@
 </div>
 <div class="content">
   需求：一段文本，不定长，需要在页面中有展开按钮，假如它少于固定行，展示按钮不可见，假如多于固定行，则出现按钮，点击后，显示全部长度。
-html 部分 &lt;div ref=&#34;content_text&#34; :class=&#34;{book_intro_content_all:!content_haveMore,book_intro_content:content_haveMore}&#34; &gt; {{ BookInfo.book_intro }} &lt;/div&gt; &lt;div v-if=&#34;content_haveMore&#34; class=&#34;more&#34; @click=&#34;getMore&#34;&gt;--展开--&lt;/div&gt;  首先定义两个样式类，一个是展开后高度自适应的情况，一个是未展开的固定行数（少于还是自适应大小，多于就是固定行数）
-css 部分 .book_intro_content { width: 635px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 10; font-size: 14px; margin-top: 15px; text-align: left; text-indent: 2em; line-height: 1.5; } .book_intro_content_all { width: 635px; font-size: 14px; margin-top: 15px; text-align: left; text-indent: 2em; line-height: 1.5; }  主要就是第一个做了个多余文本打点处理，还有固定行数，第二个就是纯自适应。
-js 部分 data:function(){ return { content_haveMore: false//很重要，判断原本文本需要的高度，如果为true，就统一到限定行了 } }, created:function(){ this.$nextTick(()=&gt;{ this.change_content_haveMore() }) }, methods:{ change_content_haveMore: function() { console.
+
 </div>
 
 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">

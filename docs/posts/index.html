@@ -113,7 +113,7 @@
             "@type":"ListItem",
             "position":  8 ,
             "name": "Vue2自动注册组件",
-            "description": "Vue 的组件要在其他地方使用得通过这三步\n\u0026lt;template\u0026gt; ... \u0026lt;vuexxx/\u0026gt; ... \u0026lt;/template\u0026gt; import vuexxx from '@components/vuexxx' export default{ ... components:[ vuexxx ] }  注册起来比较的繁琐。\n这里记录一种自动注册的方式，把下面代码写入 global.js 放在 components 文件夹里。\nimport Vue from 'vue' function capitalizeFirstLetter(string) { return string.charAt(0).toUpperCase() + string.slice(1) } const requireComponent = require.context('.', true, /\\.vue$/) requireComponent.keys().forEach((fileName) =\u0026gt; { const componentConfig = requireComponent(fileName) const componentName = capitalizeFirstLetter( fileName.replace(/^\\.\\//, '').replace(/\\.\\w+$/, '') // 因为得到的filename格式是：'./componentX.vue',所以去掉头和尾保留真正的文件名 ) Vue.component(componentName, componentConfig.default || componentConfig) })  ",
+            "description": "\u003cp\u003eVue 的组件要在其他地方使用得通过这三步\u003c/p\u003e",
             "url": "https://www.notenough.top/posts/vue%E8%87%AA%E5%8A%A8%E6%B3%A8%E5%86%8C%E7%BB%84%E4%BB%B6/"
         },{
             "@type":"ListItem",
@@ -539,9 +539,7 @@ module.exports = { ... chainWebpack: config =&gt; { config.resolve.symlinks(true
 </div>
 <div class="content">
   Vue 的组件要在其他地方使用得通过这三步
-&lt;template&gt; ... &lt;vuexxx/&gt; ... &lt;/template&gt; import vuexxx from &#39;@components/vuexxx&#39; export default{ ... components:[ vuexxx ] }  注册起来比较的繁琐。
-这里记录一种自动注册的方式，把下面代码写入 global.js 放在 components 文件夹里。
-import Vue from &#39;vue&#39; function capitalizeFirstLetter(string) { return string.charAt(0).toUpperCase() &#43; string.slice(1) } const requireComponent = require.context(&#39;.&#39;, true, /\.vue$/) requireComponent.keys().forEach((fileName) =&gt; { const componentConfig = requireComponent(fileName) const componentName = capitalizeFirstLetter( fileName.replace(/^\.\//, &#39;&#39;).replace(/\.\w&#43;$/, &#39;&#39;) // 因为得到的filename格式是：&#39;./componentX.vue&#39;,所以去掉头和尾保留真正的文件名 ) Vue.component(componentName, componentConfig.default || componentConfig) })  
+
 </div>
 
 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">

@@ -8,6 +8,8 @@ draft: false
 
 Vue 的组件要在其他地方使用得通过这三步
 
+<!--more-->
+
 ```js
 <template>
     ...
