@@ -93,7 +93,7 @@
 
 
 
-<meta property="og:updated_time" content="2021-03-31T13:11:22&#43;08:00" />
+<meta property="og:updated_time" content="2021-09-10T09:44:45&#43;08:00" />
 
 
 
@@ -214,8 +214,8 @@
     
   
 
-  <div class="pl-scrollbar bg-secondary-bg" 
-    >
+  <div class="pl-scrollbar " 
+     style="background-color: #F5F5F5;" >
     <div class="max-w-screen-xl mx-auto">
       <div id="about" class="lg:w-3/4 mx-auto px-6 md:px-8 xl:px-12 py-12">
         
@@ -346,17 +346,23 @@
   
   <div class="w-full ">
     <div class="mb-4">
-  <a href="https://www.notenough.top/posts/diagram-support/" class="font-bold text-xl hover:text-eureka">Diagram Support</a>
+  <a href="https://www.notenough.top/posts/viteesbuild%E4%BB%A5%E5%8F%8Awebpack%E6%AF%94%E8%BE%83/" class="font-bold text-xl hover:text-eureka">Vite、esbuild以及webpack比较</a>
 </div>
 <div class="content">
-  Eureka supports the rendering of diagrams by using Mermaid.
-
+  一、前言 这三者的定位都有些不同，不好直接比较，但是做的事情还算类似，因此放一块拿来说说。vite 是新生技术，由其快速优秀的开发体验有取代 webpack 的趋势，但是它并不如 webpack 打包工具那么灵活，vite 内部的打包工具是采用的 esbuild，其性能之高也来自于此。
+二、Vite2.0 特性  基于 esbuild 实现的极速开发体验 多框架支持 兼容 Rollup 的插件机制与 API SSR 支持 旧浏览器支持  三、在启动时，vite 为何比 webpack 快那么多？ 主要是 Vite 在开发模式没有做太多打包操作
+Webpack 启动后会做一堆事情，经历一条很长的编译打包链条，从入口开始需要逐步经历语法解析、依赖收集、代码转译、打包合并、代码优化，最终将高版本的、离散的源码编译打包成低版本、高兼容性的产物代码，这可满满都是 CPU、IO 操作啊，在 Node 运行时下性能必然是有问题。
+而 Vite 运行 Dev 命令后只做了两件事情，一是启动了一个用于承载资源服务的 service；二是使用 esbuild 预构建 npm 依赖包。之后就一直躺着，直到浏览器以 http 方式发来 ESM 规范的模块请求时，Vite 才开始“「按需编译」”被请求的模块。
+这里 Vite 预设的前提是：
+ 现代浏览器大多数已经原生支持 ESM 规范，构建工具 —— 特别是开发环境下已经没有太大必要为了低版本兼容把大量的时间花在编译打包上了！  这么一对比，Webpack 是啥都做了，浏览器只要运行编译好的低版本(es5)代码就行；而 Vite 只处理问题的一部分，剩下的事情交由浏览器自行处理，那速度必然贼 TM 快。
+除了启动阶段跳过编译操作之外，Vite 还有很多值得一提的性能优化，整体梳理一下：
+ 预编译：npm 包这类基本不会变化的模块，使用 Esbuild 在 「预构建」 阶段先打包整理好，减少 http 请求数 按需编译：用户代码这一类频繁变动的模块，直到被使用时才会执行编译操作 客户端强缓存：请求过的模块会被以 http 头 max-age=31536000,immutable 设置为强缓存，如果模块发生变化则用附加的版本 query 使其失效 产物优化：相比于 Webpack ，Vite 直接锚定高版本浏览器，不需要在 build 产物中插入过多运行时与模板代码 内置更好的分包实现：不需要用户干预，默认启用一系列智能分包规则，尽可能减少模块的重复打包 更好的静态资源处理：Vite 尽量避免直接处理静态资源，而是选择遵循 ESM 方式提供服务，例如引入图片 import img from &#39;xxx.
 </div>
 
 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2021-03-31</span>
+        <span>2021-09-10</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -364,182 +370,14 @@
     </div>
     
     
-
-    
-</div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="https://www.notenough.top/posts/math-support/" class="font-bold text-xl hover:text-eureka">Math Support</a>
-</div>
-<div class="content">
-  Eureka supports the rendering of mathematical formulas by using KaTeX.
-
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar mr-1"></i>
-        <span>2020-11-20</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-clock mr-1"></i>
-        <span>1分钟阅读时长</span>
-    </div>
-    
-    
-
-    
-</div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full lg:w-2/3">
-    <div class="mb-4">
-  <a href="https://www.notenough.top/posts/featured-image/" class="font-bold text-xl hover:text-eureka">Featured Image</a>
-</div>
-<div class="content">
-  Maecenas maximus, elit in ornare porttitor, nisi eros hendrerit nisl, sed fermentum nulla urna blandit tellus.
-
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar mr-1"></i>
-        <span>2020-05-26</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-clock mr-1"></i>
-        <span>2分钟阅读时长</span>
-    </div>
-    
-    
     <div class="mr-6 my-2">
         <i class="fas fa-folder mr-1"></i>
         
-        <a href="https://www.notenough.top/categories/themes/" class="hover:text-eureka">themes</a>
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
         
     </div>
     
 
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-th-list mr-1"></i>
-        
-        <a href="https://www.notenough.top/series/themes-guide/" class="hover:text-eureka">Themes Guide</a>
-        
-    </div>
-    
-</div>
-
-  </div>
-
-  
-  <div class="w-full lg:w-1/3 mb-4 lg:mb-0 lg:ml-8">
-    <img src="https://www.notenough.top/images/hero-right.jpg" class="w-full" alt="Featured Image">
-  </div>
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="https://www.notenough.top/posts/markdown-syntax/" class="font-bold text-xl hover:text-eureka">Markdown Syntax Guide</a>
-</div>
-<div class="content">
-  This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
-
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar mr-1"></i>
-        <span>2019-03-11</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-clock mr-1"></i>
-        <span>3分钟阅读时长</span>
-    </div>
-    
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-folder mr-1"></i>
-        
-        <a href="https://www.notenough.top/categories/themes/" class="hover:text-eureka">themes</a>
-        
-        
-        <span>, </span>
-        <a href="https://www.notenough.top/categories/syntax/" class="hover:text-eureka">syntax</a>
-        
-    </div>
-    
-
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-th-list mr-1"></i>
-        
-        <a href="https://www.notenough.top/series/themes-guide/" class="hover:text-eureka">Themes Guide</a>
-        
-    </div>
-    
-</div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="https://www.notenough.top/posts/placeholder-text/" class="font-bold text-xl hover:text-eureka">Placeholder Text</a>
-</div>
-<div class="content">
-  Lorem est tota propiore conpellat pectoribus de pectora summo.
-
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar mr-1"></i>
-        <span>2019-03-09</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-clock mr-1"></i>
-        <span>2分钟阅读时长</span>
-    </div>
-    
-    
-
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-th-list mr-1"></i>
-        
-        <a href="https://www.notenough.top/series/themes-guide/" class="hover:text-eureka">Themes Guide</a>
-        
-    </div>
     
 </div>
 
@@ -580,280 +418,10 @@
 
   
   
-    
-      
-  
-
-  
-
-  
-  
-  
-
-  
-    
-    
-    
-    
-      
-      
-    
-  
-
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-
-    
-    
-    
-    
-    
-  
-
-  <div class="pl-scrollbar bg-primary-bg" 
-    >
-    <div class="max-w-screen-xl mx-auto">
-      <div id="experiences" class="lg:w-4/5 mx-auto px-6 md:px-8 xl:px-12 py-12">
-        
-  
-
-  
-
-    
-    
-    
-    
-    
-      
-    
-    <div class="flex flex-col lg:flex-row">
-      <div class="flex-none lg:w-1/4 lg:mr-4">
-        <h2 class="font-bold text-3xl my-4">Experiences</h2>
-      </div>
-      <div class="flex-grow lg:ml-4">
-        
-<div class="mb-6">
-  <div class="bg-secondary-bg rounded border hover:shadow-lg transition ease-in-out duration-200 px-6 pt-6 pb-4">
-    <div class="mb-4">
-      <div class="font-bold text-xl">Example Role 1</div>
-      <div class="flex flex-col md:flex-row md:justify-between">
-        <div>
-          
-          <a href="https://example.org">Example Organization 1</a>
-          
-
-          
-          <span class="ml-2 mr-2">·</span>
-          
-
-          <span>Country </span>
-        </div>
-        <div class="flex-shrink-0"> 2019 - Present</div>
-      </div>
-    </div>
-
-    <div class="content">
-      <p>Donec scelerisque egestas augue at tempor. Fusce faucibus magna in.</p>
-<ul>
-<li>Suspendisse lacinia mauris a laoreet vehicula.</li>
-<li>Aenean tincidunt enim vitae ante blandit tempor.</li>
-<li>Nam tincidunt diam quis lorem rutrum ullamcorper.</li>
-</ul>
-
-    </div>
-  </div>
-</div>
-
-<div class="mb-6">
-  <div class="bg-secondary-bg rounded border hover:shadow-lg transition ease-in-out duration-200 px-6 pt-6 pb-4">
-    <div class="mb-4">
-      <div class="font-bold text-xl">Example Role 2</div>
-      <div class="flex flex-col md:flex-row md:justify-between">
-        <div>
-          
-          <a href="https://example.org">Example Organization 2</a>
-          
-
-          
-          <span class="ml-2 mr-2">·</span>
-          
-
-          <span>Country </span>
-        </div>
-        <div class="flex-shrink-0"> 2017 - 2019</div>
-      </div>
-    </div>
-
-    <div class="content">
-      <strong>Aliquam</strong> at <strong>rutrum</strong> ante. In sed quam faucibus.
-    </div>
-  </div>
-</div>
-
-      </div>
-    </div>
-  
-
-      </div>
-    </div>
-  </div>
-
-    
-
-  
-  
-    
-      
-  
-
-  
-
-  
-  
-  
-
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-  
-
-  
-  
-  
-  
-
-  <div class="pl-scrollbar bg-secondary-bg" 
-    >
-    <div class="max-w-screen-xl mx-auto">
-      <div id="vintage" class="">
-        
-  
-
-  
-    <div class="grid grid-cols-9 grid-rows-5 h-(screen-16)">
-  <div class="col-start-2 col-span-4 row-start-3 row-span-2 bg-local bg-cover z-10 shadow-2xl"
-    style="background-image: url(https://www.notenough.top/images/hero-left.jpg);"></div>
-
-  <div class="col-start-3 col-span-5 row-start-2 row-span-3 z-20">
-    <div class="flex flex-col items-center justify-center min-h-full">
-      <div class="bg-white bg-opacity-75 shadow-2xl -m-12 p-12">
-        <span class="font-bold text-black text-opacity-75 text-2xl md:text-3xl">We are all in the gutter, but some of us are looking at the stars.</span>
-      </div>
-    </div>
-  </div>
-  <div class="col-start-5 col-span-4 row-start-2 row-span-2 bg-local bg-cover shadow-2xl"
-    style="background-image: url(https://www.notenough.top/images/hero-right.jpg);">
-  </div>
-</div>
-  
-
-      </div>
-    </div>
-  </div>
-
-    
-
-  
-  
-    
-      
-  
-
-  
-
-  
-  
-  
-
-  
-    
-    
-    
-    
-    
-    
-      
-      
-        
-      
-    
-
-    
-    
-    
-    
-
-    
-    
-    
-    
-
-  
-
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-
-    
-    
-    
-    
-    
-  
-
-  <div class="pl-scrollbar bg-cover" 
-     style="background-image: url(https://www.notenough.top/images/hero-left.jpg);" >
-    <div class="max-w-screen-xl mx-auto">
-      <div id="blank" class="lg:w-3/4 mx-auto px-6 md:px-8 xl:px-12 py-12">
-        
-  
-
-  
-    
-<div style="text-align:center">
-  <p>Write anything you like here!</p>
-</div>
-  
-
-      </div>
-    </div>
-  </div>
-
-    
-
-  
-  
   </main>
   <footer class="pl-scrollbar">
     <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
-    <p class="text-sm text-tertiary-text">&copy; 2021 <a href="https://www.wangchucheng.com/">C. Wang</a> and <a href="https://www.ruiqima.com/">R. Ma</a>
- &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
 </div></div>
   </footer>
 </body>

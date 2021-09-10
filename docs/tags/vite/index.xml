@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on NotEnough</title>
-    <link>https://www.notenough.top/posts/</link>
-    <description>Recent content in Posts on NotEnough</description>
+    <title>vite on NotEnough</title>
+    <link>https://www.notenough.top/tags/vite/</link>
+    <description>Recent content in vite on NotEnough</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 10 Sep 2021 09:44:45 +0800</lastBuildDate><atom:link href="https://www.notenough.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Sep 2021 09:44:45 +0800</lastBuildDate><atom:link href="https://www.notenough.top/tags/vite/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vite、esbuild以及webpack比较</title>
       <link>https://www.notenough.top/posts/viteesbuild%E4%BB%A5%E5%8F%8Awebpack%E6%AF%94%E8%BE%83/</link>

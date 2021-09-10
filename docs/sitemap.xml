@@ -2,76 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.notenough.top/authors/</loc>
-    <lastmod>2021-03-31T13:11:22+08:00</lastmod>
+    <loc>https://www.notenough.top/categories/</loc>
+    <lastmod>2021-09-10T09:44:45+08:00</lastmod>
   </url><url>
-    <loc>https://www.notenough.top/posts/diagram-support/</loc>
-    <lastmod>2021-03-31T13:11:22+08:00</lastmod>
+    <loc>https://www.notenough.top/tags/esbuild/</loc>
+    <lastmod>2021-09-10T09:44:45+08:00</lastmod>
   </url><url>
-    <loc>https://www.notenough.top/authors/example-author/</loc>
-    <lastmod>2021-03-31T13:11:22+08:00</lastmod>
+    <loc>https://www.notenough.top/categories/note/</loc>
+    <lastmod>2021-09-10T09:44:45+08:00</lastmod>
   </url><url>
     <loc>https://www.notenough.top/</loc>
-    <lastmod>2021-03-31T13:11:22+08:00</lastmod>
+    <lastmod>2021-09-10T09:44:45+08:00</lastmod>
   </url><url>
     <loc>https://www.notenough.top/posts/</loc>
-    <lastmod>2021-03-31T13:11:22+08:00</lastmod>
-  </url><url>
-    <loc>https://www.notenough.top/posts/math-support/</loc>
-    <lastmod>2020-11-20T22:52:56+08:00</lastmod>
-  </url><url>
-    <loc>https://www.notenough.top/categories/</loc>
-    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.notenough.top/posts/featured-image/</loc>
-    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.notenough.top/tags/image/</loc>
-    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.notenough.top/series/</loc>
-    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
+    <lastmod>2021-09-10T09:44:45+08:00</lastmod>
   </url><url>
     <loc>https://www.notenough.top/tags/</loc>
-    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
+    <lastmod>2021-09-10T09:44:45+08:00</lastmod>
   </url><url>
-    <loc>https://www.notenough.top/categories/themes/</loc>
-    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
+    <loc>https://www.notenough.top/tags/vite/</loc>
+    <lastmod>2021-09-10T09:44:45+08:00</lastmod>
   </url><url>
-    <loc>https://www.notenough.top/series/themes-guide/</loc>
-    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
+    <loc>https://www.notenough.top/posts/viteesbuild%E4%BB%A5%E5%8F%8Awebpack%E6%AF%94%E8%BE%83/</loc>
+    <lastmod>2021-09-10T09:44:45+08:00</lastmod>
   </url><url>
-    <loc>https://www.notenough.top/tags/css/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <loc>https://www.notenough.top/tags/webpack/</loc>
+    <lastmod>2021-09-10T09:44:45+08:00</lastmod>
   </url><url>
-    <loc>https://www.notenough.top/tags/html/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <loc>https://www.notenough.top/authors/</loc>
+  </url><url>
+    <loc>https://www.notenough.top/authors/example-author/</loc>
   </url><url>
     <loc>https://www.notenough.top/authors/hugo-authors/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.notenough.top/tags/markdown/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.notenough.top/posts/markdown-syntax/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.notenough.top/categories/syntax/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.notenough.top/tags/themes/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.notenough.top/posts/placeholder-text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.notenough.top/tags/text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.notenough.top/tags/emoji/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.notenough.top/posts/emoji-support/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+    <loc>https://www.notenough.top/series/</loc>
   </url>
 </urlset>

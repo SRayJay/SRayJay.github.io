@@ -8,10 +8,10 @@ publishDir: docs
 # Uncomment when installing using Hugo Modules
 # theme: github.com/wangchucheng/hugo-eureka
 
-paginate: 3
-copyright: >
-  &copy; 2021 <a href="https://www.wangchucheng.com/">C. Wang</a> and <a
-  href="https://www.ruiqima.com/">R. Ma</a>
+paginate: 10
+# copyright: >
+#   &copy; 2021 <a href="https://www.wangchucheng.com/">C. Wang</a> and <a
+#   href="https://www.ruiqima.com/">R. Ma</a>
 enableEmoji: true
 enableGitInfo: false
 summaryLength: 75

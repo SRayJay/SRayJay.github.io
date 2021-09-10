@@ -6,69 +6,31 @@
     <description>Recent content in Tags on NotEnough</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <copyright>&amp;copy; 2021 &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;C. Wang&lt;/a&gt; and &lt;a href=&#34;https://www.ruiqima.com/&#34;&gt;R. Ma&lt;/a&gt;
-</copyright>
-    <lastBuildDate>Tue, 26 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.notenough.top/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Sep 2021 09:44:45 +0800</lastBuildDate><atom:link href="https://www.notenough.top/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>image</title>
-      <link>https://www.notenough.top/tags/image/</link>
-      <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
+      <title>esbuild</title>
+      <link>https://www.notenough.top/tags/esbuild/</link>
+      <pubDate>Fri, 10 Sep 2021 09:44:45 +0800</pubDate>
       
-      <guid>https://www.notenough.top/tags/image/</guid>
+      <guid>https://www.notenough.top/tags/esbuild/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>css</title>
-      <link>https://www.notenough.top/tags/css/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <title>vite</title>
+      <link>https://www.notenough.top/tags/vite/</link>
+      <pubDate>Fri, 10 Sep 2021 09:44:45 +0800</pubDate>
       
-      <guid>https://www.notenough.top/tags/css/</guid>
+      <guid>https://www.notenough.top/tags/vite/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>html</title>
-      <link>https://www.notenough.top/tags/html/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <title>webpack</title>
+      <link>https://www.notenough.top/tags/webpack/</link>
+      <pubDate>Fri, 10 Sep 2021 09:44:45 +0800</pubDate>
       
-      <guid>https://www.notenough.top/tags/html/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>markdown</title>
-      <link>https://www.notenough.top/tags/markdown/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.notenough.top/tags/markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>themes</title>
-      <link>https://www.notenough.top/tags/themes/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.notenough.top/tags/themes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>text</title>
-      <link>https://www.notenough.top/tags/text/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.notenough.top/tags/text/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>emoji</title>
-      <link>https://www.notenough.top/tags/emoji/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.notenough.top/tags/emoji/</guid>
+      <guid>https://www.notenough.top/tags/webpack/</guid>
       <description></description>
     </item>
     

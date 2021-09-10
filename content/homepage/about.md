@@ -21,7 +21,6 @@ widget:
 
   # Options: sm, md, lg and xl. Default is md.
   width:
-
   sidebar:
     # Options: left and right. Leave blank to hide.
     position:
@@ -30,12 +29,12 @@ widget:
 
   background:
     # Options: primary, secondary, tertiary or any valid color value. Default is primary.
-    color: secondary
+    color: '#F5F5F5'
     image:
     # Options: auto, cover and contain. Default is auto.
-    size:
+    size: cover
     # Options: center, top, right, bottom, left.
-    position:
+    position: center
     # Options: fixed, local, scroll.
-    attachment:
+    attachment: fixed
 ---
