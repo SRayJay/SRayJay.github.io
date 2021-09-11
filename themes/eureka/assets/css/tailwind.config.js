@@ -14,7 +14,8 @@ module.exports = {
   theme: {
     fontFamily: {
       'serif': ['Lora', 'Noto Serif SC', 'serif'],
-      'mono': ['SFMono-Regular', 'Menlo', 'monospace'],
+      'mono': ['Consolas', 'PingFang SC', 'monospace'],
+      'consolas':['Consolas','PingFang SC']
     },
     extend: {
       height: {
