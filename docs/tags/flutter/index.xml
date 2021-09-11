@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Flutter on NotEnough</title>
+    <link>https://www.notenough.top/tags/flutter/</link>
+    <description>Recent content in Flutter on NotEnough</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 26 Aug 2019 17:31:22 +0800</lastBuildDate><atom:link href="https://www.notenough.top/tags/flutter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RGB灯带做棋盘的双人五子棋游戏</title>
+      <link>https://www.notenough.top/posts/gomoku/</link>
+      <pubDate>Mon, 26 Aug 2019 17:31:22 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/gomoku/</guid>
+      <description>&lt;p&gt;这是我短学期的任务,做的简陋，勉强能实现主要功能，写了技术文档，记录一下。&lt;/p&gt;
+&lt;h2 id=&#34;一-项目简介&#34;&gt;一、 项目简介&lt;/h2&gt;
+&lt;p&gt;本项目综合 arduino、flutter、node-red 以及 mqtt 协议开发一个可供电脑端和手机端共同游戏的五子棋游戏，并将游戏实时显示在 RGB 灯带组成的棋盘上。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>FlutterNote3</title>
+      <link>https://www.notenough.top/posts/flutternote3/</link>
+      <pubDate>Sun, 19 May 2019 14:28:33 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/flutternote3/</guid>
+      <description>&lt;h1 id=&#34;flutter-导航&#34;&gt;Flutter 导航&lt;/h1&gt;
+&lt;h2 id=&#34;父子级导航页面的跳转&#34;&gt;父子级导航页面的跳转&lt;/h2&gt;
+&lt;p&gt;因为 app 中包含不止一个界面，void main()后面不能用箭头函数，需要设定首页。&lt;/p&gt;
+&lt;p&gt;对于每个页面，用 class 分别定义，页面作为 home，return 的是 Scaffold 类，当然也可以是其他。在按钮上添加跳转到另一个页面的功能。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>FlutterNote2</title>
+      <link>https://www.notenough.top/posts/flutternote2/</link>
+      <pubDate>Mon, 13 May 2019 15:10:17 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/flutternote2/</guid>
+      <description>&lt;h1 id=&#34;flutter-布局&#34;&gt;Flutter 布局&lt;/h1&gt;
+&lt;h2 id=&#34;水平布局&#34;&gt;水平布局&lt;/h2&gt;
+&lt;p&gt;body:Row()中间内容比如说要放上按钮，直接 new 一个 RaisedButton，它的宽高是固定的，如果在它外面套上一个 Expanded(),子元素再放按钮，就能达到自适应长度的效果，不至于边上漏出一块白的那么丑。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>FlutterNote1</title>
+      <link>https://www.notenough.top/posts/flutternote1/</link>
+      <pubDate>Fri, 03 May 2019 10:24:09 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/flutternote1/</guid>
+      <description>&lt;h1 id=&#34;flutter-基本结构&#34;&gt;Flutter 基本结构&lt;/h1&gt;
+&lt;p&gt;以一个 helloworld 程序展示一个 flutter 应用的基本结构。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

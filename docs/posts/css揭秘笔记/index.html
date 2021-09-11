@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>《css揭秘》笔记 | NotEnough</title>
+
+<meta name="generator" content="Hugo Eureka 0.8.2" />
+<link rel="stylesheet" href="https://www.notenough.top/css/eureka.min.css">
+<script defer src="https://www.notenough.top/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
+  integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="粗读了《css 揭秘》这本书，里面提到的很多技巧和操作暂时用不到，可以在用到时当工具书看，目前对我有帮助的几个技巧做了个笔记。
+
+尽量使用相对单位。line-height 与 font-size 的比例而不要使用绝对值。em 单位（相对于当前元素的字体大小）可以在修改字体尺寸同时修改其他的数值。rem 则是根据根元素的字体大小。vw 单位是窗口宽度的 1%，因此需要某个元素在浏览器窗口改变时保持一定的比例，就用 vw 作单位。vh 则是窗口高度的 1%。
+">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Posts",
+      "item":"https://www.notenough.top/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"《css揭秘》笔记",
+      "item":"https://www.notenough.top/posts/css%E6%8F%AD%E7%A7%98%E7%AC%94%E8%AE%B0/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.notenough.top/posts/css%E6%8F%AD%E7%A7%98%E7%AC%94%E8%AE%B0/"
+    },
+    "headline": "《css揭秘》笔记 | NotEnough","datePublished": "2021-03-09T10:01:01+08:00",
+    "dateModified": "2021-03-09T10:01:01+08:00",
+    "wordCount":  149 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "C. Wang",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.notenough.top/images/icon.png"
+        }
+        },
+    "description": "\u003cp\u003e粗读了《css 揭秘》这本书，里面提到的很多技巧和操作暂时用不到，可以在用到时当工具书看，目前对我有帮助的几个技巧做了个笔记。\u003c\/p\u003e\n\u003col\u003e\n\u003cli\u003e尽量使用相对单位。line-height 与 font-size 的比例而不要使用绝对值。em 单位（相对于当前元素的字体大小）可以在修改字体尺寸同时修改其他的数值。rem 则是根据根元素的字体大小。vw 单位是窗口宽度的 1%，因此需要某个元素在浏览器窗口改变时保持一定的比例，就用 vw 作单位。vh 则是窗口高度的 1%。\u003c\/li\u003e\n\u003c\/ol\u003e"
+}
+</script><meta property="og:title" content="《css揭秘》笔记 | NotEnough" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://www.notenough.top/images/icon.png">
+
+
+<meta property="og:url" content="https://www.notenough.top/posts/css%E6%8F%AD%E7%A7%98%E7%AC%94%E8%AE%B0/" />
+
+
+
+
+<meta property="og:description" content="粗读了《css 揭秘》这本书，里面提到的很多技巧和操作暂时用不到，可以在用到时当工具书看，目前对我有帮助的几个技巧做了个笔记。
+
+尽量使用相对单位。line-height 与 font-size 的比例而不要使用绝对值。em 单位（相对于当前元素的字体大小）可以在修改字体尺寸同时修改其他的数值。rem 则是根据根元素的字体大小。vw 单位是窗口宽度的 1%，因此需要某个元素在浏览器窗口改变时保持一定的比例，就用 vw 作单位。vh 则是窗口高度的 1%。
+" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="NotEnough" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2021-03-09T10:01:01&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2021-03-09T10:01:01&#43;08:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="CSS" />
+
+
+
+
+
+<meta property="og:see_also" content="https://www.notenough.top/posts/css%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/" />
+
+<meta property="og:see_also" content="https://www.notenough.top/posts/marginbug/" />
+
+<meta property="og:see_also" content="https://www.notenough.top/posts/cssnote/" />
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">NotEnough</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">About</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">Posts</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Docs</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">《css揭秘》笔记</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-03-09</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <p>粗读了《css 揭秘》这本书，里面提到的很多技巧和操作暂时用不到，可以在用到时当工具书看，目前对我有帮助的几个技巧做了个笔记。</p>
+<ol>
+<li>尽量使用相对单位。line-height 与 font-size 的比例而不要使用绝对值。em 单位（相对于当前元素的字体大小）可以在修改字体尺寸同时修改其他的数值。rem 则是根据根元素的字体大小。vw 单位是窗口宽度的 1%，因此需要某个元素在浏览器窗口改变时保持一定的比例，就用 vw 作单位。vh 则是窗口高度的 1%。</li>
+</ol>
+<ol start="2">
+<li>
+<p>要做定义类型的表示，如“作者：XXX”,可以用更加语义化的标签，dl，dt，dd。三者都是块元素，需要 dt 和 dd 在同一行的话得转换成行内元素。而在第二个 dt 出现前，需要给前一个 dd 加上一个换行符，采用伪元素的方式添加换行符，而 dd 若需要两条内容，可以同样的方法在其之间添上’，‘</p>
+<pre><code class="language-html">&lt;style&gt;
+  dt,
+  dd {
+    display: inline;
+  }
+  dd {
+    margin: 0;
+  }
+  dd + dt::before {
+    content: '\A';
+    white-space: pre;
+  }
+  dd + dd::before {
+    content: ',';
+  }
+&lt;/style&gt;
+&lt;dl&gt;
+  &lt;dt&gt;物种：&lt;/dt&gt;
+  &lt;dd&gt;人&lt;/dd&gt;
+  &lt;dt&gt;生日：&lt;/dt&gt;
+  &lt;dd&gt;3.9&lt;/dd&gt;
+  &lt;dd&gt;3.8&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+</li>
+<li>
+<p>需要实现矩形有切角，可以用 background：linear-gradient(-45deg,transparent 25px,#58a 0);其中 25px 是切角的大小，#58a 是背景颜色。</p>
+</li>
+<li>
+<p>要实现按钮背景矩形歪斜成平行四边形，需要用到 transform:skew(-45deg)，但是里面的文字也会歪斜，要想让文字不变，需要用到伪元素生成一个等大的矩形，并用 z-index 使其在底部，不要盖住文字，只要把伪元素生成的矩形歪斜就好了。</p>
+<pre><code class="language-css">#skewbtn {
+  background: none;
+  width: 6em;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  height: 2em;
+  color: white;
+  position: relative;
+}
+#skewbtn::before {
+  content: '';
+  height: 2em;
+  width: 6em;
+  background: #58a;
+  z-index: -1;
+  transform: skew(-45deg);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+</code></pre>
+</li>
+<li>
+<p>自适应内部元素，当一个盒模型内部有一个元素比较小，但希望这个盒模型就以这个元素的宽度为准，而不是被其他元素撑大。可以试试 width:min-content;并以 margin:auto;居中。</p>
+</li>
+<li>
+<p>满幅的背景，定宽的内容。一般我做的时候都是给内容定了 1024px 的宽，并用 margin:auto 来居中，但要想更适应窗口缩小的情况，就要根据视口大小的百分比来调整。这边的优化是用 padding:1em calc(50%-512px);</p>
+<p>calc(50%-512px)等同于 max-width:1024px，内容最宽为 1024px，并且根据视口的一半来调整，更加人性化。</p>
+</li>
+<li>
+<p>垂直居中：最好用 flexbox，给待居中的元素的父元素设置 display:flex;同时给待居中的元素一个 margin:auto。同时借助 align-items 和 justify-content 还能实现对内部元素的操作。</p>
+</li>
+<li>
+<p>页脚紧贴底部：给 body 个 display:flex，flex-flow:column;然后给 min-height:100vh;这时依然还不会拉伸 main 部分，需要给 main 一个 flex:1。就能使 footer 沉底了</p>
+</li>
+</ol>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://www.notenough.top/tags/css/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#CSS</a>
+    
+</div>
+        
+        
+        
+
+
+        
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://www.notenough.top/posts/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90css%E7%AC%94%E8%AE%B0/" class="block">《深入解析css》笔记</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://www.notenough.top/posts/css%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/" class="block">css常用技巧</a>
+        
+    </div>
+</div>
+
+        
+
+
+
+    </div>
+    
+
+    
+    
+    <div
+        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded p-6">
+        <h2 class="text-lg font-semibold mb-4">相关</h2>
+        <div class="content">
+            
+            <a href="https://www.notenough.top/posts/css%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/">css常用技巧</a>
+            <br />
+            
+            <a href="https://www.notenough.top/posts/marginbug/">margin塌陷和合并</a>
+            <br />
+            
+            <a href="https://www.notenough.top/posts/cssnote/">CSS笔记</a>
+            <br />
+            
+        </div>
+    </div>
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>FlutterNote1 | NotEnough</title>
+
+<meta name="generator" content="Hugo Eureka 0.8.2" />
+<link rel="stylesheet" href="https://www.notenough.top/css/eureka.min.css">
+<script defer src="https://www.notenough.top/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
+  integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="Flutter 基本结构
+以一个 helloworld 程序展示一个 flutter 应用的基本结构。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Posts",
+      "item":"https://www.notenough.top/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"FlutterNote1",
+      "item":"https://www.notenough.top/posts/flutternote1/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.notenough.top/posts/flutternote1/"
+    },
+    "headline": "FlutterNote1 | NotEnough","datePublished": "2019-05-03T10:24:09+08:00",
+    "dateModified": "2019-05-03T10:24:09+08:00",
+    "wordCount":  259 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "C. Wang",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.notenough.top/images/icon.png"
+        }
+        },
+    "description": "\u003ch1 id=\u0022flutter-基本结构\u0022\u003eFlutter 基本结构\u003c\/h1\u003e\n\u003cp\u003e以一个 helloworld 程序展示一个 flutter 应用的基本结构。\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="FlutterNote1 | NotEnough" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://www.notenough.top/images/icon.png">
+
+
+<meta property="og:url" content="https://www.notenough.top/posts/flutternote1/" />
+
+
+
+
+<meta property="og:description" content="Flutter 基本结构
+以一个 helloworld 程序展示一个 flutter 应用的基本结构。" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="NotEnough" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2019-05-03T10:24:09&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2019-05-03T10:24:09&#43;08:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="Flutter" />
+
+
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">NotEnough</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">About</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">Posts</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Docs</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">FlutterNote1</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-05-03</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>2分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <h1 id="flutter-基本结构">Flutter 基本结构</h1>
+<p>以一个 helloworld 程序展示一个 flutter 应用的基本结构。</p>
+<pre><code class="language-dart">    import 'package:flutter/material.dart';
+    void main() =&gt; runApp(Myapp());
+    class Myapp extends StatelessWidget{
+        @override
+        Widget build(BuildContext context) {
+            return MaterialApp(
+                title: 'Hello World',
+                home: Scaffold(
+                    appBar: new AppBar(
+                    title: Text('Hello World'),
+                    ),
+                body: Center(
+                    child: Text('Hello Flutter!',style: TextStyle(fontSize: 25.0),),
+                    )
+                ),
+            );
+        }
+    }
+</code></pre>
+<h1 id="flutter-常用控件">Flutter 常用控件</h1>
+<h2 id="1text-控件">1.Text 控件</h2>
+<p>textAlign：TextAlign.center 控制文本居中显示，当然还有 left、right、start、end 等属性值</p>
+<p>maxLines：该文本最多显示成几行，填数字即可。溢出部分不显示。</p>
+<p>overflow：文本溢出处理，属性值 TetxOverflow.(clip)(fade)(ellipsis),分别是切除，渐变，省略</p>
+<p><strong>style</strong>：TextStyle()内包含其他属性。fontsize：25.0(要用浮点数)。color:Color.fromARGB(a,r,g,b)。</p>
+<p>decoration:TextDecoration.underline 代表文本加下划线。</p>
+<p>decorationstyle：TextDecorationStyle.solid 代表装饰是实线。</p>
+<h2 id="2container-控件">2.Container 控件</h2>
+<p>相当于 html 里的 div，就是一个块儿。</p>
+<p>alignment:Alignment.center&ndash;对齐格式，点后面也可以带两个单词，比如 bottomleft，即底部靠左，也可以用坐标(x,y)表示。</p>
+<p>对于一个 div，肯定有 width、height、color 等属性，其属性值是浮点数，得带小数点。</p>
+<p>padding 和 margin： EdgeInsets.all(10.0)代表上下左右四个方向都有 10.0 的 padding 或者 margin。当然用方法.fromLTRB 带四个参数更随心所欲。</p>
+<p>decoration: new BoxDecoration(),内部加其他属性。比如 gradient(渐变色): LinearGradient(colors:[Colors.blue,colors.green])。注意渐变色与 color 冲突。</p>
+<p>还能加 border:Border.all(width:5.0,color:Colors.red),代表四个方向的边框线。</p>
+<h2 id="3image-控件">3.Image 控件</h2>
+<p>new 一个 Image 控件，有四种类型，分别是 asset（本地资源）、file（本地图片）、memory、network（网络图片）。</p>
+<p>加入图片后还可以用 fit:BoxFit 选择填充方法。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">属性名称</th>
+<th style="text-align:center">样式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">BoxFit.contain</td>
+<td style="text-align:center">全图居中显示但不充满，显示原比例</td>
+</tr>
+<tr>
+<td style="text-align:center">BoxFit.fill</td>
+<td style="text-align:center">全图显示且填充满，图片可能会拉伸</td>
+</tr>
+<tr>
+<td style="text-align:center">BoxFit.cover</td>
+<td style="text-align:center">图片可能拉伸，也可能裁剪，但是充满容器</td>
+</tr>
+<tr>
+<td style="text-align:center">BoxFit.fitHeight</td>
+<td style="text-align:center">图片可能拉伸，可能裁剪，高度充满</td>
+</tr>
+<tr>
+<td style="text-align:center">BoxFit.fitWidth</td>
+<td style="text-align:center">图片可能拉伸，可能裁剪，宽度充满</td>
+</tr>
+<tr>
+<td style="text-align:center">BoxFit.scaleDown</td>
+<td style="text-align:center">效果和 contain 差不多， 但是只能缩小图片，不能放大图片</td>
+</tr>
+</tbody>
+</table>
+<p>也可以再加入颜色，并用 colorBlendMode:BlendMode.XXX 来混色。</p>
+<p>repeat：ImageRepeat 设置图片重复填充的方式。</p>
+<h2 id="4listview-控件">4.ListView 控件</h2>
+<p>new 一个 ListView 列表控件</p>
+<pre><code class="language-dart">body:new ListView(
+    children: &lt;Widget&gt;[
+        new ListTile(
+            leading:new Icon(Icons.XXX),
+            title:new Text('XXX')
+        )
+        ......
+    ]
+)
+</code></pre>
+<p>作为列表项的组件也可以不是 icon，而是图片，就要用到 image 了。</p>
+<h3 id="横向列表">横向列表</h3>
+<p>在 listview 中 scrollDirection: Axis.horizontal，代表横向列表。然后每个列表部件只设置宽度，可以左右拉动。如果是纵向列表，那就是 Axis.vertical，每个部件设置高度，可以下拉。</p>
+<h3 id="动态列表">动态列表</h3>
+<p>在 runApp()中声明列表项，如 items:List(),中间加数字可以固定列表长度。items:List<code>&lt;string&gt;</code>()确定了项的类型，items:[1,2,3]直接赋值。</p>
+<p>还有 items:List<code>&lt;string&gt;</code>.generate(1000,(i)=&gt;&ldquo;Items &amp;i&rdquo;)用 generate 函数，相当于数组，i 则是下标。引号内容是每一项的格式，&amp;号作替换符。</p>
+<p>举个例子：</p>
+<pre><code class="language-dart">import 'package:flutter/material.dart';
+void main() =&gt; runApp(Myapp(
+  items:List&lt;String&gt;.generate(1000, (i)=&gt;&quot;第$i项：&quot;)
+));
+class Myapp extends StatelessWidget{
+  final List&lt;String&gt; items;
+//  接收items参数
+  Myapp({Key key,@required this.items}):super(key:key);
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Hello World',
+      home: Scaffold(
+        appBar: new AppBar(
+          title: Text('动态列表'),
+        ),
+        body: new ListView.builder(
+          itemCount: items.length,//得到传递过来的参数的长度
+          itemBuilder: (context,index){
+            return new ListTile(
+              title: Text('${items[index]}'),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+</code></pre>
+<h3 id="网格列表">网格列表</h3>
+<p>以文本表示的网格列表，换成 Image 控件可以显示图片。</p>
+<pre><code class="language-dart">body: GridView.count(
+    padding:EdgeInsets.all(30.0),
+    crossAxisSpacing:20.0,//网格之间的间距
+    crossAxisCount:3 //每行显示的列表项个数
+    children:&lt;Widget&gt;[
+        Text:&quot;...&quot;
+        Text:&quot;...&quot;
+        ...
+    ]
+)
+</code></pre>
+<p>另一种网格列表的写法:</p>
+<pre><code class="language-dart">body: GridView(
+    gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount:3,
+        mainAxisSpacing:2.0,//纵向列表项间距
+        CrossAxisSpacing:2.0,//横向列表项间距
+        childAspectRatio:1.0,//宽高比
+    )，
+    children：&lt;Widget&gt;[
+        new Image.network(src),
+        ....
+        ....
+    ],
+)
+</code></pre>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://www.notenough.top/tags/flutter/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Flutter</a>
+    
+</div>
+        
+        
+        
+
+
+        
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://www.notenough.top/posts/flutternote2/" class="block">FlutterNote2</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://www.notenough.top/posts/winrar-pojie/" class="block">WinRAR破解</a>
+        
+    </div>
+</div>
+
+        
+
+
+
+    </div>
+    
+
+    
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>

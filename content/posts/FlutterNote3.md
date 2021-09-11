@@ -2,7 +2,8 @@
 title: FlutterNote3
 date: 2019-05-19T14:28:33+08:00
 categories: note
-tags: Flutter
+tags:
+  - Flutter
 draft: false
 ---
 

@@ -2,7 +2,8 @@
 title: Python基础知识笔记
 date: 2019-01-05T14:42:45+08:00
 categories: note
-tags: Python
+tags:
+  - Python
 draft: false
 ---
 

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>VueNote1 | NotEnough</title>
+
+<meta name="generator" content="Hugo Eureka 0.8.2" />
+<link rel="stylesheet" href="https://www.notenough.top/css/eureka.min.css">
+<script defer src="https://www.notenough.top/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
+  integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="每个 vue 应用都需要实例化 vue
+对于 html 中 id 为 app 的元素，对其实例化。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Posts",
+      "item":"https://www.notenough.top/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"VueNote1",
+      "item":"https://www.notenough.top/posts/vuenote/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.notenough.top/posts/vuenote/"
+    },
+    "headline": "VueNote1 | NotEnough","datePublished": "2019-05-27T21:58:46+08:00",
+    "dateModified": "2019-05-27T21:58:46+08:00",
+    "wordCount":  478 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "C. Wang",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.notenough.top/images/icon.png"
+        }
+        },
+    "description": "\u003cp\u003e每个 vue 应用都需要实例化 vue\u003c\/p\u003e\n\u003cp\u003e对于 html 中 id 为 app 的元素，对其实例化。\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="VueNote1 | NotEnough" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://www.notenough.top/images/icon.png">
+
+
+<meta property="og:url" content="https://www.notenough.top/posts/vuenote/" />
+
+
+
+
+<meta property="og:description" content="每个 vue 应用都需要实例化 vue
+对于 html 中 id 为 app 的元素，对其实例化。" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="NotEnough" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2019-05-27T21:58:46&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2019-05-27T21:58:46&#43;08:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="Vue" />
+
+
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">NotEnough</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">About</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">Posts</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Docs</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">VueNote1</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-05-27</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>3分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <p>每个 vue 应用都需要实例化 vue</p>
+<p>对于 html 中 id 为 app 的元素，对其实例化。</p>
+<pre><code class="language-javascript">var vm = new Vue({
+    el: '#app',
+    data: {
+        site: 'aaa',
+        num: 23
+    }
+    methods:{
+        func: function(){
+            return this.site + 'bbb';
+        }
+    }
+})
+</code></pre>
+<p>el 参数就是选中的标签的 id 值，只对其作用。</p>
+<p>data 定义的是其属性，methods 就是方法函数了。</p>
+<p>在 html 标签中使用{{site}}这样由两层大括号包裹起来的数据将被 vm 实例内容替换。</p>
+<p>vue 实例内容与 html 内容绑定，可以互相找到也可以互相改变。</p>
+<p>对于 vue 自带的属性和方法，可以加个前缀$，以区分开和用户自己定义的属性。</p>
+<h2 id="vue-指令">Vue 指令</h2>
+<p>v-html：用于输出 html 标签</p>
+<pre><code class="language-html">&lt;div id=&quot;app&quot;&gt;
+  &lt;div v-html=&quot;message&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  new Vue({
+    el: '#app',
+    data: {
+      message: '&lt;p&gt;text&lt;/p&gt;',
+    },
+  })
+&lt;/script&gt;
+</code></pre>
+<p>v-if：根据 if 后面跟的属性的布尔值来判定是否产生效果</p>
+<pre><code class="language-javascript">;&lt;div id=&quot;app-3&quot;&gt;
+  &lt;p v-if=&quot;seen&quot;&gt;现在你看到我了&lt;/p&gt;
+&lt;/div&gt;
+var app3 = new Vue({
+  el: '#app-3',
+  data: {
+    seen: true,
+  },
+})
+</code></pre>
+<p>还有 v-else、v-else-if 这两个就和其他语言一样的意思，只不过每次使用都得在一个 div 块里。</p>
+<p>v-on：可以用于添加一个事件监听器，可以加入一个函数，触发事件时调用函数，也可以加入一个内联语句。(v-on:可以缩写为@)</p>
+<pre><code class="language-javascript">;&lt;div id=&quot;app-5&quot;&gt;
+  &lt;p&gt;{{ message }}&lt;/p&gt;
+  &lt;button v-on:click=&quot;reverseMessage&quot;&gt;逆转消息&lt;/button&gt;
+&lt;/div&gt;
+var app5 = new Vue({
+  el: '#app-5',
+  data: {
+    message: 'Hello Vue.js!',
+  },
+  methods: {
+    reverseMessage: function () {
+      this.message = this.message.split('').reverse().join('')
+    },
+  },
+})
+</code></pre>
+<p>该例子监听了一个点击效果，实现对 message 的逆转</p>
+<p>v-model：用来在 input、select、textarea、checkbox、radio 等表单控件元素上创建双向数据绑定，根据表单上的值，自动更新绑定的元素的值。</p>
+<pre><code class="language-javascript">&lt;div id=&quot;app-6&quot;&gt;
+  &lt;p&gt;{{ message }}&lt;/p&gt;
+  &lt;input v-model=&quot;message&quot;&gt;
+&lt;/div&gt;
+var app6 = new Vue({
+  el: '#app-6',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+</code></pre>
+<p>v-bind：动态更新 html 元素上的属性。比如 id，class，href。(v-bind:可以缩写为:)</p>
+<pre><code class="language-javascript">;&lt;div id=&quot;app&quot;&gt;
+  &lt;a v-bind:href=&quot;url&quot;&gt;链接&lt;/a&gt;
+&lt;/div&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    url: 'http://google.com',
+  },
+})
+</code></pre>
+<p>:class 与普通的 class 可以并存，一般可以通过:class 绑定一个布尔值，当其为真时使该类生效。当:class 的表达式过长或逻辑复杂时还可以绑定一个计算属性。例如：</p>
+<pre><code class="language-javascript">&lt;div id=&quot;app&quot;&gt;
+  &lt;div :class=&quot;classes&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    isActive: true,
+    error: null
+    },
+  computed:{
+    classes: function(){
+      return {
+        active: this.isActive &amp;&amp; !this.error,
+        'text-fail':this.error &amp;&amp; this.error.type === 'fail'
+      }
+    }
+  }
+})
+</code></pre>
+<p><strong>vue 在渲染元素时，出于效率考虑，会尽可能复用已有的元素而非重新渲染。加入一个唯一的 key 值就能使他重新渲染</strong></p>
+<p>v-show: 用法与 v-if 类似，后面跟一个表达式，判定值是否为真而决定元素是否隐藏。值为真显示，为假隐藏。v-show 只是简单的 css 属性切换，无论条件是否为真，都会进行编译，无非就是 display 属性改变了值而已。而 v-if 才是真正的条件渲染。</p>
+<p>v-for：列表渲染指令。该指令可以绑定数组的数据来渲染一个项目列表。须以 site in sites 这样的形式，sites 为源数据数组名并且 site 是数组元素迭代的别名。本质上是一个循环。</p>
+<p>对于内容是一个对象的，也可以加入其他参数，键、值、序号皆可,对象的属性也可以被循环遍历。也可以迭代整数。</p>
+<pre><code class="language-javascript">&lt;div id=&quot;app-4&quot;&gt;
+  &lt;ol&gt;
+    &lt;li v-for=&quot;todo in todos&quot;&gt;
+      {{ todo.text }}
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+var app4 = new Vue({
+  el: '#app-4',
+  data: {
+    todos: [
+      { text: '学习 JavaScript' },
+      { text: '学习 Vue' },
+      { text: '学习 Android' }
+    ]
+  }
+})
+</code></pre>
+<p>与 v-if 一样，v-for 也可以用在内置标签 template 上，将多个元素进行渲染。</p>
+<pre><code class="language-javascript">&lt;div id=&quot;app&quot;&gt;
+  &lt;ul&gt;
+    &lt;template v-for=&quot;book in books&quot;&gt;
+      &lt;li&gt;书名：{{book.name}}&lt;/li&gt;
+      &lt;li&gt;作者：{{book.author}}&lt;/li&gt;
+    &lt;/template&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    books: [
+      {
+        name:'《月亮与六便士》',
+        author: '毛姆'
+      },
+      {
+        name:'《一个人的村庄》',
+        author:'刘亮程'
+      },
+      {
+        name:'《陶庵梦忆》',
+        author:'张岱'
+      }
+    ]
+  },
+})
+</code></pre>
+<h2 id="vue-组件">Vue 组件</h2>
+<p>要在父实例中使用这个组件，必须要在实例创建前注册，之后就可以用<code>&lt;my-component&gt;&lt;/my-component&gt;</code>的形式来使用组件了。</p>
+<pre><code class="language-html">&lt;div id=&quot;app&quot;&gt;
+  &lt;my-component&gt;&lt;/my-component&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  Vue.component('my-component', {
+    template: '&lt;div&gt;这里是组件的内容&lt;/div&gt;',
+  })
+
+  var app = new Vue({
+    el: '#app',
+  })
+&lt;/script&gt;
+</code></pre>
+<p><strong>template 的 DOM 结构必须被一个元素包含，如果直接写成‘这里是组件的内容’，不带<code>&lt;div&gt;&lt;/div&gt;</code>是无法渲染的</strong></p>
+<p><strong>Vue 组件的模板在某些情况下会受到 HTML 的限制，比如<code>&lt;table&gt;</code>内规定只能是<code>&lt;tr&gt;</code>、<code>&lt;td&gt;</code>、<code>&lt;th&gt;</code>等表格元素，所以在 table 标签内直接使用组件是无效的。这种情况下，可以使用<code>&lt;tbody</code> is=&ldquo;my-component&rdquo;&gt;<code>&lt;/tbody&gt;</code>来使用组件。同理，还有限制元素如<code>&lt;ul&gt;</code>、<code>&lt;ol&gt;</code>、<code>&lt;select&gt;</code></strong></p>
+<p>组件可以使用其单独定义的 data，methods，computed，但 data 里要求必须是函数，将数据 return。</p>
+<pre><code class="language-javascript">Vue.component('my-component',{
+  template: '&lt;div&gt;{{ message }}&lt;/div&gt;'
+  data: function(){
+    return {
+      message: '组件内容'
+    }
+  }
+});
+</code></pre>
+<h3 id="使用-props-传递数据">使用 props 传递数据</h3>
+<p>使用 props 来声明需要从父级接收的数据，props 的值可以是两种，一种是字符串数组，一种是对象。</p>
+<pre><code class="language-html">&lt;div id=&quot;app&quot;&gt;
+  &lt;my-component message=&quot;来自父组件&quot;&gt;&lt;/my-component&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  Vue.component('my-component', {
+    props: ['message'],
+    template: '&lt;div&gt;{{ message }}&lt;/div&gt;',
+  })
+  var app = new Vue({
+    el: '#app',
+  })
+&lt;/script&gt;
+</code></pre>
+<p>props 中声明的数据与组件 data 函数 return 的数据主要区别在于 props 的来自父级，data 中的是组件自己的数据，作用域是组件本身。</p>
+<p><strong>由于 HTML 特性不区分大小写，当使用 DOM 模板时，驼峰命名的 props 名称转为短横分割命名。比如 props 中&rsquo;warningText'，到 html 中组件属性里就是 warning-text</strong></p>
+<p>要写动态数据，则需要 v-bind 来绑定数据了。一个区别在于：</p>
+<pre><code class="language-html">&lt;div id=&quot;app&quot;&gt;
+  &lt;my-component message=&quot;[1,2,3]&quot;&gt;&lt;/my-component&gt;
+  &lt;my-component :message=&quot;[1,2,3]&quot;&gt;&lt;/my-component&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  Vue.component('my-component', {
+    props: ['message'],
+    template: '&lt;div&gt;{{ message.length }}&lt;/div&gt;',
+  })
+  var app = new Vue({
+    el: '#app',
+  })
+&lt;/script&gt;
+</code></pre>
+<p>这个例子第一个输出 7，第二个输出 3。第一个是被写死了，只传递字符串，长度就是“”中字符个数，第二种使用 v-bind 才能传递数组（布尔值、数字、对象）</p>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://www.notenough.top/tags/vue/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Vue</a>
+    
+</div>
+        
+        
+        
+
+
+        
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://www.notenough.top/posts/vuenote2/" class="block">VueNote2</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://www.notenough.top/posts/jsnote/" class="block">JavaScript基础</a>
+        
+    </div>
+</div>
+
+        
+
+
+
+    </div>
+    
+
+    
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>

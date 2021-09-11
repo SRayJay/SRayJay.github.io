@@ -2,7 +2,8 @@
 title: Vue@路径别名设置
 date: 2021-06-06T17:57:12+08:00
 categories: solution
-tags: Vue
+tags:
+  - Vue
 draft: false
 ---
 

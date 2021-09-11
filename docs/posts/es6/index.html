@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>ES6笔记 | NotEnough</title>
+
+<meta name="generator" content="Hugo Eureka 0.8.2" />
+<link rel="stylesheet" href="https://www.notenough.top/css/eureka.min.css">
+<script defer src="https://www.notenough.top/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
+  integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="一、let 和 var 的区别以及 const
+
+
+let 声明的变量只在所在块中生效；
+
+
+let 声明的变量可以解决 var 与 for 循环结合使用产生的无法取得最新变量值的问题（以往都需要通过闭包来解决这个问题）；
+
+">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Posts",
+      "item":"https://www.notenough.top/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"ES6笔记",
+      "item":"https://www.notenough.top/posts/es6/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.notenough.top/posts/es6/"
+    },
+    "headline": "ES6笔记 | NotEnough","datePublished": "2021-05-21T20:57:31+08:00",
+    "dateModified": "2021-05-21T20:57:31+08:00",
+    "wordCount":  667 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "C. Wang",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.notenough.top/images/icon.png"
+        }
+        },
+    "description": "\u003ch2 id=\u0022一let-和-var-的区别以及-const\u0022\u003e一、let 和 var 的区别以及 const\u003c\/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003elet 声明的变量\u003cstrong\u003e只在所在块中生效\u003c\/strong\u003e；\u003c\/p\u003e\n\u003c\/li\u003e\n\u003cli\u003e\n\u003cp\u003elet 声明的变量可以解决 var 与 for 循环结合使用产生的无法取得最新变量值的问题（以往都需要通过闭包来解决这个问题）；\u003c\/p\u003e\n\u003c\/li\u003e\n\u003c\/ul\u003e"
+}
+</script><meta property="og:title" content="ES6笔记 | NotEnough" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://www.notenough.top/images/icon.png">
+
+
+<meta property="og:url" content="https://www.notenough.top/posts/es6/" />
+
+
+
+
+<meta property="og:description" content="一、let 和 var 的区别以及 const
+
+
+let 声明的变量只在所在块中生效；
+
+
+let 声明的变量可以解决 var 与 for 循环结合使用产生的无法取得最新变量值的问题（以往都需要通过闭包来解决这个问题）；
+
+" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="NotEnough" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2021-05-21T20:57:31&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2021-05-21T20:57:31&#43;08:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="JavaScript" />
+
+
+
+
+
+<meta property="og:see_also" content="https://www.notenough.top/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B0%8F%E7%BB%93/" />
+
+<meta property="og:see_also" content="https://www.notenough.top/posts/gomoku/" />
+
+<meta property="og:see_also" content="https://www.notenough.top/posts/jsnote/" />
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">NotEnough</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">About</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">Posts</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Docs</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">ES6笔记</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-05-21</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>4分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <h2 id="一let-和-var-的区别以及-const">一、let 和 var 的区别以及 const</h2>
+<ul>
+<li>
+<p>let 声明的变量<strong>只在所在块中生效</strong>；</p>
+</li>
+<li>
+<p>let 声明的变量可以解决 var 与 for 循环结合使用产生的无法取得最新变量值的问题（以往都需要通过闭包来解决这个问题）；</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>let 声明的变量<strong>不存在变量提升</strong>，var 出的变量在脚本开始运行时就存在了，但值是 undefined，但用 let 会显示尚未定义；</p>
+</li>
+<li>
+<p>let 不允许重复声明；</p>
+</li>
+</ul>
+<p>const 声明的变量行为与 let 类似，只是多了两点更强的约束：</p>
+<p>​ <strong>1.声明时必须初始化；</strong></p>
+<p>​ <strong>2.声明的变量内存地址不可变。</strong></p>
+<p><strong>需要注意的是</strong>：对于用 const 声明基本类型，值就保存在内存地址之中，意味着变量不可重新赋值；对于用 const 声明的对象，对象内容还是可以更改的，只是不能改变其指向。（冻结对象应该用 Object.freeze()）</p>
+<h2 id="二解构赋值">二、解构赋值</h2>
+<h4 id="1数组解构">1、数组解构</h4>
+<pre><code class="language-swift"> let arr = [1, 2, 3];
+ let [a, b, c] = arr;
+ console.log(a, b, c) //1,2,3
+</code></pre>
+<h4 id="2对象解构">2、对象解构</h4>
+<pre><code class="language-javascript">const person = {
+  name: 'qiyue',
+  age: 23,
+  language: ['java', 'js', 'css'],
+}
+const { name, age, language } = person
+console.log(name, age, language) //qiyue 23 (3) [&quot;java&quot;, &quot;js&quot;, &quot;css&quot;]
+</code></pre>
+<pre><code class="language-javascript">const person = {
+  name: 'qiyue',
+  age: 23,
+  language: ['java', 'js', 'css'],
+}
+//从person里解析出name的值在赋值给abc
+const { name: abc, age, language } = person
+console.log(abc, age, language) //qiyue 23 (3) [&quot;java&quot;, &quot;js&quot;, &quot;css&quot;]
+</code></pre>
+<h2 id="三字符串">三、字符串</h2>
+<p>1、拓展方法：</p>
+<ul>
+<li><strong>includes()</strong>：返回布尔值，判断是否找到参数字符串。</li>
+<li><strong>startsWith()</strong>：返回布尔值，判断参数字符串是否在原字符串的头部。</li>
+<li><strong>endsWith()</strong>：返回布尔值，判断参数字符串是否在原字符串的尾部。</li>
+<li><strong>repeat()</strong>：返回新的字符串，表示将字符串重复指定次数返回。</li>
+<li><strong>padStart</strong>：返回新的字符串，表示用参数字符串从头部（左侧）补全原字符串。</li>
+<li><strong>padEnd</strong>：返回新的字符串，表示用参数字符串从尾部（右侧）补全原字符串。</li>
+</ul>
+<p>2、模板字符串</p>
+<p>普通字符串</p>
+<pre><code class="language-js">let string = `Hello'\n'world`
+console.log(string)
+// &quot;Hello'
+// 'world&quot;
+</code></pre>
+<p>多行字符串:</p>
+<pre><code class="language-js">let string1 = `Hey,
+can you stop angry now?`
+console.log(string1)
+// Hey,
+// can you stop angry now?
+</code></pre>
+<p>字符串插入变量和表达式。</p>
+<p>变量名写在 ${} 中，${} 中可以放入 JavaScript 表达式。</p>
+<pre><code class="language-js">let name = 'Mike'
+let age = 27
+let info = `My Name is ${name},I am ${age + 1} years old next year.`
+console.log(info)
+// My Name is Mike,I am 28 years old next year.
+</code></pre>
+<p>字符串中调用函数：</p>
+<pre><code class="language-js">function f() {
+  return 'have fun!'
+}
+let string2 = `Game start,${f()}`
+console.log(string2) // Game start,have fun!
+</code></pre>
+<p>3、标签模板</p>
+<p>标签模板，是一个函数的调用，其中调用的参数是模板字符串。</p>
+<pre><code class="language-js">alert`Hello world!`
+// 等价于
+alert('Hello world!')
+</code></pre>
+<p>当模板字符串中带有变量，会将模板字符串参数处理成多个参数。</p>
+<pre><code class="language-js">function f(stringArr, ...values) {
+  let result = ''
+  for (let i = 0; i &lt; stringArr.length; i++) {
+    result += stringArr[i]
+    if (values[i]) {
+      result += values[i]
+    }
+  }
+  return result
+}
+let name = 'Mike'
+let age = 27
+f`My Name is ${name},I am ${age + 1} years old next year.`
+// &quot;My Name is Mike,I am 28 years old next year.&quot;
+
+f`My Name is ${name},I am ${age + 1} years old next year.`
+// 等价于
+f(['My Name is', ',I am ', ' years old next year.'], 'Mike', 28)
+</code></pre>
+<h2 id="四函数">四、函数</h2>
+<p>1、函数默认值：直接给参数写上默认值，没传就会自动使用默认值。</p>
+<pre><code class="language-js">function add(a, b = 1) {
+  return a + b
+}
+console.log(add(10)) //11
+</code></pre>
+<p>2、不定参数：不定参数用了表示不确定的参数个数，形如…变量名，由…加上要给具名参数标识符组成。具名参数只能放在参数列表的最后，并且有且只有一个不定参数</p>
+<pre><code class="language-js">function f(...values) {
+  console.log(values.length)
+}
+f(1, 2) //2
+f(1, 2, 3, 4) //4
+</code></pre>
+<p>3、箭头函数</p>
+<pre><code class="language-js">var f = (v) =&gt; v
+//等价于
+var f = function (a) {
+  return a
+}
+</code></pre>
+<p>当箭头函数没有参数或者有多个参数，要用 <strong>()</strong> 括起来。</p>
+<pre><code class="language-js">var f = (a, b) =&gt; a + b
+f(6, 2) //8
+var f = () =&gt; console.log(123)
+f() //123
+</code></pre>
+<p>当箭头函数函数体有多行语句，用 <strong>{}</strong> 包裹起来，表示代码块，当只有一行语句，并且需要返回结果时，可以省略 <strong>{}</strong> , 结果会自动返回。</p>
+<blockquote>
+<p>注意点：没有 this、super、arguments 和 new.target 绑定。this 对象是外层的 this</p>
+</blockquote>
+<p>4、箭头函数结合解构表达式</p>
+<pre><code class="language-js">//以前
+function hello(person) {
+  console.log('hello' + person.name)
+}
+hello(person) //helloqiyue
+//箭头函数
+let hello2 = (params) =&gt; console.log('hello' + person.name)
+hello2(person) //helloqiyue
+//箭头函数加解构表达式
+var hello3 = ({ name }) =&gt; console.log('hello' + name)
+hello3(person) //helloqiyue
+</code></pre>
+<p>5、箭头函数和普通函数的区别</p>
+<ul>
+<li>箭头函数没有自己的 this，指向的是外层的，且指向永远不变</li>
+<li>箭头函数的 this 不能被 call、apply、bind 改变</li>
+<li>箭头函数不能做构造函数</li>
+<li>箭头函数没有 arguments</li>
+</ul>
+<h2 id="五对象">五、对象</h2>
+<p>1、新方法：</p>
+<ul>
+<li>key(obj)：获取对象的所有 key 形成的数组</li>
+<li>value(obj):获取对象的所有 value 形成的数组</li>
+<li>entries(obj):获取对象所有的 key 和 value 形成的二维数组</li>
+</ul>
+<pre><code class="language-js">const person = {
+  name: 'qiyue',
+  age: 23,
+  language: ['java', 'js', 'css'],
+}
+console.log(Object.keys(person)) //[&quot;name&quot;,&quot;age&quot;,&quot;language&quot;]
+console.log(Object.values(person)) // [&quot;qiyue&quot;,23,Array(3)]
+console.log(Object.entries(person)) //[Array(2),Array(2),Array(2)]
+</code></pre>
+<p>2、Object.assign 方法的第一个参数是目标对象，后面的参数都是源对象；将源对象的属性赋值到目标对象中</p>
+<pre><code class="language-js">const target = { a: 1 }
+const source1 = { b: 2 }
+const source2 = { c: 3 }
+Object.assign(target, source1, source2)
+console.log(target) //{a: 1, b: 2, c: 3}
+</code></pre>
+<p>3、 声明对象简写</p>
+<pre><code class="language-js">//以前
+const name = 'sanyue'
+const age = 21
+//将属性值name，age分别赋给person1对象的name，age,后面是属性值
+const person1 = { name: name, age: age }
+console.log(person1) //{name: &quot;sanyue&quot;, age: 21}
+
+//es6:属性名和属性值变量名一样，可以省略
+const person2 = { name, age }
+console.log(person2) //{name: &quot;sanyue&quot;, age: 21}
+</code></pre>
+<p>4、对象的函数属性简写</p>
+<pre><code class="language-js">let person3 = {
+  name: 'qiyue',
+  //以前
+  eat: function (food) {
+    console.log(this.name + '在吃' + food)
+  },
+  //箭头函数中this不能使用，用对象.属性
+  eat2: (food) =&gt; console.log(person3.name + '在吃' + food),
+  eat3(food) {
+    console.log(this.name + '在吃' + food)
+  },
+}
+person3.eat('苹果') //qiyue在吃苹果
+person3.eat2('香蕉') // qiyue在吃香蕉
+person3.eat3('西瓜') //qiyue在吃西瓜
+</code></pre>
+<p>5、对象的扩展运算符</p>
+<p>扩展运算符（…)用于取出参数对象所有可遍历属性然后拷贝到当前对象</p>
+<pre><code class="language-js">//拷贝对象（深拷贝）
+let p1 = { name: 'qiyue', age: 23 }
+let obj = { ...p1 }
+console.log(obj) //{name: &quot;qiyue&quot;, age: 23}
+
+//合并对象
+let age1 = { age: 24 }
+let name1 = { name: 'qiyue' }
+let p2 = {}
+p2 = { ...age1, ...name1 }
+console.log(p2) //{age: 24, name: &quot;qiyue&quot;}
+//如果p2中原本有name,age属性会被覆盖
+</code></pre>
+<h2 id="六promise">六、Promise</h2>
+<p>promise 是处理异步操作的对象。promise 在新建后就会立刻执行，但是回调函数（then）要在当前脚本所有同步任务执行完成后才会执行。</p>
+<p>以下是一个基本用法示例。</p>
+<pre><code class="language-js">let promise = new Promise((resolve,reject)=&gt;{
+    // ...
+    if(/*异步操作成功*/){
+       resolve(value);
+    }else{
+       reject(error);
+    }
+}).then((data)=&gt;{
+    console.log(data);    //success操作返回，即pending=&gt;fulfilled
+},(error)=&gt;{
+    console.log(error);   //错误返回（可省略），即pending=&gt;rejected
+})
+</code></pre>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://www.notenough.top/tags/javascript/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#JavaScript</a>
+    
+</div>
+        
+        
+        
+
+
+        
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://www.notenough.top/posts/vue%E8%87%AA%E5%8A%A8%E6%B3%A8%E5%86%8C%E7%BB%84%E4%BB%B6/" class="block">Vue2自动注册组件</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://www.notenough.top/posts/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" class="block">排序算法总结</a>
+        
+    </div>
+</div>
+
+        
+
+
+
+    </div>
+    
+
+    
+    
+    <div
+        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded p-6">
+        <h2 class="text-lg font-semibold mb-4">相关</h2>
+        <div class="content">
+            
+            <a href="https://www.notenough.top/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B0%8F%E7%BB%93/">正则表达式小结</a>
+            <br />
+            
+            <a href="https://www.notenough.top/posts/gomoku/">RGB灯带做棋盘的双人五子棋游戏</a>
+            <br />
+            
+            <a href="https://www.notenough.top/posts/jsnote/">JavaScript基础</a>
+            <br />
+            
+        </div>
+    </div>
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>

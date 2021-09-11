@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Koa on NotEnough</title>
+    <link>https://www.notenough.top/tags/koa/</link>
+    <description>Recent content in Koa on NotEnough</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 30 Aug 2021 23:30:51 +0800</lastBuildDate><atom:link href="https://www.notenough.top/tags/koa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Koa搭建静态资源文件服务器及图片上传接口的实现</title>
+      <link>https://www.notenough.top/posts/koa-static/</link>
+      <pubDate>Mon, 30 Aug 2021 23:30:51 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/koa-static/</guid>
+      <description>&lt;p&gt;场景：前端需要上传图片到服务器，保存在固定目录下，并返回一个外部可访问的 url 给客户端。&lt;/p&gt;
+&lt;p&gt;需要的工具：koa-body，koa-static, path&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,7 +2,8 @@
 title: VueNote1
 date: 2019-05-27T21:58:46+08:00
 categories: note
-tags: Vue
+tags:
+  - Vue
 draft: false
 ---
 

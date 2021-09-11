@@ -1,21 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>html on NotEnough</title>
+    <title>HTML on NotEnough</title>
     <link>https://www.notenough.top/tags/html/</link>
-    <description>Recent content in html on NotEnough</description>
+    <description>Recent content in HTML on NotEnough</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <copyright>&amp;copy; 2021 &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;C. Wang&lt;/a&gt; and &lt;a href=&#34;https://www.ruiqima.com/&#34;&gt;R. Ma&lt;/a&gt;
-</copyright>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.notenough.top/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Aug 2019 17:31:22 +0800</lastBuildDate><atom:link href="https://www.notenough.top/tags/html/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Markdown Syntax Guide</title>
-      <link>https://www.notenough.top/posts/markdown-syntax/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <title>RGB灯带做棋盘的双人五子棋游戏</title>
+      <link>https://www.notenough.top/posts/gomoku/</link>
+      <pubDate>Mon, 26 Aug 2019 17:31:22 +0800</pubDate>
       
-      <guid>https://www.notenough.top/posts/markdown-syntax/</guid>
-      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+      <guid>https://www.notenough.top/posts/gomoku/</guid>
+      <description>&lt;p&gt;这是我短学期的任务,做的简陋，勉强能实现主要功能，写了技术文档，记录一下。&lt;/p&gt;
+&lt;h2 id=&#34;一-项目简介&#34;&gt;一、 项目简介&lt;/h2&gt;
+&lt;p&gt;本项目综合 arduino、flutter、node-red 以及 mqtt 协议开发一个可供电脑端和手机端共同游戏的五子棋游戏，并将游戏实时显示在 RGB 灯带组成的棋盘上。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>html超文本标记语言笔记</title>
+      <link>https://www.notenough.top/posts/htmlnote1/</link>
+      <pubDate>Fri, 04 Jan 2019 10:44:21 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/htmlnote1/</guid>
+      <description>&lt;h2 id=&#34;一html-常用标签&#34;&gt;一、html 常用标签&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;html&amp;gt; --网页开始 最后要有结束标签 &amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;结束标签一定不能忘了&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; &amp;ndash;网页头标签，里面可以加 title 标签修改网页的 title，也可以用&lt;code&gt;&amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;&amp;lt;/meta&amp;gt;&lt;/code&gt;定义网页解码使用的码表。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;body&amp;gt; --网页主体 &amp;lt;/body&amp;gt;&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

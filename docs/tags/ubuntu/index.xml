@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on NotEnough</title>
+    <link>https://www.notenough.top/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on NotEnough</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 12 Aug 2019 12:17:43 +0800</lastBuildDate><atom:link href="https://www.notenough.top/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ubuntu安装卡死及关机卡死解决方法</title>
+      <link>https://www.notenough.top/posts/ubuntu2/</link>
+      <pubDate>Mon, 12 Aug 2019 12:17:43 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/ubuntu2/</guid>
+      <description>&lt;h2 id=&#34;ubuntu-安装界面卡住&#34;&gt;Ubuntu 安装界面卡住&lt;/h2&gt;
+&lt;p&gt;给笔记本安装 ubuntu 的时候一直有这个问题，在安装界面就直接卡死，鼠标能动，但啥都不能点。&lt;/p&gt;
+&lt;p&gt;实际上是由于我的显卡是 GTX1060，是在 1050ti 以上，而 ubuntu 与 n 卡的高版本兼容性不好才导致卡死。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

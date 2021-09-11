@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>正则表达式小结 | NotEnough</title>
+
+<meta name="generator" content="Hugo Eureka 0.8.2" />
+<link rel="stylesheet" href="https://www.notenough.top/css/eureka.min.css">
+<script defer src="https://www.notenough.top/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
+  integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="正则表达式是由一个字符序列形成的搜索模式。可以用来搜索也可以用来替换。
+
+语法：/正则表达式主体/修饰符(可选)
+
+//是定界符，内容则是需要查找或替换的内容。比如/runoob/就是查找 runoob 这个词">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Posts",
+      "item":"https://www.notenough.top/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"正则表达式小结",
+      "item":"https://www.notenough.top/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B0%8F%E7%BB%93/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.notenough.top/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B0%8F%E7%BB%93/"
+    },
+    "headline": "正则表达式小结 | NotEnough","datePublished": "2019-09-22T09:49:04+08:00",
+    "dateModified": "2019-09-22T09:49:04+08:00",
+    "wordCount":  144 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "C. Wang",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.notenough.top/images/icon.png"
+        }
+        },
+    "description": "\u003cp\u003e正则表达式是由一个字符序列形成的搜索模式。可以用来搜索也可以用来替换。\u003c\/p\u003e\n\u003cblockquote\u003e\n\u003cp\u003e语法：\/正则表达式主体\/修饰符(可选)\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003cp\u003e\/\/是定界符，内容则是需要查找或替换的内容。比如\/runoob\/就是查找 runoob 这个词\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="正则表达式小结 | NotEnough" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://www.notenough.top/images/icon.png">
+
+
+<meta property="og:url" content="https://www.notenough.top/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B0%8F%E7%BB%93/" />
+
+
+
+
+<meta property="og:description" content="正则表达式是由一个字符序列形成的搜索模式。可以用来搜索也可以用来替换。
+
+语法：/正则表达式主体/修饰符(可选)
+
+//是定界符，内容则是需要查找或替换的内容。比如/runoob/就是查找 runoob 这个词" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="NotEnough" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2019-09-22T09:49:04&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2019-09-22T09:49:04&#43;08:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="JavaScript" />
+
+
+
+
+
+<meta property="og:see_also" content="https://www.notenough.top/posts/gomoku/" />
+
+<meta property="og:see_also" content="https://www.notenough.top/posts/jsnote/" />
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">NotEnough</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">About</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">Posts</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Docs</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">正则表达式小结</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-09-22</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <p>正则表达式是由一个字符序列形成的搜索模式。可以用来搜索也可以用来替换。</p>
+<blockquote>
+<p>语法：/正则表达式主体/修饰符(可选)</p>
+</blockquote>
+<p>//是定界符，内容则是需要查找或替换的内容。比如/runoob/就是查找 runoob 这个词</p>
+<h3 id="正则表达式修饰符">正则表达式修饰符</h3>
+<p>i：无视大小写。比如&quot;abvAce&quot; 中使用/A/i，会匹配到小写 a</p>
+<p>g：全局匹配。比如“abvbeb”中使用/b/g，会匹配到所有三个 b</p>
+<p>^、$：行首行尾符，比如/^1{ab}.js$/要求的是 1 开头.js 结尾</p>
+<h3 id="字符串方法">字符串方法</h3>
+<p><strong>search() 方法</strong> 用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串，并返回子串的起始位置。</p>
+<pre><code class="language-javascript">var str = 'Visit Runoob!'
+var n = str.search(/Runoob/i)
+</code></pre>
+<p>得到结果就会是 6，是 R 字符的位置。</p>
+<p>search 方法参数也可以选择用字符串，字符串参数会转换为正则表达式。</p>
+<p><strong>replace() 方法</strong> 用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。</p>
+<pre><code class="language-javascript">var str = 'Visit Microsoft!'
+var txt = str.replace(/microsoft/i, 'Runoob')
+</code></pre>
+<p>结果 str 会变成&quot;Visit Runoob!&quot;</p>
+<h3 id="元字符">元字符</h3>
+<ol>
+<li>
+<p><strong>任何一个</strong></p>
+<p>/a[abc]q/：既可以是 aaq，也可以是 abq，也可以是 acq，但不能是 abbq</p>
+</li>
+<li>
+<p><strong>范围</strong></p>
+<p>/[a-z]/：a 到 z 之间任何字符</p>
+<p>/[0-9]/：0-9 之间任何数字</p>
+<p>/[a-z0-9]/：包含上述两种，不需要分隔符</p>
+<p>但是元字符只代表一位。比如/[3-59]/其实是 3-5 或者 9</p>
+</li>
+<li>
+<p><strong>排除</strong></p>
+<p>/[^+]/：排除+号，也可以换成^0-9a-z</p>
+</li>
+</ol>
+<h3 id="转义">转义</h3>
+<table>
+<thead>
+<tr>
+<th>转义</th>
+<th>等同于</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\d</td>
+<td>[0-9]</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>[0-9a-z_]</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>空格符*</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>[^0-9]</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>[^0-9a-z_]</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>非空白符</td>
+</tr>
+<tr>
+<td>.</td>
+<td>任意字符</td>
+</tr>
+</tbody>
+</table>
+<h3 id="量词">量词</h3>
+<table>
+<thead>
+<tr>
+<th>量词</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n+</td>
+<td>匹配任何包含至少一个 <em>n</em> 的字符串。</td>
+</tr>
+<tr>
+<td>n*</td>
+<td>匹配任何包含零个或多个 <em>n</em> 的字符串。</td>
+</tr>
+<tr>
+<td>n？</td>
+<td>匹配任何包含零个或一个 <em>n</em> 的字符串。</td>
+</tr>
+</tbody>
+</table>
+<p>比如在“34sfh574sdhf93hcn”中用/\d/g，会得到 3,4,5,7,4,9,3。但是用/\d+/g 可以得到 34,574,93</p>
+<p>{n}： /\d{6}/匹配的是 6 个数字的内容。/1\d{5}/匹配的是 1 开头后面五个数字的内容</p>
+<p>{n,m}：/\d{5,12}/匹配的是 5 到 12 个数字的内容</p>
+<p>{n,}： /\d{6}/匹配的是至少 6 个数字的内容。+其实等同于{1,}至少一个，多则不限。？等同于{0,1}</p>
+<p>关于?的用法比如，要匹配.js 或者.jsx 文件。可以用/.jsx?/来匹配。</p>
+<p>关于.的用法，因为它是任意字符，可以/a.{5-18}z/，即 a 开头，z 结尾中间任意 5-18 个字符。</p>
+<p>如果是真的要用.这个字符本身，需要加反斜杠\.</p>
+<h3 id="test-方法">test 方法</h3>
+<p>test() 方法用于检测一个字符串是否匹配某个模式，如果字符串中含有匹配的文本，则返回 true，否则返回 false。</p>
+<p><strong>它是由符合的部分就返回 true，没有符合内容才 false。要严格要求的话得用行首行尾修饰符</strong></p>
+<p>用法是 (正则表达式).test(字符串)</p>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://www.notenough.top/tags/javascript/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#JavaScript</a>
+    
+</div>
+        
+        
+        
+
+
+        
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://www.notenough.top/posts/nodejs%E7%AC%94%E8%AE%B0%E4%B8%80/" class="block">Node.js笔记(一)</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://www.notenough.top/posts/python%E7%88%AC%E5%8F%96csdn/" class="block">Python爬取用户所有博客</a>
+        
+    </div>
+</div>
+
+        
+
+
+
+    </div>
+    
+
+    
+    
+    <div
+        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded p-6">
+        <h2 class="text-lg font-semibold mb-4">相关</h2>
+        <div class="content">
+            
+            <a href="https://www.notenough.top/posts/gomoku/">RGB灯带做棋盘的双人五子棋游戏</a>
+            <br />
+            
+            <a href="https://www.notenough.top/posts/jsnote/">JavaScript基础</a>
+            <br />
+            
+        </div>
+    </div>
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>

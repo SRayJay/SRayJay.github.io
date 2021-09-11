@@ -28,5 +28,396 @@
 &lt;p&gt;npm 的一些人尽皆知的不足:&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Koa搭建静态资源文件服务器及图片上传接口的实现</title>
+      <link>https://www.notenough.top/posts/koa-static/</link>
+      <pubDate>Mon, 30 Aug 2021 23:30:51 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/koa-static/</guid>
+      <description>&lt;p&gt;场景：前端需要上传图片到服务器，保存在固定目录下，并返回一个外部可访问的 url 给客户端。&lt;/p&gt;
+&lt;p&gt;需要的工具：koa-body，koa-static, path&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Vue3新特性</title>
+      <link>https://www.notenough.top/posts/vue3/</link>
+      <pubDate>Thu, 26 Aug 2021 22:29:22 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/vue3/</guid>
+      <description>&lt;h2 id=&#34;一vue30-六大亮点&#34;&gt;一、Vue3.0 六大亮点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Performance：性能比 Vue2.x 快 1.2~2 倍&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tree shaking support：按需编译，体积比 Vue2.x 更小&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Vue3.2新特性</title>
+      <link>https://www.notenough.top/posts/vue3-2/</link>
+      <pubDate>Thu, 26 Aug 2021 21:10:46 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/vue3-2/</guid>
+      <description>&lt;h3 id=&#34;1-新的-sfc-特性&#34;&gt;1. 新的 SFC 特性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;script setup&amp;gt;&lt;/code&gt;是一种编译时语法糖，可在 SFC 内使用 Composition API 时极大地提升工作效率&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;style&amp;gt; v-bind&lt;/code&gt;在 SFC&lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt;标签内启用组件状态驱动的动态 CSS 值&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>前端解决跨域</title>
+      <link>https://www.notenough.top/posts/%E5%89%8D%E7%AB%AF%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/</link>
+      <pubDate>Wed, 14 Jul 2021 23:21:04 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/%E5%89%8D%E7%AB%AF%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/</guid>
+      <description>&lt;p&gt;重新整理了下 Vue 的接口去跨域的事，其实就两个地方实际生效，其他地方乱写端口什么的反倒是阻碍了。这边展示 Vue3+Vite 的例子：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Vue@路径别名设置</title>
+      <link>https://www.notenough.top/posts/vue-%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Sun, 06 Jun 2021 17:57:12 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/vue-%E8%B7%AF%E5%BE%84/</guid>
+      <description>路径别名，省去相对路径的麻烦，直接用@views 来作为路径开头更加的方便
+Vue2+Vue-Cli 写法 在 vue.config.js 里写入
+module.exports = { ... chainWebpack: config =&amp;gt; { config.resolve.symlinks(true) config.resolve.alias .set(&#39;@&#39;, resolve(&#39;src&#39;)) .set(&#39;@assets&#39;, resolve(&#39;src/assets&#39;)) .set(&#39;@components&#39;, resolve(&#39;src/components&#39;)) .set(&#39;@views&#39;, resolve(&#39;src/views&#39;)) } }  Vue3+Vite+Ts 写法 // vite.config.js resolve:{ alias: { &amp;quot;@&amp;quot;: path.resolve(__dirname, &amp;quot;src&amp;quot;), &amp;quot;@V&amp;quot;: path.resolve(__dirname, &amp;quot;src/views&amp;quot;), &amp;quot;@C&amp;quot;: path.resolve(__dirname,&amp;quot;src/components&amp;quot;) } } } // tsconfig.json &amp;quot;paths&amp;quot;:{ &amp;quot;@/*&amp;quot;:[&amp;quot;./src/*&amp;quot;], &amp;quot;@V/*&amp;quot;:[&amp;quot;./src/views/*&amp;quot;], &amp;quot;@C/*&amp;quot;:[&amp;quot;./src/components/*&amp;quot;] }  </description>
+    </item>
+    
+    <item>
+      <title>Vue2自动注册组件</title>
+      <link>https://www.notenough.top/posts/vue%E8%87%AA%E5%8A%A8%E6%B3%A8%E5%86%8C%E7%BB%84%E4%BB%B6/</link>
+      <pubDate>Sun, 06 Jun 2021 17:51:14 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/vue%E8%87%AA%E5%8A%A8%E6%B3%A8%E5%86%8C%E7%BB%84%E4%BB%B6/</guid>
+      <description>&lt;p&gt;Vue 的组件要在其他地方使用得通过这三步&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ES6笔记</title>
+      <link>https://www.notenough.top/posts/es6/</link>
+      <pubDate>Fri, 21 May 2021 20:57:31 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/es6/</guid>
+      <description>&lt;h2 id=&#34;一let-和-var-的区别以及-const&#34;&gt;一、let 和 var 的区别以及 const&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;let 声明的变量&lt;strong&gt;只在所在块中生效&lt;/strong&gt;；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;let 声明的变量可以解决 var 与 for 循环结合使用产生的无法取得最新变量值的问题（以往都需要通过闭包来解决这个问题）；&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>排序算法总结</title>
+      <link>https://www.notenough.top/posts/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Wed, 17 Mar 2021 10:50:33 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/</guid>
+      <description>&lt;h3 id=&#34;归并排序&#34;&gt;归并排序&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;归并排序（MERGE-SORT）是利用归并的思想实现的排序方法，该算法采用经典的分治（divide-and-conquer）策略（分治法将问题分(divide)成一些小的问题然后递归求解，而治(conquer)的阶段则将分的阶段得到的各答案&amp;quot;修补&amp;quot;在一起，即分而治之)。&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>css陋习和误区</title>
+      <link>https://www.notenough.top/posts/css%E9%99%8B%E4%B9%A0%E5%92%8C%E8%AF%AF%E5%8C%BA/</link>
+      <pubDate>Sun, 14 Mar 2021 12:04:10 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/css%E9%99%8B%E4%B9%A0%E5%92%8C%E8%AF%AF%E5%8C%BA/</guid>
+      <description>常常出现按钮中文字高度不对之类的事，平时老是喜欢给这些元素设定宽高，假如内容变化，则要调整宽高，实际上应该让宽高自动适应内容，然后给内容设定 padding 和 margin
+  一些并列元素总想着用 div，万物皆可 div，实际上 ul 和 li 更好用些。
+  加载 cdn 文件，script 标签应该要带上 async 属性，异步加载 cdn，不阻塞文本流的解析。
+  &amp;ndash;待更新</description>
+    </item>
+    
+    <item>
+      <title>垂直居中方案</title>
+      <link>https://www.notenough.top/posts/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Wed, 10 Mar 2021 16:38:52 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%96%B9%E6%A1%88/</guid>
+      <description>&lt;p&gt;**可以用一个自然高度的容器吗？**给容器加上相等的上下内边距让内容居中。&lt;/p&gt;
+&lt;p&gt;**容器需要指定高度或者避免使用内边距吗？**对容器使用 display：table-cell 和 vertical-align:middle。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>《深入解析css》笔记</title>
+      <link>https://www.notenough.top/posts/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90css%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 10 Mar 2021 14:02:32 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90css%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;h3 id=&#34;第一章层叠优先级和继承&#34;&gt;第一章：层叠、优先级和继承&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;优先级：！important&amp;gt;行内样式&amp;gt;id 选择器&amp;gt;类选择器&amp;gt;标签选择器&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;两条经验法则：选择器少用 id；少用!important。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用 inherit 属性使元素属性继承自父元素，方便修改。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>《css揭秘》笔记</title>
+      <link>https://www.notenough.top/posts/css%E6%8F%AD%E7%A7%98%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Tue, 09 Mar 2021 10:01:01 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/css%E6%8F%AD%E7%A7%98%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;p&gt;粗读了《css 揭秘》这本书，里面提到的很多技巧和操作暂时用不到，可以在用到时当工具书看，目前对我有帮助的几个技巧做了个笔记。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;尽量使用相对单位。line-height 与 font-size 的比例而不要使用绝对值。em 单位（相对于当前元素的字体大小）可以在修改字体尺寸同时修改其他的数值。rem 则是根据根元素的字体大小。vw 单位是窗口宽度的 1%，因此需要某个元素在浏览器窗口改变时保持一定的比例，就用 vw 作单位。vh 则是窗口高度的 1%。&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>css常用技巧</title>
+      <link>https://www.notenough.top/posts/css%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Sat, 23 Jan 2021 17:15:18 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/css%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+      <description>&lt;p&gt;1、多行文本溢出隐藏&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>vue路由参数改变后不刷新的问题</title>
+      <link>https://www.notenough.top/posts/vue%E8%B7%AF%E7%94%B1%E5%8F%82%E6%95%B0%E6%94%B9%E5%8F%98%E5%90%8E%E4%B8%8D%E5%88%B7%E6%96%B0%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Thu, 07 Jan 2021 18:08:06 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/vue%E8%B7%AF%E7%94%B1%E5%8F%82%E6%95%B0%E6%94%B9%E5%8F%98%E5%90%8E%E4%B8%8D%E5%88%B7%E6%96%B0%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;p&gt;问题：跳转到同一个页面，但是传入不同的路由参数，而 data 内数据从 route.params 拿的并不会在路由跳转后再次获取，即不会跟随刷新。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>展开按钮总结</title>
+      <link>https://www.notenough.top/posts/zhankai/</link>
+      <pubDate>Tue, 15 Dec 2020 13:34:28 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/zhankai/</guid>
+      <description>&lt;p&gt;需求：一段文本，不定长，需要在页面中有展开按钮，假如它少于固定行，展示按钮不可见，假如多于固定行，则出现按钮，点击后，显示全部长度。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Node.js笔记(一)</title>
+      <link>https://www.notenough.top/posts/nodejs%E7%AC%94%E8%AE%B0%E4%B8%80/</link>
+      <pubDate>Wed, 02 Oct 2019 19:43:01 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/nodejs%E7%AC%94%E8%AE%B0%E4%B8%80/</guid>
+      <description>&lt;p&gt;今天初步了解了 http、fs、querystring、url 四个包以及本地服务器部署的内容，记录一下。&lt;/p&gt;
+&lt;h3 id=&#34;引入包&#34;&gt;引入包&lt;/h3&gt;
+&lt;p&gt;首先需要的包要下载，使用 npm 工具，（cnpm 更快也行），npm i module 安装。&lt;/p&gt;
+&lt;p&gt;在该文件下目录下会自动生成 node_modules 文件夹，里面包含了很多模块。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>正则表达式小结</title>
+      <link>https://www.notenough.top/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B0%8F%E7%BB%93/</link>
+      <pubDate>Sun, 22 Sep 2019 09:49:04 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B0%8F%E7%BB%93/</guid>
+      <description>&lt;p&gt;正则表达式是由一个字符序列形成的搜索模式。可以用来搜索也可以用来替换。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;语法：/正则表达式主体/修饰符(可选)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;//是定界符，内容则是需要查找或替换的内容。比如/runoob/就是查找 runoob 这个词&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python爬取用户所有博客</title>
+      <link>https://www.notenough.top/posts/python%E7%88%AC%E5%8F%96csdn/</link>
+      <pubDate>Wed, 11 Sep 2019 12:51:44 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/python%E7%88%AC%E5%8F%96csdn/</guid>
+      <description>&lt;p&gt;CSDN 的爬取比较简单，没有知乎那种反爬虫需要 ip 代理模拟登录那么麻烦。在确认一个用户之后，找到目录的 url，再通过 css 选择器找到每一篇博客的 url 再分别保存为 markdown 格式。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>RGB灯带做棋盘的双人五子棋游戏</title>
+      <link>https://www.notenough.top/posts/gomoku/</link>
+      <pubDate>Mon, 26 Aug 2019 17:31:22 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/gomoku/</guid>
+      <description>&lt;p&gt;这是我短学期的任务,做的简陋，勉强能实现主要功能，写了技术文档，记录一下。&lt;/p&gt;
+&lt;h2 id=&#34;一-项目简介&#34;&gt;一、 项目简介&lt;/h2&gt;
+&lt;p&gt;本项目综合 arduino、flutter、node-red 以及 mqtt 协议开发一个可供电脑端和手机端共同游戏的五子棋游戏，并将游戏实时显示在 RGB 灯带组成的棋盘上。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu安装卡死及关机卡死解决方法</title>
+      <link>https://www.notenough.top/posts/ubuntu2/</link>
+      <pubDate>Mon, 12 Aug 2019 12:17:43 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/ubuntu2/</guid>
+      <description>&lt;h2 id=&#34;ubuntu-安装界面卡住&#34;&gt;Ubuntu 安装界面卡住&lt;/h2&gt;
+&lt;p&gt;给笔记本安装 ubuntu 的时候一直有这个问题，在安装界面就直接卡死，鼠标能动，但啥都不能点。&lt;/p&gt;
+&lt;p&gt;实际上是由于我的显卡是 GTX1060，是在 1050ti 以上，而 ubuntu 与 n 卡的高版本兼容性不好才导致卡死。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VueNote2</title>
+      <link>https://www.notenough.top/posts/vuenote2/</link>
+      <pubDate>Mon, 03 Jun 2019 18:59:16 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/vuenote2/</guid>
+      <description>&lt;h2 id=&#34;vue-实例购物车&#34;&gt;Vue 实例——购物车&lt;/h2&gt;
+&lt;p&gt;之前照书上题目打得一个例子，模拟一个购物车，要求选中商品再计算总价。&lt;/p&gt;
+&lt;p&gt;1.对于每个条目，给其 list 对象中加入一条 chose：false 表示其初始状态是非选中的，然后再 html 中该条目的 checkbox 中用 v-model 绑定该条目的 chose 值。当其 checkbox 选中后会将 chose 值变为真。首先实现了一个数据绑定。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VueNote1</title>
+      <link>https://www.notenough.top/posts/vuenote/</link>
+      <pubDate>Mon, 27 May 2019 21:58:46 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/vuenote/</guid>
+      <description>&lt;p&gt;每个 vue 应用都需要实例化 vue&lt;/p&gt;
+&lt;p&gt;对于 html 中 id 为 app 的元素，对其实例化。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JavaScript基础</title>
+      <link>https://www.notenough.top/posts/jsnote/</link>
+      <pubDate>Sun, 26 May 2019 10:19:54 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/jsnote/</guid>
+      <description>&lt;p&gt;1.在标签中填写 onclick 事件调用函数时，不是 onclick=函数名， 而是 onclick=&amp;ldquo;函数名+()&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;2.script 中用到的函数中带 document.write 会覆盖之前的文本。&lt;/p&gt;
+&lt;p&gt;3.js 输出数据：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>FlutterNote3</title>
+      <link>https://www.notenough.top/posts/flutternote3/</link>
+      <pubDate>Sun, 19 May 2019 14:28:33 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/flutternote3/</guid>
+      <description>&lt;h1 id=&#34;flutter-导航&#34;&gt;Flutter 导航&lt;/h1&gt;
+&lt;h2 id=&#34;父子级导航页面的跳转&#34;&gt;父子级导航页面的跳转&lt;/h2&gt;
+&lt;p&gt;因为 app 中包含不止一个界面，void main()后面不能用箭头函数，需要设定首页。&lt;/p&gt;
+&lt;p&gt;对于每个页面，用 class 分别定义，页面作为 home，return 的是 Scaffold 类，当然也可以是其他。在按钮上添加跳转到另一个页面的功能。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>FlutterNote2</title>
+      <link>https://www.notenough.top/posts/flutternote2/</link>
+      <pubDate>Mon, 13 May 2019 15:10:17 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/flutternote2/</guid>
+      <description>&lt;h1 id=&#34;flutter-布局&#34;&gt;Flutter 布局&lt;/h1&gt;
+&lt;h2 id=&#34;水平布局&#34;&gt;水平布局&lt;/h2&gt;
+&lt;p&gt;body:Row()中间内容比如说要放上按钮，直接 new 一个 RaisedButton，它的宽高是固定的，如果在它外面套上一个 Expanded(),子元素再放按钮，就能达到自适应长度的效果，不至于边上漏出一块白的那么丑。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>FlutterNote1</title>
+      <link>https://www.notenough.top/posts/flutternote1/</link>
+      <pubDate>Fri, 03 May 2019 10:24:09 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/flutternote1/</guid>
+      <description>&lt;h1 id=&#34;flutter-基本结构&#34;&gt;Flutter 基本结构&lt;/h1&gt;
+&lt;p&gt;以一个 helloworld 程序展示一个 flutter 应用的基本结构。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>WinRAR破解</title>
+      <link>https://www.notenough.top/posts/winrar-pojie/</link>
+      <pubDate>Thu, 21 Feb 2019 13:03:04 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/winrar-pojie/</guid>
+      <description>&lt;h3 id=&#34;winrar-64-位软件的破解方法&#34;&gt;WinRAR 64 位软件的破解方法&lt;/h3&gt;
+&lt;p&gt;1、新建一个文本文档&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>安装Win10无法找到现有分区</title>
+      <link>https://www.notenough.top/posts/win10error/</link>
+      <pubDate>Sun, 17 Feb 2019 14:52:03 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/win10error/</guid>
+      <description>&lt;p&gt;昨天给固态安装 win10 系统，本想用机械硬盘迁移系统到固态里去，但一直给我报错，“操作系统分区至少要预留 800MB 空间”。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>margin塌陷和合并</title>
+      <link>https://www.notenough.top/posts/marginbug/</link>
+      <pubDate>Mon, 04 Feb 2019 12:51:44 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/marginbug/</guid>
+      <description>&lt;h2 id=&#34;margin-塌陷&#34;&gt;Margin 塌陷&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;wrap&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>CSS笔记</title>
+      <link>https://www.notenough.top/posts/cssnote/</link>
+      <pubDate>Fri, 25 Jan 2019 13:35:54 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/cssnote/</guid>
+      <description>&lt;h2 id=&#34;一如何创建-css&#34;&gt;一、如何创建 CSS&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;内联样式：也叫&lt;strong&gt;行间样式&lt;/strong&gt;在标签后面写上 style={&amp;hellip;}就可以，但仅限于这个标签产生样式作用&lt;/li&gt;
+&lt;li&gt;内部样式表：当单个文档需要特殊的样式时，就应该使用内部样式表。可以使用&lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; 标签在文档头部定义内部样式表.&lt;/li&gt;
+&lt;li&gt;外部样式表：在 html 的 head 标签内加上 link 标签，href 的值就是 css 文件的路径，但是.css 文件内不能包含任何 html 标签。&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python爬虫笔记</title>
+      <link>https://www.notenough.top/posts/pythonnote2/</link>
+      <pubDate>Fri, 18 Jan 2019 20:44:23 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/pythonnote2/</guid>
+      <description>&lt;p&gt;爬虫分为四个步骤，首先获取数据，然后解析数据，再提取数据，最后是存储数据&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python基础知识笔记</title>
+      <link>https://www.notenough.top/posts/pythonnote1/</link>
+      <pubDate>Sat, 05 Jan 2019 14:42:45 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/pythonnote1/</guid>
+      <description>&lt;h3 id=&#34;数据类型&#34;&gt;数据类型&lt;/h3&gt;
+&lt;h4 id=&#34;字符串双引号或者单引号引起来的文本&#34;&gt;字符串：双引号或者单引号引起来的文本&lt;/h4&gt;
+&lt;p&gt;字符串内字符都有序号，正向是从 0 开始，反向是-1 开始。str[-1]指的就是最后一个字符。&lt;/p&gt;
+&lt;p&gt;字符串的拼接：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;号，对于字符串或者非字符串使用该符号就能拼接成一个字符串。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;.format()，中间的参数，对应字符串中的{}，相当于 c 语言里的占位符。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;整数python-中整数的除法能得到小数这一点与-c-不同&#34;&gt;整数：python 中整数的除法能得到小数，这一点与 c 不同&lt;/h4&gt;</description>
+    </item>
+    
+    <item>
+      <title>html超文本标记语言笔记</title>
+      <link>https://www.notenough.top/posts/htmlnote1/</link>
+      <pubDate>Fri, 04 Jan 2019 10:44:21 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/htmlnote1/</guid>
+      <description>&lt;h2 id=&#34;一html-常用标签&#34;&gt;一、html 常用标签&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;html&amp;gt; --网页开始 最后要有结束标签 &amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;结束标签一定不能忘了&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; &amp;ndash;网页头标签，里面可以加 title 标签修改网页的 title，也可以用&lt;code&gt;&amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;&amp;lt;/meta&amp;gt;&lt;/code&gt;定义网页解码使用的码表。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;body&amp;gt; --网页主体 &amp;lt;/body&amp;gt;&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

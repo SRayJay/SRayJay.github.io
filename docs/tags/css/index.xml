@@ -1,21 +1,100 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>css on NotEnough</title>
+    <title>CSS on NotEnough</title>
     <link>https://www.notenough.top/tags/css/</link>
-    <description>Recent content in css on NotEnough</description>
+    <description>Recent content in CSS on NotEnough</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <copyright>&amp;copy; 2021 &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;C. Wang&lt;/a&gt; and &lt;a href=&#34;https://www.ruiqima.com/&#34;&gt;R. Ma&lt;/a&gt;
-</copyright>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.notenough.top/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Mar 2021 12:04:10 +0800</lastBuildDate><atom:link href="https://www.notenough.top/tags/css/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Markdown Syntax Guide</title>
-      <link>https://www.notenough.top/posts/markdown-syntax/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <title>css陋习和误区</title>
+      <link>https://www.notenough.top/posts/css%E9%99%8B%E4%B9%A0%E5%92%8C%E8%AF%AF%E5%8C%BA/</link>
+      <pubDate>Sun, 14 Mar 2021 12:04:10 +0800</pubDate>
       
-      <guid>https://www.notenough.top/posts/markdown-syntax/</guid>
-      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+      <guid>https://www.notenough.top/posts/css%E9%99%8B%E4%B9%A0%E5%92%8C%E8%AF%AF%E5%8C%BA/</guid>
+      <description>常常出现按钮中文字高度不对之类的事，平时老是喜欢给这些元素设定宽高，假如内容变化，则要调整宽高，实际上应该让宽高自动适应内容，然后给内容设定 padding 和 margin
+  一些并列元素总想着用 div，万物皆可 div，实际上 ul 和 li 更好用些。
+  加载 cdn 文件，script 标签应该要带上 async 属性，异步加载 cdn，不阻塞文本流的解析。
+  &amp;ndash;待更新</description>
+    </item>
+    
+    <item>
+      <title>垂直居中方案</title>
+      <link>https://www.notenough.top/posts/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Wed, 10 Mar 2021 16:38:52 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%96%B9%E6%A1%88/</guid>
+      <description>&lt;p&gt;**可以用一个自然高度的容器吗？**给容器加上相等的上下内边距让内容居中。&lt;/p&gt;
+&lt;p&gt;**容器需要指定高度或者避免使用内边距吗？**对容器使用 display：table-cell 和 vertical-align:middle。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>《深入解析css》笔记</title>
+      <link>https://www.notenough.top/posts/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90css%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 10 Mar 2021 14:02:32 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90css%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;h3 id=&#34;第一章层叠优先级和继承&#34;&gt;第一章：层叠、优先级和继承&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;优先级：！important&amp;gt;行内样式&amp;gt;id 选择器&amp;gt;类选择器&amp;gt;标签选择器&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;两条经验法则：选择器少用 id；少用!important。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用 inherit 属性使元素属性继承自父元素，方便修改。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>《css揭秘》笔记</title>
+      <link>https://www.notenough.top/posts/css%E6%8F%AD%E7%A7%98%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Tue, 09 Mar 2021 10:01:01 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/css%E6%8F%AD%E7%A7%98%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;p&gt;粗读了《css 揭秘》这本书，里面提到的很多技巧和操作暂时用不到，可以在用到时当工具书看，目前对我有帮助的几个技巧做了个笔记。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;尽量使用相对单位。line-height 与 font-size 的比例而不要使用绝对值。em 单位（相对于当前元素的字体大小）可以在修改字体尺寸同时修改其他的数值。rem 则是根据根元素的字体大小。vw 单位是窗口宽度的 1%，因此需要某个元素在浏览器窗口改变时保持一定的比例，就用 vw 作单位。vh 则是窗口高度的 1%。&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>css常用技巧</title>
+      <link>https://www.notenough.top/posts/css%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Sat, 23 Jan 2021 17:15:18 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/css%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+      <description>&lt;p&gt;1、多行文本溢出隐藏&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>margin塌陷和合并</title>
+      <link>https://www.notenough.top/posts/marginbug/</link>
+      <pubDate>Mon, 04 Feb 2019 12:51:44 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/marginbug/</guid>
+      <description>&lt;h2 id=&#34;margin-塌陷&#34;&gt;Margin 塌陷&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;wrap&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>CSS笔记</title>
+      <link>https://www.notenough.top/posts/cssnote/</link>
+      <pubDate>Fri, 25 Jan 2019 13:35:54 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/cssnote/</guid>
+      <description>&lt;h2 id=&#34;一如何创建-css&#34;&gt;一、如何创建 CSS&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;内联样式：也叫&lt;strong&gt;行间样式&lt;/strong&gt;在标签后面写上 style={&amp;hellip;}就可以，但仅限于这个标签产生样式作用&lt;/li&gt;
+&lt;li&gt;内部样式表：当单个文档需要特殊的样式时，就应该使用内部样式表。可以使用&lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; 标签在文档头部定义内部样式表.&lt;/li&gt;
+&lt;li&gt;外部样式表：在 html 的 head 标签内加上 link 标签，href 的值就是 css 文件的路径，但是.css 文件内不能包含任何 html 标签。&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
     
   </channel>

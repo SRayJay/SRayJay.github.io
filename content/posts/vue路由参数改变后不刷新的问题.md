@@ -2,7 +2,8 @@
 title: vue路由参数改变后不刷新的问题
 date: 2021-01-07T18:08:06+08:00
 categories: Vue
-tags: solution
+tags:
+  - solution
 draft: false
 ---
 

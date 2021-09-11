@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NodeJS on NotEnough</title>
+    <link>https://www.notenough.top/tags/nodejs/</link>
+    <description>Recent content in NodeJS on NotEnough</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 30 Aug 2021 23:30:51 +0800</lastBuildDate><atom:link href="https://www.notenough.top/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Koa搭建静态资源文件服务器及图片上传接口的实现</title>
+      <link>https://www.notenough.top/posts/koa-static/</link>
+      <pubDate>Mon, 30 Aug 2021 23:30:51 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/koa-static/</guid>
+      <description>&lt;p&gt;场景：前端需要上传图片到服务器，保存在固定目录下，并返回一个外部可访问的 url 给客户端。&lt;/p&gt;
+&lt;p&gt;需要的工具：koa-body，koa-static, path&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Node.js笔记(一)</title>
+      <link>https://www.notenough.top/posts/nodejs%E7%AC%94%E8%AE%B0%E4%B8%80/</link>
+      <pubDate>Wed, 02 Oct 2019 19:43:01 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/nodejs%E7%AC%94%E8%AE%B0%E4%B8%80/</guid>
+      <description>&lt;p&gt;今天初步了解了 http、fs、querystring、url 四个包以及本地服务器部署的内容，记录一下。&lt;/p&gt;
+&lt;h3 id=&#34;引入包&#34;&gt;引入包&lt;/h3&gt;
+&lt;p&gt;首先需要的包要下载，使用 npm 工具，（cnpm 更快也行），npm i module 安装。&lt;/p&gt;
+&lt;p&gt;在该文件下目录下会自动生成 node_modules 文件夹，里面包含了很多模块。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

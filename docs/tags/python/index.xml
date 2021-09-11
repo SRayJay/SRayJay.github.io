@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on NotEnough</title>
+    <link>https://www.notenough.top/tags/python/</link>
+    <description>Recent content in Python on NotEnough</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 11 Sep 2019 12:51:44 +0800</lastBuildDate><atom:link href="https://www.notenough.top/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python爬取用户所有博客</title>
+      <link>https://www.notenough.top/posts/python%E7%88%AC%E5%8F%96csdn/</link>
+      <pubDate>Wed, 11 Sep 2019 12:51:44 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/python%E7%88%AC%E5%8F%96csdn/</guid>
+      <description>&lt;p&gt;CSDN 的爬取比较简单，没有知乎那种反爬虫需要 ip 代理模拟登录那么麻烦。在确认一个用户之后，找到目录的 url，再通过 css 选择器找到每一篇博客的 url 再分别保存为 markdown 格式。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python爬虫笔记</title>
+      <link>https://www.notenough.top/posts/pythonnote2/</link>
+      <pubDate>Fri, 18 Jan 2019 20:44:23 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/pythonnote2/</guid>
+      <description>&lt;p&gt;爬虫分为四个步骤，首先获取数据，然后解析数据，再提取数据，最后是存储数据&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python基础知识笔记</title>
+      <link>https://www.notenough.top/posts/pythonnote1/</link>
+      <pubDate>Sat, 05 Jan 2019 14:42:45 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/pythonnote1/</guid>
+      <description>&lt;h3 id=&#34;数据类型&#34;&gt;数据类型&lt;/h3&gt;
+&lt;h4 id=&#34;字符串双引号或者单引号引起来的文本&#34;&gt;字符串：双引号或者单引号引起来的文本&lt;/h4&gt;
+&lt;p&gt;字符串内字符都有序号，正向是从 0 开始，反向是-1 开始。str[-1]指的就是最后一个字符。&lt;/p&gt;
+&lt;p&gt;字符串的拼接：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;号，对于字符串或者非字符串使用该符号就能拼接成一个字符串。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;.format()，中间的参数，对应字符串中的{}，相当于 c 语言里的占位符。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;整数python-中整数的除法能得到小数这一点与-c-不同&#34;&gt;整数：python 中整数的除法能得到小数，这一点与 c 不同&lt;/h4&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

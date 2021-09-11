@@ -2,7 +2,8 @@
 title: Node.js笔记(一)
 date: 2019-10-02T19:43:01+08:00
 categories: note
-tags: NodeJS
+tags:
+  - NodeJS
 draft: false
 ---
 

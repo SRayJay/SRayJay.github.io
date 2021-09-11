@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>solution on NotEnough</title>
+    <link>https://www.notenough.top/categories/solution/</link>
+    <description>Recent content in solution on NotEnough</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 30 Aug 2021 23:30:51 +0800</lastBuildDate><atom:link href="https://www.notenough.top/categories/solution/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Koa搭建静态资源文件服务器及图片上传接口的实现</title>
+      <link>https://www.notenough.top/posts/koa-static/</link>
+      <pubDate>Mon, 30 Aug 2021 23:30:51 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/koa-static/</guid>
+      <description>&lt;p&gt;场景：前端需要上传图片到服务器，保存在固定目录下，并返回一个外部可访问的 url 给客户端。&lt;/p&gt;
+&lt;p&gt;需要的工具：koa-body，koa-static, path&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>前端解决跨域</title>
+      <link>https://www.notenough.top/posts/%E5%89%8D%E7%AB%AF%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/</link>
+      <pubDate>Wed, 14 Jul 2021 23:21:04 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/%E5%89%8D%E7%AB%AF%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/</guid>
+      <description>&lt;p&gt;重新整理了下 Vue 的接口去跨域的事，其实就两个地方实际生效，其他地方乱写端口什么的反倒是阻碍了。这边展示 Vue3+Vite 的例子：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Vue@路径别名设置</title>
+      <link>https://www.notenough.top/posts/vue-%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Sun, 06 Jun 2021 17:57:12 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/vue-%E8%B7%AF%E5%BE%84/</guid>
+      <description>路径别名，省去相对路径的麻烦，直接用@views 来作为路径开头更加的方便
+Vue2+Vue-Cli 写法 在 vue.config.js 里写入
+module.exports = { ... chainWebpack: config =&amp;gt; { config.resolve.symlinks(true) config.resolve.alias .set(&#39;@&#39;, resolve(&#39;src&#39;)) .set(&#39;@assets&#39;, resolve(&#39;src/assets&#39;)) .set(&#39;@components&#39;, resolve(&#39;src/components&#39;)) .set(&#39;@views&#39;, resolve(&#39;src/views&#39;)) } }  Vue3+Vite+Ts 写法 // vite.config.js resolve:{ alias: { &amp;quot;@&amp;quot;: path.resolve(__dirname, &amp;quot;src&amp;quot;), &amp;quot;@V&amp;quot;: path.resolve(__dirname, &amp;quot;src/views&amp;quot;), &amp;quot;@C&amp;quot;: path.resolve(__dirname,&amp;quot;src/components&amp;quot;) } } } // tsconfig.json &amp;quot;paths&amp;quot;:{ &amp;quot;@/*&amp;quot;:[&amp;quot;./src/*&amp;quot;], &amp;quot;@V/*&amp;quot;:[&amp;quot;./src/views/*&amp;quot;], &amp;quot;@C/*&amp;quot;:[&amp;quot;./src/components/*&amp;quot;] }  </description>
+    </item>
+    
+    <item>
+      <title>Vue2自动注册组件</title>
+      <link>https://www.notenough.top/posts/vue%E8%87%AA%E5%8A%A8%E6%B3%A8%E5%86%8C%E7%BB%84%E4%BB%B6/</link>
+      <pubDate>Sun, 06 Jun 2021 17:51:14 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/vue%E8%87%AA%E5%8A%A8%E6%B3%A8%E5%86%8C%E7%BB%84%E4%BB%B6/</guid>
+      <description>&lt;p&gt;Vue 的组件要在其他地方使用得通过这三步&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>垂直居中方案</title>
+      <link>https://www.notenough.top/posts/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Wed, 10 Mar 2021 16:38:52 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%96%B9%E6%A1%88/</guid>
+      <description>&lt;p&gt;**可以用一个自然高度的容器吗？**给容器加上相等的上下内边距让内容居中。&lt;/p&gt;
+&lt;p&gt;**容器需要指定高度或者避免使用内边距吗？**对容器使用 display：table-cell 和 vertical-align:middle。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>展开按钮总结</title>
+      <link>https://www.notenough.top/posts/zhankai/</link>
+      <pubDate>Tue, 15 Dec 2020 13:34:28 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/zhankai/</guid>
+      <description>&lt;p&gt;需求：一段文本，不定长，需要在页面中有展开按钮，假如它少于固定行，展示按钮不可见，假如多于固定行，则出现按钮，点击后，显示全部长度。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu安装卡死及关机卡死解决方法</title>
+      <link>https://www.notenough.top/posts/ubuntu2/</link>
+      <pubDate>Mon, 12 Aug 2019 12:17:43 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/ubuntu2/</guid>
+      <description>&lt;h2 id=&#34;ubuntu-安装界面卡住&#34;&gt;Ubuntu 安装界面卡住&lt;/h2&gt;
+&lt;p&gt;给笔记本安装 ubuntu 的时候一直有这个问题，在安装界面就直接卡死，鼠标能动，但啥都不能点。&lt;/p&gt;
+&lt;p&gt;实际上是由于我的显卡是 GTX1060，是在 1050ti 以上，而 ubuntu 与 n 卡的高版本兼容性不好才导致卡死。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>WinRAR破解</title>
+      <link>https://www.notenough.top/posts/winrar-pojie/</link>
+      <pubDate>Thu, 21 Feb 2019 13:03:04 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/winrar-pojie/</guid>
+      <description>&lt;h3 id=&#34;winrar-64-位软件的破解方法&#34;&gt;WinRAR 64 位软件的破解方法&lt;/h3&gt;
+&lt;p&gt;1、新建一个文本文档&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>安装Win10无法找到现有分区</title>
+      <link>https://www.notenough.top/posts/win10error/</link>
+      <pubDate>Sun, 17 Feb 2019 14:52:03 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/win10error/</guid>
+      <description>&lt;p&gt;昨天给固态安装 win10 系统，本想用机械硬盘迁移系统到固态里去，但一直给我报错，“操作系统分区至少要预留 800MB 空间”。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>margin塌陷和合并</title>
+      <link>https://www.notenough.top/posts/marginbug/</link>
+      <pubDate>Mon, 04 Feb 2019 12:51:44 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/marginbug/</guid>
+      <description>&lt;h2 id=&#34;margin-塌陷&#34;&gt;Margin 塌陷&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;wrap&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

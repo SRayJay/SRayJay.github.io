@@ -2,7 +2,8 @@
 title: html超文本标记语言笔记
 date: 2019-01-04T10:44:21+08:00
 categories: note
-tags: HTML
+tags:
+  - HTML
 draft: false
 ---
 

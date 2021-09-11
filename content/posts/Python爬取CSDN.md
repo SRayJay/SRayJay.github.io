@@ -2,7 +2,8 @@
 title: Python爬取用户所有博客
 date: 2019-09-11T12:51:44+08:00
 categories: note
-tags: Python
+tags:
+  - Python
 draft: false
 ---
 

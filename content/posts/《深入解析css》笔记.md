@@ -2,7 +2,8 @@
 title: 《深入解析css》笔记
 date: 2021-03-10T14:02:32+08:00
 categories: note
-tags: CSS
+tags:
+  - CSS
 draft: false
 ---
 

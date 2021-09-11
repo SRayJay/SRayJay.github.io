@@ -1,8 +1,9 @@
 ---
 title: css常用技巧
 date: 2021-01-23T17:15:18+08:00
-categories: CSS
-tags: solution
+categories: note
+tags:
+  - CSS
 draft: false
 ---
 
@@ -17,7 +18,7 @@ div{
  text-overflow: ellipsis;
  display: -webkit-box;
  -webkit-line-clamp: 2;  //行数
- -webkit-box-orient: vertical;-webkit-box-orient-webkit-box-orient-webkit-box-orient
+ -webkit-box-orient: vertical;-webkit-box-orient-webkit-box-orient-webkit-box-orient-webkit-box-orient-webkit-box-orient-webkit-box-orient
 }
 ```
 
@@ -25,8 +26,8 @@ div{
 
 ```css
 white-space: nowrap;–文本不受容器影响，不自动分段
-overflow: hidden;overflowoverflowoverflow溢出的文本不可见
-text-overflow: ellipsis;text-overflowtext-overflowtext-overflow
+overflow: hidden;overflowoverflowoverflowoverflowoverflowoverflow溢出的文本不可见
+text-overflow: ellipsis;text-overflowtext-overflowtext-overflowtext-overflowtext-overflowtext-overflow
 ```
 
 3、float 浮动造成父元素塌陷

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>html超文本标记语言笔记 | NotEnough</title>
+
+<meta name="generator" content="Hugo Eureka 0.8.2" />
+<link rel="stylesheet" href="https://www.notenough.top/css/eureka.min.css">
+<script defer src="https://www.notenough.top/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
+  integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="一、html 常用标签
+&lt;html&gt; --网页开始 最后要有结束标签 &lt;/html&gt;
+结束标签一定不能忘了
+&lt;head&gt; &ndash;网页头标签，里面可以加 title 标签修改网页的 title，也可以用&lt;meta charset=&quot;utf-8&quot;&gt;&lt;/meta&gt;定义网页解码使用的码表。
+&lt;body&gt; --网页主体 &lt;/body&gt;">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Posts",
+      "item":"https://www.notenough.top/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"html超文本标记语言笔记",
+      "item":"https://www.notenough.top/posts/htmlnote1/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.notenough.top/posts/htmlnote1/"
+    },
+    "headline": "html超文本标记语言笔记 | NotEnough","datePublished": "2019-01-04T10:44:21+08:00",
+    "dateModified": "2019-01-04T10:44:21+08:00",
+    "wordCount":  350 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "C. Wang",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.notenough.top/images/icon.png"
+        }
+        },
+    "description": "\u003ch2 id=\u0022一html-常用标签\u0022\u003e一、html 常用标签\u003c\/h2\u003e\n\u003cp\u003e\u003ccode\u003e\u0026lt;html\u0026gt; --网页开始 最后要有结束标签 \u0026lt;\/html\u0026gt;\u003c\/code\u003e\u003c\/p\u003e\n\u003cp\u003e\u003cstrong\u003e结束标签一定不能忘了\u003c\/strong\u003e\u003c\/p\u003e\n\u003cp\u003e\u003ccode\u003e\u0026lt;head\u0026gt;\u003c\/code\u003e \u0026ndash;网页头标签，里面可以加 title 标签修改网页的 title，也可以用\u003ccode\u003e\u0026lt;meta charset=\u0026quot;utf-8\u0026quot;\u0026gt;\u0026lt;\/meta\u0026gt;\u003c\/code\u003e定义网页解码使用的码表。\u003c\/p\u003e\n\u003cp\u003e\u003ccode\u003e\u0026lt;body\u0026gt; --网页主体 \u0026lt;\/body\u0026gt;\u003c\/code\u003e\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="html超文本标记语言笔记 | NotEnough" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://www.notenough.top/images/icon.png">
+
+
+<meta property="og:url" content="https://www.notenough.top/posts/htmlnote1/" />
+
+
+
+
+<meta property="og:description" content="一、html 常用标签
+&lt;html&gt; --网页开始 最后要有结束标签 &lt;/html&gt;
+结束标签一定不能忘了
+&lt;head&gt; &ndash;网页头标签，里面可以加 title 标签修改网页的 title，也可以用&lt;meta charset=&quot;utf-8&quot;&gt;&lt;/meta&gt;定义网页解码使用的码表。
+&lt;body&gt; --网页主体 &lt;/body&gt;" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="NotEnough" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2019-01-04T10:44:21&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2019-01-04T10:44:21&#43;08:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="HTML" />
+
+
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">NotEnough</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">About</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">Posts</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Docs</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">html超文本标记语言笔记</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-01-04</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>2分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <h2 id="一html-常用标签">一、html 常用标签</h2>
+<p><code>&lt;html&gt; --网页开始 最后要有结束标签 &lt;/html&gt;</code></p>
+<p><strong>结束标签一定不能忘了</strong></p>
+<p><code>&lt;head&gt;</code> &ndash;网页头标签，里面可以加 title 标签修改网页的 title，也可以用<code>&lt;meta charset=&quot;utf-8&quot;&gt;&lt;/meta&gt;</code>定义网页解码使用的码表。</p>
+<p><code>&lt;body&gt; --网页主体 &lt;/body&gt;</code></p>
+<p><code>&lt;h1&gt; 这是一个标题 &lt;h1&gt;</code> 共有大小六个标题格式，h1 to h6</p>
+<p><code>&lt;a href=&quot;http://www.w3school.com.cn&quot;&gt;This is a link&lt;/a&gt;</code> &ndash;链接的表示。a 标签不能嵌套 a 标签。</p>
+<p><code>&lt;img src=&quot;w3school.jpg&quot; width=&quot;104&quot; height=&quot;142&quot; /&gt;</code> &ndash;图像的表示</p>
+<p><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code> &ndash;段落标识。p 标签中不能套块级元素，否则会被截断成两个 p 标签。</p>
+<p><code>&lt;br /&gt;</code> &ndash;换行符</p>
+<p>当显示页面时，浏览器会移除源代码中多余的空格和空行。所有连续的空格或空行都会被算作一个空格。需要注意的是，HTML 代码中的所有连续的空行（换行）也被显示为一个空格。</p>
+<p><code>&lt;hr /&gt;</code> &ndash;水平线用于分割内容</p>
+<p>html 编码:</p>
+<p>常用的也就三个，用于在 html 文档中表示特殊字符。</p>
+<ol>
+<li>
+<p>空格，html 中 n 个空格也仅被看作一个空格，作为单词的切分符，于是用<code>&amp;nbsp;</code>来代替。</p>
+</li>
+<li>
+<p>左尖角符，代表标签的开始，<code>&amp;lt;</code></p>
+</li>
+<li>
+<p>右尖角符，代表标签的结束，<code>&amp;gt;</code></p>
+</li>
+</ol>
+<blockquote>
+<p>注释：浏览器会自动地在标题的前后添加空行。<br>
+注释：默认情况下，HTML 会自动地在块级元素前后添加一个额外的空行，比如段落、标题元素前后</p>
+</blockquote>
+<h2 id="二html-注释">二、html 注释</h2>
+<p><code>&lt;!--This is a comment--&gt;</code> 注释的写法</p>
+<h2 id="三html-样式">三、html 样式</h2>
+<h4 id="背景颜色background">背景颜色(background)</h4>
+<p>eg:</p>
+<blockquote>
+<p><code>&lt;body style=&quot;background-color:yellow&quot;&gt;</code><br>
+<code>&lt;h2 style=&quot;background-color:red&quot;&gt;This is a heading&lt;/h2&gt;</code> &gt;<code>&lt;p style=&quot;background-color:green&quot;&gt;This is a paragraph.&lt;/p&gt;</code></p>
+</blockquote>
+<h4 id="字体颜色和尺寸font-familycolorfont-size">字体、颜色和尺寸(font-family;color;font-size)</h4>
+<p>eg:</p>
+<blockquote>
+<p><code>&lt;h1 style=&quot;font-family:verdana&quot;&gt;A heading&lt;/h1&gt;</code></p>
+</blockquote>
+<blockquote>
+<p><code>&lt;p style=&quot;font-family:arial;color:red;font-size:20px;&quot;&gt;A paragraph.&lt;/p&gt;</code></p>
+</blockquote>
+<h4 id="文本对齐text-align">文本对齐(text-align)</h4>
+<p>eg：</p>
+<blockquote>
+<p><code>&lt;h1 style=&quot;text-align:center&quot;&gt;This is a heading&lt;/h1&gt;</code></p>
+</blockquote>
+<h2 id="四html-格式化">四、html 格式化</h2>
+<h4 id="常用的几种格式">常用的几种格式</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">标签</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:center">标签</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>&lt;b&gt;</code></td>
+<td style="text-align:center">定义粗体文本</td>
+<td style="text-align:center"><code>&lt;code&gt;</code></td>
+<td style="text-align:center">定义计算机代码</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;big&gt;</code></td>
+<td style="text-align:center">定义大号字</td>
+<td style="text-align:center"><code>&lt;pre&gt;</code></td>
+<td style="text-align:center">定义预格式文本</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;i&gt;</code></td>
+<td style="text-align:center">定义斜体字</td>
+<td style="text-align:center"><code>&lt;var&gt;</code></td>
+<td style="text-align:center">定义变量</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;strong&gt;</code></td>
+<td style="text-align:center">加粗</td>
+<td style="text-align:center"><code>&lt;del&gt;</code></td>
+<td style="text-align:center">删除线</td>
+</tr>
+</tbody>
+</table>
+<h2 id="五html-引用">五、html 引用</h2>
+<p><code>&lt;q&gt;</code>和<code>&lt;/q&gt;</code>包围起来的文本称为短引用，文本两边会带上引号。</p>
+<p><code>&lt;blockquote&gt;</code>和<code>&lt;/blockquote&gt;</code>包围起来的文本称为长引用，文本会进行缩进处理。</p>
+<p>其他引用的格式：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">标签</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>&lt;address&gt;</code></td>
+<td style="text-align:center">定义文档作者或拥有者的联系信息</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;cite&gt;</code></td>
+<td style="text-align:center">定义著作的标题</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;abbr&gt;</code></td>
+<td style="text-align:center">定义缩写或首字母缩略语</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;bdo&gt;</code></td>
+<td style="text-align:center">定义文本方向</td>
+</tr>
+</tbody>
+</table>
+<h2 id="六html-链接">六、html 链接</h2>
+<p><code>&lt;a href=&quot;(url)&quot;&gt;*words*&lt;/a&gt;</code> 最终点击 words（甚至 words 可以替换成一张图片）可进入指定的 url 链接</p>
+<blockquote>
+<p>★ 如果在&quot;url&quot;后面再加上 target=&quot;_blank&quot;，则是打开一个新窗口进入链接页面，就无需离开当前站点了。</p>
+</blockquote>
+<blockquote>
+<p>注释：在 url 后面得跟上一个/，比如<code>http://www.baidu.com/</code>，不加上会向服务器两次请求。<br>
+在 url 前端加上/，比如/index.html，应该就是直接进本站的 index.html 界面。省略了前面的内容。</p>
+</blockquote>
+<h4 id="html-的锚">html 的锚</h4>
+<p>定义：<code>&lt;a name=&quot;*label*&quot;&gt;*ID*</code></a>` 由此定义了一个锚</p>
+<p>调用：<code>&lt;a href=&quot;#*label*&quot;&gt;&lt;/a&gt;</code></p>
+<p>当然也可以在 url 的末端写上#label,就可以直接转到链接页面的锚了。</p>
+<h2 id="七html-图像">七、html 图像</h2>
+<p>在 HTML 中，图像由 <code>&lt;img&gt;</code> 标签定义。</p>
+<p><code>&lt;img&gt;</code> 是空标签，意思是说，它只包含属性，并且没有闭合标签。</p>
+<p>要在页面上显示图像，你需要使用源属性（src）。src 指 &ldquo;source&rdquo;。源属性的值是图像的 URL 地址。</p>
+<p>定义图像的语法是：</p>
+<p><code>&lt;img src=&quot;url&quot; /&gt;</code></p>
+<p>URL 指存储图像的位置。如果名为 &ldquo;boat.gif&rdquo; 的图像位于 <code>www.w3school.com.cn</code> 的 images 目录中，那么其 URL 为 <code>http://www.w3school.com.cn/images/boat.gif</code>。</p>
+<p><code>&lt;title=&quot;&quot;&gt;</code>图片提示符，鼠标挪过去就会显示的提示。</p>
+<p><code>&lt;alt=&quot;'&gt;</code>图片占位符，如果图片显示不出来，就会显示这里的文字。</p>
+<p><code>&lt;p&gt;</code>图像 <code>&lt;img src =&quot;/i/eg_cute.gif&quot; align=&quot;top/bottom/center/left/right&quot;&gt;</code> 在文本中<code>&lt;/p&gt;</code></p>
+<p>当然写属性的地方也可以控制图像的大小 如 width=&ldquo;50&rdquo; height=&ldquo;50&rdquo;</p>
+<h2 id="八html-列表">八、html 列表</h2>
+<h4 id="无序列表">无序列表</h4>
+<p>无序列表是一个项目的列表，此列项目使用粗体圆点（典型的小黑圆圈）进行标记。</p>
+<p>无序列表始于 <code>&lt;ul&gt;</code> 标签。每个列表项始于 <code>&lt;li&gt;</code>。列表项内部可以使用段落、换行符、图片、链接以及其他列表等等。</p>
+<p><code>&lt;ur type=&quot;disc/circle/square&quot;&gt;</code> 分别是黑圆圈、白圆圈、黑方块</p>
+<blockquote>
+<p><code>&lt;ul&gt;</code><br>
+<code>&lt;li&gt;Coffee&lt;/li&gt;</code><br>
+<code>&lt;li&gt;Milk&lt;/li&gt;</code><br>
+<code>&lt;/ul&gt;</code></p>
+</blockquote>
+<ul>
+<li>coffee</li>
+<li>milk</li>
+</ul>
+<h4 id="有序列表">有序列表</h4>
+<p>同样，有序列表也是一列项目，列表项目使用数字进行标记。</p>
+<p>有序列表始于 <code>&lt;ol&gt;</code> 标签。每个列表项始于 <code>&lt;li&gt;</code> 标签。</p>
+<p>标签 ol 后面可以加个 type，代表列表的样式，共有五种，不写默认数字，写法为<code>&lt;ol type=&quot;1/a/A/i/I&quot;&gt;</code>.其中 i 和 I 代表罗马数字。</p>
+<p>如果要倒序排，可加一句<code>reversed=&quot;reversed&quot;</code>.如果要设定从第 3 个开始排，就加一句 start=&ldquo;3&rdquo;，无论你是哪种类型，都能用数字去取 start。</p>
+<blockquote>
+<p><code>&lt;ol&gt;</code><br>
+<code>&lt;li&gt;Coffee&lt;/li&gt;</code><br>
+<code>&lt;li&gt;Milk&lt;/li&gt;</code><br>
+<code>&lt;/ol&gt;</code></p>
+</blockquote>
+<ol>
+<li>coffee</li>
+<li>milk</li>
+</ol>
+<h2 id="九html-块">九、html 块</h2>
+<h4 id="html-块元素">html 块元素</h4>
+<p>块级元素在浏览器显示时，通常会以新行来开始（和结束）。例子：<code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;table&gt;</code>, <code>&lt;div&gt;</code></p>
+<p>内联元素在显示时通常不会以新行开始。例子：<code>&lt;b&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;span&gt;</code></p>
+<p><code>&lt;div&gt;</code>它是可用于组合其他 HTML 元素的容器。有换行效果，而 span 没有。</p>
+<p><code>&lt;span&gt;</code>可用作文本的容器。这两者都没有特定含义。</p>
+<h2 id="十html-表单">十、html 表单</h2>
+<p>1.文本输入 <code>&lt;input type=&quot;text&quot;&gt;</code>,就出现一个文本输入框。得有 name 才能正确提交。如果再写上 value 值，就是文本框中默认的内容。<br>
+2.密码输入，将 type 改为 password，输入内容变为暗码，要有 name 才能正确提交<br>
+3.单选按钮，将 type 类型写成 radio。不过在 type 后面还得追加 name 和 value，name 相同的作为同一个单选题的选项，而 value 代表提交的值。<br>
+4.多选按钮 type 类型为 checkbox，每个项都得有 name 和 value，name 相同 value 不同。<br>
+5.提交按钮，type 类型为 submit，其 value 的值就是显示在按钮上的字，不写默认为提交。<br>
+6.下拉列表，<code>&lt;select name=&quot;&quot;&gt;</code> 然后接下来子块标签都是<code>&lt;option value=&quot;&quot;&gt;</code><br>
+7.文本域，<code>&lt;textarea name=&quot;&quot; rows=&quot;&quot; cols=&quot;&quot;&gt;</code>,可分行分段输入。<br>
+8.按钮，<code>&lt;button type=&quot;button&quot; onclick=&quot;alert('')&quot;&gt;</code>Click me!<code>&lt;/button&gt;</code>,alert 中的内容就是弹出框的内容，中间的文本是按钮上面的文字。<br>
+9.只读属性，readonly 这个属性可以规定文本输入只读，即不能修改。<br>
+10.禁用属性，disabled 这个属性不准对文本框操作，背景深灰色。</p>
+<p>ps: 这篇笔记真是折腾我够久啊，一直给我报错，百度了 n 次也搜不到原因，拿掉这个 md 文件就不报错，那就是这个文件的问题，frontmatter 抄了之前的也还是报错，那就是正文的原因，然后我删掉大部分剩下一点点放上去，问题就了然了——markdown 和 html 之间的矛盾（是 vscode 预览器害了我啊，让我以为在标签前面加上一个反斜杠就能正常输出，实际上不行，对于标签要用<code>...</code>单引号给括起来才行，至少最后总算解决了这个麻烦。唉。</p>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://www.notenough.top/tags/html/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#HTML</a>
+    
+</div>
+        
+        
+        
+
+
+        
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://www.notenough.top/posts/pythonnote1/" class="block">Python基础知识笔记</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+    </div>
+</div>
+
+        
+
+
+
+    </div>
+    
+
+    
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>

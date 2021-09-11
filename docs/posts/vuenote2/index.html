@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>VueNote2 | NotEnough</title>
+
+<meta name="generator" content="Hugo Eureka 0.8.2" />
+<link rel="stylesheet" href="https://www.notenough.top/css/eureka.min.css">
+<script defer src="https://www.notenough.top/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
+  integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="Vue 实例——购物车
+之前照书上题目打得一个例子，模拟一个购物车，要求选中商品再计算总价。
+1.对于每个条目，给其 list 对象中加入一条 chose：false 表示其初始状态是非选中的，然后再 html 中该条目的 checkbox 中用 v-model 绑定该条目的 chose 值。当其 checkbox 选中后会将 chose 值变为真。首先实现了一个数据绑定。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Posts",
+      "item":"https://www.notenough.top/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"VueNote2",
+      "item":"https://www.notenough.top/posts/vuenote2/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.notenough.top/posts/vuenote2/"
+    },
+    "headline": "VueNote2 | NotEnough","datePublished": "2019-06-03T18:59:16+08:00",
+    "dateModified": "2019-06-03T18:59:16+08:00",
+    "wordCount":  344 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "C. Wang",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.notenough.top/images/icon.png"
+        }
+        },
+    "description": "\u003ch2 id=\u0022vue-实例购物车\u0022\u003eVue 实例——购物车\u003c\/h2\u003e\n\u003cp\u003e之前照书上题目打得一个例子，模拟一个购物车，要求选中商品再计算总价。\u003c\/p\u003e\n\u003cp\u003e1.对于每个条目，给其 list 对象中加入一条 chose：false 表示其初始状态是非选中的，然后再 html 中该条目的 checkbox 中用 v-model 绑定该条目的 chose 值。当其 checkbox 选中后会将 chose 值变为真。首先实现了一个数据绑定。\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="VueNote2 | NotEnough" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://www.notenough.top/images/icon.png">
+
+
+<meta property="og:url" content="https://www.notenough.top/posts/vuenote2/" />
+
+
+
+
+<meta property="og:description" content="Vue 实例——购物车
+之前照书上题目打得一个例子，模拟一个购物车，要求选中商品再计算总价。
+1.对于每个条目，给其 list 对象中加入一条 chose：false 表示其初始状态是非选中的，然后再 html 中该条目的 checkbox 中用 v-model 绑定该条目的 chose 值。当其 checkbox 选中后会将 chose 值变为真。首先实现了一个数据绑定。" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="NotEnough" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2019-06-03T18:59:16&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2019-06-03T18:59:16&#43;08:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="Vue" />
+
+
+
+
+
+<meta property="og:see_also" content="https://www.notenough.top/posts/vuenote/" />
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">NotEnough</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">About</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">Posts</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Docs</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">VueNote2</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-06-03</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>2分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <h2 id="vue-实例购物车">Vue 实例——购物车</h2>
+<p>之前照书上题目打得一个例子，模拟一个购物车，要求选中商品再计算总价。</p>
+<p>1.对于每个条目，给其 list 对象中加入一条 chose：false 表示其初始状态是非选中的，然后再 html 中该条目的 checkbox 中用 v-model 绑定该条目的 chose 值。当其 checkbox 选中后会将 chose 值变为真。首先实现了一个数据绑定。</p>
+<p>然后再 totalprice 总价的计算方法里，增加一个判定条件，就是 chose==true 才计算入内。</p>
+<p>2.提供一个全选的按钮。依然选用一个 checkbox 作为全选的按钮。初始状态为不选，不选作为 vue 实例的一个属性，取名为 all，赋值 false，在全选按钮上用 v-model 来绑定。要求单击后实现全选，用一个 checkAll 函数，在实例的 methods 里，根据 all 的取值真假来判定，对于每个条目，都给 chose 赋相应的值，如果 all 为真，证明已经全选，再按一次按常理就是全部不选，那就全部赋值为 false，如果为假就全部赋为 true。</p>
+<p>下面附上全部代码</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;title&gt;购物车示例&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;index.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;app&quot; v-cloak&gt;
+      &lt;template v-if=&quot;list.length&quot;&gt;
+        &lt;table&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;&lt;/th&gt;
+              &lt;th&gt;
+                &lt;input type=&quot;checkbox&quot; v-model=&quot;all&quot; @click=&quot;checkAll&quot; /&gt;
+              &lt;/th&gt;
+              &lt;th&gt;商品名称&lt;/th&gt;
+              &lt;th&gt;商品单价&lt;/th&gt;
+              &lt;th&gt;购买数量&lt;/th&gt;
+              &lt;th&gt;操作&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr v-for=&quot;(item,index) in list&quot;&gt;
+              &lt;td&gt;{{ index+1 }}&lt;/td&gt;
+              &lt;td&gt;
+                &lt;input type=&quot;checkbox&quot; v-model=&quot;item.chose&quot; /&gt;
+              &lt;/td&gt;
+              &lt;td&gt;{{ item.name }}&lt;/td&gt;
+              &lt;td&gt;{{ item.price }}&lt;/td&gt;
+              &lt;td&gt;
+                &lt;button
+                  @click=&quot;handleReduce(index)&quot;
+                  :disabled=&quot;item.count === 1&quot;
+                &gt;
+                  -
+                &lt;/button&gt;
+                {{ item.count }}
+                &lt;button @click=&quot;handleAdd(index)&quot;&gt;+&lt;/button&gt;
+              &lt;/td&gt;
+              &lt;td&gt;
+                &lt;button @click=&quot;handleRemove(index)&quot;&gt;移除&lt;/button&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+        &lt;div&gt;总价：￥{{ totalPrice }}&lt;/div&gt;
+      &lt;/template&gt;
+      &lt;div v-else&gt;购物车为空&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;index.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="language-css">[v-cloak] {
+  display: none;
+}
+table {
+  border: 1px solid #e9e9e9;
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+}
+th,
+td {
+  padding: 8px 16px;
+  border: 1px solid #e9e9e9;
+  text-align: left;
+}
+th {
+  background: #f7f7f7;
+  color: #5c6b77;
+  font-weight: 600;
+  white-space: nowrap;
+}
+</code></pre>
+<pre><code class="language-javascript">var app = new Vue({
+  el: '#app',
+  data: {
+    all: false,
+    list: [
+      {
+        id: 1,
+        name: 'iphone7',
+        price: 2800,
+        count: 1,
+        chose: false,
+      },
+      {
+        id: 2,
+        name: 'ipad pro',
+        price: 4396,
+        count: 1,
+        chose: false,
+      },
+      {
+        id: 3,
+        name: 'macbook',
+        price: 4399,
+        count: 1,
+        chose: false,
+      },
+    ],
+  },
+  computed: {
+    totalPrice: function () {
+      var total = 0
+      for (var i = 0; i &lt; this.list.length; i++) {
+        if (this.list[i].chose === true) {
+          var item = this.list[i]
+          total += item.price * item.count
+        }
+      }
+      return total.toString().replace(/\B(?=(\d{3})+$)/g, ',')
+    },
+  },
+  methods: {
+    handleReduce: function (index) {
+      if (this.list[index].count === 1) return
+      this.list[index].count--
+    },
+    handleAdd: function (index) {
+      this.list[index].count++
+    },
+    handleRemove: function (index) {
+      this.list.splice(index, 1)
+    },
+    checkAll: function () {
+      if (this.all === true) {
+        for (var i = 0; i &lt; this.list.length; i++) {
+          this.list[i].chose = false
+        }
+      } else {
+        for (var i = 0; i &lt; this.list.length; i++) {
+          this.list[i].chose = true
+        }
+      }
+    },
+  },
+})
+</code></pre>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://www.notenough.top/tags/vue/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Vue</a>
+    
+</div>
+        
+        
+        
+
+
+        
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://www.notenough.top/posts/ubuntu2/" class="block">ubuntu安装卡死及关机卡死解决方法</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://www.notenough.top/posts/vuenote/" class="block">VueNote1</a>
+        
+    </div>
+</div>
+
+        
+
+
+
+    </div>
+    
+
+    
+    
+    <div
+        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded p-6">
+        <h2 class="text-lg font-semibold mb-4">相关</h2>
+        <div class="content">
+            
+            <a href="https://www.notenough.top/posts/vuenote/">VueNote1</a>
+            <br />
+            
+        </div>
+    </div>
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>

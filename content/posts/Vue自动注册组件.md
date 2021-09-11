@@ -2,7 +2,8 @@
 title: Vue2自动注册组件
 date: 2021-06-06T17:51:14+08:00
 categories: solution
-tags: Vue
+tags:
+  - Vue
 draft: false
 ---
 

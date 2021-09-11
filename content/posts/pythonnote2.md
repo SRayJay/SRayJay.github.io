@@ -2,7 +2,8 @@
 title: Python爬虫笔记
 date: 2019-01-18T20:44:23+08:00
 categories: note
-tags: Python
+tags:
+  - Python
 draft: false
 ---
 

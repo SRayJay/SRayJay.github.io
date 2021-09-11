@@ -2,7 +2,8 @@
 title: JavaScript基础
 date: 2019-05-26T10:19:54+08:00
 categories: note
-tags: JavaScript
+tags:
+  - JavaScript
 draft: false
 ---
 

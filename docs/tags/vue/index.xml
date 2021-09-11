@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vue on NotEnough</title>
+    <link>https://www.notenough.top/tags/vue/</link>
+    <description>Recent content in Vue on NotEnough</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 26 Aug 2021 22:29:22 +0800</lastBuildDate><atom:link href="https://www.notenough.top/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue3新特性</title>
+      <link>https://www.notenough.top/posts/vue3/</link>
+      <pubDate>Thu, 26 Aug 2021 22:29:22 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/vue3/</guid>
+      <description>&lt;h2 id=&#34;一vue30-六大亮点&#34;&gt;一、Vue3.0 六大亮点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Performance：性能比 Vue2.x 快 1.2~2 倍&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tree shaking support：按需编译，体积比 Vue2.x 更小&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Vue3.2新特性</title>
+      <link>https://www.notenough.top/posts/vue3-2/</link>
+      <pubDate>Thu, 26 Aug 2021 21:10:46 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/vue3-2/</guid>
+      <description>&lt;h3 id=&#34;1-新的-sfc-特性&#34;&gt;1. 新的 SFC 特性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;script setup&amp;gt;&lt;/code&gt;是一种编译时语法糖，可在 SFC 内使用 Composition API 时极大地提升工作效率&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;style&amp;gt; v-bind&lt;/code&gt;在 SFC&lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt;标签内启用组件状态驱动的动态 CSS 值&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>前端解决跨域</title>
+      <link>https://www.notenough.top/posts/%E5%89%8D%E7%AB%AF%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/</link>
+      <pubDate>Wed, 14 Jul 2021 23:21:04 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/%E5%89%8D%E7%AB%AF%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/</guid>
+      <description>&lt;p&gt;重新整理了下 Vue 的接口去跨域的事，其实就两个地方实际生效，其他地方乱写端口什么的反倒是阻碍了。这边展示 Vue3+Vite 的例子：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Vue@路径别名设置</title>
+      <link>https://www.notenough.top/posts/vue-%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Sun, 06 Jun 2021 17:57:12 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/vue-%E8%B7%AF%E5%BE%84/</guid>
+      <description>路径别名，省去相对路径的麻烦，直接用@views 来作为路径开头更加的方便
+Vue2+Vue-Cli 写法 在 vue.config.js 里写入
+module.exports = { ... chainWebpack: config =&amp;gt; { config.resolve.symlinks(true) config.resolve.alias .set(&#39;@&#39;, resolve(&#39;src&#39;)) .set(&#39;@assets&#39;, resolve(&#39;src/assets&#39;)) .set(&#39;@components&#39;, resolve(&#39;src/components&#39;)) .set(&#39;@views&#39;, resolve(&#39;src/views&#39;)) } }  Vue3+Vite+Ts 写法 // vite.config.js resolve:{ alias: { &amp;quot;@&amp;quot;: path.resolve(__dirname, &amp;quot;src&amp;quot;), &amp;quot;@V&amp;quot;: path.resolve(__dirname, &amp;quot;src/views&amp;quot;), &amp;quot;@C&amp;quot;: path.resolve(__dirname,&amp;quot;src/components&amp;quot;) } } } // tsconfig.json &amp;quot;paths&amp;quot;:{ &amp;quot;@/*&amp;quot;:[&amp;quot;./src/*&amp;quot;], &amp;quot;@V/*&amp;quot;:[&amp;quot;./src/views/*&amp;quot;], &amp;quot;@C/*&amp;quot;:[&amp;quot;./src/components/*&amp;quot;] }  </description>
+    </item>
+    
+    <item>
+      <title>Vue2自动注册组件</title>
+      <link>https://www.notenough.top/posts/vue%E8%87%AA%E5%8A%A8%E6%B3%A8%E5%86%8C%E7%BB%84%E4%BB%B6/</link>
+      <pubDate>Sun, 06 Jun 2021 17:51:14 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/vue%E8%87%AA%E5%8A%A8%E6%B3%A8%E5%86%8C%E7%BB%84%E4%BB%B6/</guid>
+      <description>&lt;p&gt;Vue 的组件要在其他地方使用得通过这三步&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>展开按钮总结</title>
+      <link>https://www.notenough.top/posts/zhankai/</link>
+      <pubDate>Tue, 15 Dec 2020 13:34:28 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/zhankai/</guid>
+      <description>&lt;p&gt;需求：一段文本，不定长，需要在页面中有展开按钮，假如它少于固定行，展示按钮不可见，假如多于固定行，则出现按钮，点击后，显示全部长度。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VueNote2</title>
+      <link>https://www.notenough.top/posts/vuenote2/</link>
+      <pubDate>Mon, 03 Jun 2019 18:59:16 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/vuenote2/</guid>
+      <description>&lt;h2 id=&#34;vue-实例购物车&#34;&gt;Vue 实例——购物车&lt;/h2&gt;
+&lt;p&gt;之前照书上题目打得一个例子，模拟一个购物车，要求选中商品再计算总价。&lt;/p&gt;
+&lt;p&gt;1.对于每个条目，给其 list 对象中加入一条 chose：false 表示其初始状态是非选中的，然后再 html 中该条目的 checkbox 中用 v-model 绑定该条目的 chose 值。当其 checkbox 选中后会将 chose 值变为真。首先实现了一个数据绑定。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VueNote1</title>
+      <link>https://www.notenough.top/posts/vuenote/</link>
+      <pubDate>Mon, 27 May 2019 21:58:46 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/vuenote/</guid>
+      <description>&lt;p&gt;每个 vue 应用都需要实例化 vue&lt;/p&gt;
+&lt;p&gt;对于 html 中 id 为 app 的元素，对其实例化。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>JavaScript基础 | NotEnough</title>
+
+<meta name="generator" content="Hugo Eureka 0.8.2" />
+<link rel="stylesheet" href="https://www.notenough.top/css/eureka.min.css">
+<script defer src="https://www.notenough.top/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
+  integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="1.在标签中填写 onclick 事件调用函数时，不是 onclick=函数名， 而是 onclick=&ldquo;函数名&#43;()&rdquo;
+2.script 中用到的函数中带 document.write 会覆盖之前的文本。
+3.js 输出数据：">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Posts",
+      "item":"https://www.notenough.top/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"JavaScript基础",
+      "item":"https://www.notenough.top/posts/jsnote/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.notenough.top/posts/jsnote/"
+    },
+    "headline": "JavaScript基础 | NotEnough","datePublished": "2019-05-26T10:19:54+08:00",
+    "dateModified": "2019-05-26T10:19:54+08:00",
+    "wordCount":  191 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "C. Wang",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.notenough.top/images/icon.png"
+        }
+        },
+    "description": "\u003cp\u003e1.在标签中填写 onclick 事件调用函数时，不是 onclick=函数名， 而是 onclick=\u0026ldquo;函数名\u002b()\u0026rdquo;\u003c\/p\u003e\n\u003cp\u003e2.script 中用到的函数中带 document.write 会覆盖之前的文本。\u003c\/p\u003e\n\u003cp\u003e3.js 输出数据：\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="JavaScript基础 | NotEnough" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://www.notenough.top/images/icon.png">
+
+
+<meta property="og:url" content="https://www.notenough.top/posts/jsnote/" />
+
+
+
+
+<meta property="og:description" content="1.在标签中填写 onclick 事件调用函数时，不是 onclick=函数名， 而是 onclick=&ldquo;函数名&#43;()&rdquo;
+2.script 中用到的函数中带 document.write 会覆盖之前的文本。
+3.js 输出数据：" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="NotEnough" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2019-05-26T10:19:54&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2019-05-26T10:19:54&#43;08:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="JavaScript" />
+
+
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">NotEnough</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">About</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">Posts</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Docs</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">JavaScript基础</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-05-26</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <p>1.在标签中填写 onclick 事件调用函数时，不是 onclick=函数名， 而是 onclick=&ldquo;函数名+()&rdquo;</p>
+<p>2.script 中用到的函数中带 document.write 会覆盖之前的文本。</p>
+<p>3.js 输出数据：</p>
+<ul>
+<li>使用 window.alert() 弹出警告框</li>
+<li>使用 document.write() 方法将内容写到 HTML 文档中</li>
+<li>使用 innerHTML 写入到 HTML 元素</li>
+<li>使用 console.log() 写入到浏览器的控制台</li>
+</ul>
+<p>使用 javascript 操作 html 元素，使用 document.getElementById(id) 方法，id 要自己在元素内标记。</p>
+<p>4.js 对象用花括号包裹，采用键值对的方式来定义对象的属性，访问属性可以用对象名.属性，也可以对象名[&ldquo;属性名&rdquo;]这样。</p>
+<p>在声明变量时，不必要一开始就设初值，可以后面追加，那么定义时可以 var st = new Object(),然后再分别 st.name=&ldquo;abc&quot;来对属性赋值。但用了 new 定义的就是对象。</p>
+<p>数组的声明，可以 var arr = new Array(&ldquo;a&rdquo;,&ldquo;b&rdquo;)也可以 var arr = [&ldquo;a&rdquo;,&ldquo;b&rdquo;]</p>
+<p>5.使用 typeof 无法区分数组和对象，返回的都是 object。可以采用 Array.isArray(数组名)这一方法来判断，也可以 数组名 instanceof Array 来判断。</p>
+<p>6.基本类型的变量存放在栈内存中。即赋初值时可以借用其他变量，但并不会随着其他变量的变化而变化。</p>
+<pre><code class="language-javascript">var a = 3
+var b = a
+console.log(a) //3
+console.log(b) //3
+a = 'a'
+console.log(a) //&quot;a&quot;
+console.log(b) //3
+</code></pre>
+<p>7.如果把值赋给尚未声明的变量，该变量将被自动作为 window 的一个属性,默认为全局变量。</p>
+<p>8.let 声明的变量，与 var 作用域不同，只作用于自己所在的代码块{}中，如果包含在 if 中，那么出了 if 块，这个 let 将无效。</p>
+<p>用 var 声明变量，加入函数内和函数外声明的变量同名，是会改变函数外这个变量的值的。这种情况下要么用 let 限制范围，要么干脆改个变量名。</p>
+<p>在相同作用域下，不允许先 var a =1，然后 let a=2，倒过来也一样。但是同种声明来改值的话是可以的。</p>
+<p>9.单引号和双引号均能定义字符串，并且字符串中能包含另一种引号，如要包含与首尾相同的引号，就得用'或者&quot;这样的转义字符了。并且字符串可以用 s[7]这样的索引来访问单个字符。</p>
+<p>10.js 中的==和===的区别：</p>
+<p>==：用于比较二者值是否相等，如类型不同，将高等类型转化为初等类型，&ldquo;1&rdquo;==1 是 true 的。</p>
+<p>===：要求类型与值皆相等，若类型不同，直接判 false</p>
+<p>11.+号用于拼接字符串，同时字符串也能与数字拼接。自左向右的顺序，如果先碰到字符串，那么接下来的数字都将作为字符串拼接，若显示数字间的+，会作和再与字符串拼接。</p>
+<p>12.js 中可以对一个代码块打标签，label：{statement}，然后使用 break label 或者 continue label 可以针对该标签来跳出或者继续。这样扩大了 break 和 continue 的使用范围。</p>
+<p>13.null 和 undefined：</p>
+<p>null 用于对象，undefined 用于变量，属性，方法。</p>
+<p>undefind 代表声明了但为赋值。null 是没有值，一般用于主动释放内存，即不再使用一个变量时，将其赋值为 null。</p>
+<p>undefined 和 null 值相等，但类型不同。</p>
+<p>14.将其他类型转化为字符串，可以用 String(2)或者 2.toString()。</p>
+<p>将字符串转化为数字，如果是空字符串，返回的是 0，如果字符串不好直接转为数字，会变成 NaN,这不是个数字，但他是 number 类型的。</p>
+<p>15.一元运算符+可以用来将字符串转化为数字，比如 y=&ldquo;5&rdquo;，x=+y，x 就是 5。如果 y 是&quot;John&rdquo;,就变成 NaN 了，但类型上还是数字。</p>
+<p>16.try、catch、throw、finally 这四个用作错误处理，try 就是尝试操作，如果符合某种错误情况，用 throw 抛出自定义错误 err，然后 catch(err)中针对错误做处理，最后的 finally 是无论如何总要进行的操作。</p>
+<p>17.变量提升，就是可以先给变量赋值并使用，而在最后再声明，这种操作是可行的，但不适用于初始化变量，只能 var a，但不能 var a = 7。在严格模式中，就不能使用为声明的变量。</p>
+<p>let 与 var 不同，不允许变量提升。</p>
+<p>18.js 中字符串断行要用到反斜杠,switch 语句在判断的时候是采用===恒等计算的，要求类型也一致。数组不允许用名字来索引，只能用数字下标索引，一旦数组用名字做索引，会认定是对象。</p>
+<p>19.表单自动验证可以在 input 框属性中使用 required=&ldquo;required&quot;要求必须填入内容。</p>
+<p>20.void()仅仅是代表不返回任何值，但是括号内的表达式还是要运行。</p>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://www.notenough.top/tags/javascript/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#JavaScript</a>
+    
+</div>
+        
+        
+        
+
+
+        
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://www.notenough.top/posts/vuenote/" class="block">VueNote1</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://www.notenough.top/posts/flutternote3/" class="block">FlutterNote3</a>
+        
+    </div>
+</div>
+
+        
+
+
+
+    </div>
+    
+
+    
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>

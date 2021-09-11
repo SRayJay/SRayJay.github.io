@@ -2,7 +2,8 @@
 title: ES6笔记
 date: 2021-05-21T20:57:31+08:00
 categories: note
-tags: JavaScript
+tags:
+  - JavaScript
 draft: false
 ---
 
