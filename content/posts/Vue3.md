@@ -12,7 +12,7 @@ draft: false
 
 - Tree shaking support：按需编译，体积比 Vue2.x 更小
 
-  <!--more-->
+<!--more-->
 
 - Composition API：组合 API
 

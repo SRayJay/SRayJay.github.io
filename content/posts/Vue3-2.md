@@ -2,7 +2,8 @@
 title: Vue3.2新特性
 date: 2021-08-26T21:10:46+08:00
 categories: note
-tags: Vue
+tags:
+  - Vue
 draft: false
 ---
 

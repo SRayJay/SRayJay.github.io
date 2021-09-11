@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>Vue3.2新特性 | NotEnough</title>
+
+<meta name="generator" content="Hugo Eureka 0.8.2" />
+<link rel="stylesheet" href="https://www.notenough.top/css/eureka.min.css">
+<script defer src="https://www.notenough.top/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
+  integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="1. 新的 SFC 特性
+
+&lt;script setup&gt;是一种编译时语法糖，可在 SFC 内使用 Composition API 时极大地提升工作效率
+&lt;style&gt; v-bind在 SFC&lt;style&gt;标签内启用组件状态驱动的动态 CSS 值
+">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Posts",
+      "item":"https://www.notenough.top/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"Vue3.2新特性",
+      "item":"https://www.notenough.top/posts/vue3-2/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.notenough.top/posts/vue3-2/"
+    },
+    "headline": "Vue3.2新特性 | NotEnough","datePublished": "2021-08-26T21:10:46+08:00",
+    "dateModified": "2021-08-26T21:10:46+08:00",
+    "wordCount":  249 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "C. Wang",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.notenough.top/images/icon.png"
+        }
+        },
+    "description": "\u003ch3 id=\u00221-新的-sfc-特性\u0022\u003e1. 新的 SFC 特性\u003c\/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ccode\u003e\u0026lt;script setup\u0026gt;\u003c\/code\u003e是一种编译时语法糖，可在 SFC 内使用 Composition API 时极大地提升工作效率\u003c\/li\u003e\n\u003cli\u003e\u003ccode\u003e\u0026lt;style\u0026gt; v-bind\u003c\/code\u003e在 SFC\u003ccode\u003e\u0026lt;style\u0026gt;\u003c\/code\u003e标签内启用组件状态驱动的动态 CSS 值\u003c\/li\u003e\n\u003c\/ul\u003e"
+}
+</script><meta property="og:title" content="Vue3.2新特性 | NotEnough" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://www.notenough.top/images/icon.png">
+
+
+<meta property="og:url" content="https://www.notenough.top/posts/vue3-2/" />
+
+
+
+
+<meta property="og:description" content="1. 新的 SFC 特性
+
+&lt;script setup&gt;是一种编译时语法糖，可在 SFC 内使用 Composition API 时极大地提升工作效率
+&lt;style&gt; v-bind在 SFC&lt;style&gt;标签内启用组件状态驱动的动态 CSS 值
+" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="NotEnough" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2021-08-26T21:10:46&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2021-08-26T21:10:46&#43;08:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="Vue" />
+
+
+
+
+
+<meta property="og:see_also" content="https://www.notenough.top/posts/%E5%89%8D%E7%AB%AF%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/" />
+
+<meta property="og:see_also" content="https://www.notenough.top/posts/vue-%E8%B7%AF%E5%BE%84/" />
+
+<meta property="og:see_also" content="https://www.notenough.top/posts/vue%E8%87%AA%E5%8A%A8%E6%B3%A8%E5%86%8C%E7%BB%84%E4%BB%B6/" />
+
+<meta property="og:see_also" content="https://www.notenough.top/posts/zhankai/" />
+
+<meta property="og:see_also" content="https://www.notenough.top/posts/vuenote2/" />
+
+<meta property="og:see_also" content="https://www.notenough.top/posts/vuenote/" />
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">NotEnough</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">About</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">Posts</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Docs</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">Vue3.2新特性</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-08-26</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>2分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <h3 id="1-新的-sfc-特性">1. 新的 SFC 特性</h3>
+<ul>
+<li><code>&lt;script setup&gt;</code>是一种编译时语法糖，可在 SFC 内使用 Composition API 时极大地提升工作效率</li>
+<li><code>&lt;style&gt; v-bind</code>在 SFC<code>&lt;style&gt;</code>标签内启用组件状态驱动的动态 CSS 值</li>
+</ul>
+<p>下面是个例子</p>
+<pre><code class="language-vue">&lt;script setup&gt;
+import { ref } from 'vue'
+
+const color = ref('red')
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;button @click=&quot;color = color === 'red' ? 'green' : 'red'&quot;&gt;
+    Color is: {{ color }}
+  &lt;/button&gt;
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+button {
+  color: v-bind(color);
+}
+&lt;/style&gt;
+</code></pre>
+<hr>
+<p>script setup 的几个优势</p>
+<ul>
+<li>更少的样板内容，更简洁的代码。</li>
+<li>能够使用纯 Typescript 声明 props 和发出事件。</li>
+<li>更好的运行时性能 (其模板会被编译成与其同一作用域的渲染函数，没有任何的中间代理)。</li>
+<li>更好的 IDE 类型推断性能 (减少语言服务器从代码中抽离类型的工作)。</li>
+</ul>
+<p>写在里面的代码会被编译成组件 <code>setup()</code> 函数的内容。这意味着与普通的 <code>&lt;script&gt;</code> 只在组件被首次引入的时候执行一次不同，<code>&lt;script setup&gt;</code> 中的代码会在<strong>每次组件实例被创建的时候执行</strong>。</p>
+<p><strong>顶层的绑定会被暴露给模板</strong></p>
+<pre><code class="language-vue">&lt;script setup&gt;
+import { clickItem } from './methods.ts' // 方法
+import { foo } from './foo.vue' // 组件A
+import { bar } from './bar.vue' // 组件B
+// 变量
+const msg = 'Hello!'
+const flag = true
+// 函数
+function log() {
+  console.log(msg)
+}
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div @click=&quot;log&quot;&gt;{{ msg }}&lt;/div&gt;
+  &lt;div @click=&quot;clickItem&quot;&gt;
+    &lt;foo&gt;&lt;/foo&gt;
+    &lt;component :is=&quot;flag ? bar : foo&quot; /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<p>动态组件中组件可以做变量在三元表达式中使用<component :is="someCondition ? Foo : Bar" /></p>
+<p><strong>defineProps 和 defineEmits</strong></p>
+<p>传入到 defineProps 和 defineEmits 的选项会从 setup 中提升到模块的范围。因此，传入的选项不能引用在 setup 范围中声明的局部变量。</p>
+<p><strong>defineExpose</strong></p>
+<p>在标准组件写法里，子组件的数据都是默认隐式暴露给父组件的，但在 script-setup 模式下，所有数据只是默认 return 给 template 使用，不会暴露到组件外，所以父组件是无法直接通过挂载 ref 变量获取子组件的数据。</p>
+<p>如果要调用子组件的数据，需要先在子组件显示的暴露出来，才能够正确的拿到，这个操作，就是由 expose 来完成。</p>
+<h3 id="2web-组件">2.Web 组件</h3>
+<p>Vue 3.2 引入了新的 defineCustomElement 方法，可以使用 Vue 组件 API 轻松创建原生自定义元素：</p>
+<pre><code class="language-js">import { defineCustomElement } from 'vue'
+
+const MyVueElement = defineCustomElement({
+  // 常规 Vue 组件选项
+})
+
+// 注册自定义元素。
+// 注册完成后，此页面上的所有 `&lt;my-vue-element&gt;` 标签
+// 都将将升级。
+customElements.define('my-vue-element', MyVueElement)
+</code></pre>
+<p>此 API 允许开发者们创建由 Vue 驱动的 UI 组件库。这些库可以支持任何框架选项，甚至能够在无框架情况下正常使用。</p>
+<h3 id="3性能改进">3.性能改进</h3>
+<p>3.2 版本为 Vue 的响应式系统带来了一系列重大性能改进。</p>
+<ul>
+<li>更高效的 ref 实现（读取速度提高约 260%，写入速度提高约 50%）</li>
+<li>依赖项跟踪速度提高约 40%</li>
+<li>内存使用量减少约 17%</li>
+</ul>
+<p>模板编译器也得到一些改进</p>
+<ul>
+<li>
+<p>创建普通元素 VNode 的速度提高约 200%</p>
+</li>
+<li>
+<p>更为积极的连续 hoisting</p>
+</li>
+</ul>
+<h3 id="4v-memo">4.v-memo</h3>
+<p>对模板的一个子树进行记忆。在元素和组件上均可以使用。该指令通过一个固定长度的依赖数组来进行记忆比较。如果数组中的每个值跟最后一次渲染时相比都没有发生变化，那么整个子树的更新都将被跳过。</p>
+<p>当组件重新渲染的时候，如果 valueA 与 valueB 都维持不变，那么对这个 <div> 以及它的所有子节点的更新都将被跳过。事实上，即使是虚拟 DOM 的 VNode 创建也将被跳过，因为子树的记忆副本可以被重用。</p>
+<p>带有空依赖数组的 <code>v-memo</code> (<code>v-memo=&quot;[]&quot;</code>) 在功能上等效于 <code>v-once</code>。</p>
+<blockquote>
+<p>v-memo 能在性能非常关键的场景下（比如 v-for，length&gt;1000）提供微量的优化，在其他情况下很少需要被用到。</p>
+</blockquote>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://www.notenough.top/tags/vue/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Vue</a>
+    
+</div>
+        
+        
+        
+
+
+        
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://www.notenough.top/posts/vue3/" class="block">Vue3新特性</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://www.notenough.top/posts/%E5%89%8D%E7%AB%AF%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/" class="block">前端解决跨域</a>
+        
+    </div>
+</div>
+
+        
+
+
+
+    </div>
+    
+
+    
+    
+    <div
+        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded p-6">
+        <h2 class="text-lg font-semibold mb-4">相关</h2>
+        <div class="content">
+            
+            <a href="https://www.notenough.top/posts/%E5%89%8D%E7%AB%AF%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/">前端解决跨域</a>
+            <br />
+            
+            <a href="https://www.notenough.top/posts/vue-%E8%B7%AF%E5%BE%84/">Vue@路径别名设置</a>
+            <br />
+            
+            <a href="https://www.notenough.top/posts/vue%E8%87%AA%E5%8A%A8%E6%B3%A8%E5%86%8C%E7%BB%84%E4%BB%B6/">Vue2自动注册组件</a>
+            <br />
+            
+            <a href="https://www.notenough.top/posts/zhankai/">展开按钮总结</a>
+            <br />
+            
+            <a href="https://www.notenough.top/posts/vuenote2/">VueNote2</a>
+            <br />
+            
+            <a href="https://www.notenough.top/posts/vuenote/">VueNote1</a>
+            <br />
+            
+        </div>
+    </div>
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text"> Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>
