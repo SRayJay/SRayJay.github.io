@@ -6,7 +6,16 @@
     <description>Recent content in Tags on NotEnough</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 10 Sep 2021 09:44:45 +0800</lastBuildDate><atom:link href="https://www.notenough.top/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Nov 2021 21:13:05 +0800</lastBuildDate><atom:link href="https://www.notenough.top/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue</title>
+      <link>https://www.notenough.top/tags/vue/</link>
+      <pubDate>Wed, 10 Nov 2021 21:13:05 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/tags/vue/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>ESbuild</title>
       <link>https://www.notenough.top/tags/esbuild/</link>
@@ -67,15 +76,6 @@
       <pubDate>Mon, 30 Aug 2021 23:30:51 +0800</pubDate>
       
       <guid>https://www.notenough.top/tags/nodejs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vue</title>
-      <link>https://www.notenough.top/tags/vue/</link>
-      <pubDate>Thu, 26 Aug 2021 22:29:22 +0800</pubDate>
-      
-      <guid>https://www.notenough.top/tags/vue/</guid>
       <description></description>
     </item>
     

@@ -6,7 +6,16 @@
     <description>Recent content in Posts on NotEnough</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 10 Sep 2021 09:44:45 +0800</lastBuildDate><atom:link href="https://www.notenough.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Nov 2021 21:13:05 +0800</lastBuildDate><atom:link href="https://www.notenough.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue3添加公共方法方式</title>
+      <link>https://www.notenough.top/posts/vue3%E6%B7%BB%E5%8A%A0%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Wed, 10 Nov 2021 21:13:05 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/vue3%E6%B7%BB%E5%8A%A0%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95%E6%96%B9%E5%BC%8F/</guid>
+      <description>&lt;p&gt;在vue3中是不会直接暴露vue对象给你使用了。所以不能像vue2那样直接在原型上挂载，想要添加公共方法可以有下面三种方式。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Vite、esbuild以及webpack比较</title>
       <link>https://www.notenough.top/posts/viteesbuild%E4%BB%A5%E5%8F%8Awebpack%E6%AF%94%E8%BE%83/</link>
