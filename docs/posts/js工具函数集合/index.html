@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>NotEnough</title>
+<title>JS工具函数集合 | NotEnough</title>
 
 <meta name="generator" content="Hugo Eureka 0.8.2" />
 <link rel="stylesheet" href="https://www.notenough.top/css/eureka.min.css">
@@ -58,25 +58,63 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png">
 
 <meta name="description"
-  content="Eureka is a elegant and powerful theme for Hugo.">
+  content="
+Url参数提取
+">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Posts",
+      "item":"https://www.notenough.top/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"JS工具函数集合",
+      "item":"https://www.notenough.top/posts/js%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E9%9B%86%E5%90%88/"}]
+}
+</script>
 
 
 
-<meta property="og:title" content="NotEnough" />
-<meta property="og:type" content="website" />
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.notenough.top/posts/js%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E9%9B%86%E5%90%88/"
+    },
+    "headline": "JS工具函数集合 | NotEnough","datePublished": "2021-11-10T21:22:10+08:00",
+    "dateModified": "2021-11-10T21:22:10+08:00",
+    "wordCount":  41 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "C. Wang",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.notenough.top/images/icon.png"
+        }
+        },
+    "description": "\u003col\u003e\n\u003cli\u003eUrl参数提取\u003c\/li\u003e\n\u003c\/ol\u003e"
+}
+</script><meta property="og:title" content="JS工具函数集合 | NotEnough" />
+<meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="https://www.notenough.top/images/icon.png">
 
 
-<meta property="og:url" content="https://www.notenough.top/categories/" />
+<meta property="og:url" content="https://www.notenough.top/posts/js%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E9%9B%86%E5%90%88/" />
 
 
 
 
-
-<meta property="og:description" content="Eureka is a elegant and powerful theme for Hugo." />
-
+<meta property="og:description" content="
+Url参数提取
+" />
 
 
 
@@ -93,14 +131,17 @@
 
 
 
-<meta property="og:updated_time" content="2021-11-21T17:18:23&#43;08:00" />
+<meta property="article:published_time" content="2021-11-10T21:22:10&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2021-11-10T21:22:10&#43;08:00" />
 
 
 
-<meta property="article:section" content="categories" />
+<meta property="article:section" content="posts" />
 
 
-<link rel="alternate" type="application/rss+xml" href="https://www.notenough.top/categories/index.xml" title="NotEnough" />
+
 
 <body class="flex flex-col min-h-screen">
   <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
@@ -120,7 +161,7 @@
         class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
         <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
             <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">About</a>
-            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Posts</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">Posts</a>
             <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Docs</a>
         </div>
 
@@ -172,29 +213,97 @@
   <main class="flex-grow pt-16">
     <div class="pl-scrollbar">
       <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
-<article class="mx-6 my-8">
-    <h1 class="font-bold text-3xl text-primary-text">Categories</h1>
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">JS工具函数集合</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-11-10</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
     
-</article>
-<div class="bg-secondary-bg rounded px-6 py-8">
     
-    <h2 class="text-lg text-primary-text my-2">
-        <a href="https://www.notenough.top/categories/note/" class="text-eureka hover:underline">note</a>
-    </h2>
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
     
-    <h2 class="text-lg text-primary-text my-2">
-        <a href="https://www.notenough.top/categories/solution/" class="text-eureka hover:underline">solution</a>
-    </h2>
-    
-    <h2 class="text-lg text-primary-text my-2">
-        <a href="https://www.notenough.top/categories/vue/" class="text-eureka hover:underline">Vue</a>
-    </h2>
-    
-    <h2 class="text-lg text-primary-text my-2">
-        <a href="https://www.notenough.top/categories/project/" class="text-eureka hover:underline">project</a>
-    </h2>
+
     
 </div>
+        
+        
+        
+
+        <div class="content">
+            <ol>
+<li>Url参数提取</li>
+</ol>
+<pre><code class="language-javascript">   // www.baidu.com?id=23&amp;op=24&amp;gr=32 =&gt; {id:23,op:2424,gr:32}
+   // 提取键值对成对象
+   function UrlParamHash(url) {
+     var params = [],
+       h
+     var hash = url.slice(url.indexOf('?') + 1).split('&amp;')
+     for (var i = 0; i &lt; hash.length; i++) {
+       h = hash[i].split('=')
+       params[h[0]] = h[1]
+     }
+    return params
+   }
+</code></pre>
+<ol start="2">
+<li></li>
+</ol>
+        </div>
+        
+        
+        
+
+
+        
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://www.notenough.top/posts/javascript%E6%8A%80%E5%B7%A7%E6%B1%87%E6%80%BB/" class="block">JavaScript技巧汇总</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://www.notenough.top/posts/vue3%E6%B7%BB%E5%8A%A0%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95%E6%96%B9%E5%BC%8F/" class="block">Vue3添加公共方法方式</a>
+        
+    </div>
+</div>
+
+        
+
+
+
+    </div>
+    
+
+    
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
 
       </div>
     </div>

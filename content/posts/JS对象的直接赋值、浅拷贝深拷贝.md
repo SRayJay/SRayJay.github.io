@@ -1,7 +1,7 @@
 ---
-title: "JS对象的直接赋值、浅拷贝深拷贝"
+title: JS对象的直接赋值、浅拷贝深拷贝
 date: 2021-11-21T17:18:23+08:00
-draft: true
+draft: false
 categories: note
 tag: JavaScript
 ---

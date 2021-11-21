@@ -70,63 +70,63 @@
     "itemListElement":[{
             "@type":"ListItem",
             "position":  1 ,
+            "name": "Vue@路径别名设置",
+            "description": "路径别名，省去相对路径的麻烦，直接用@views 来作为路径开头更加的方便\nVue2+Vue-Cli 写法 在 vue.config.js 里写入\nmodule.exports = { ... chainWebpack: config =\u0026gt; { config.resolve.symlinks(true) config.resolve.alias .set('@', resolve('src')) .set('@assets', resolve('src/assets')) .set('@components', resolve('src/components')) .set('@views', resolve('src/views')) } }  Vue3+Vite+Ts 写法 // vite.config.js resolve:{ alias: { \u0026quot;@\u0026quot;: path.resolve(__dirname, \u0026quot;src\u0026quot;), \u0026quot;@V\u0026quot;: path.resolve(__dirname, \u0026quot;src/views\u0026quot;), \u0026quot;@C\u0026quot;: path.resolve(__dirname,\u0026quot;src/components\u0026quot;) } } } // tsconfig.json \u0026quot;paths\u0026quot;:{ \u0026quot;@/*\u0026quot;:[\u0026quot;./src/*\u0026quot;], \u0026quot;@V/*\u0026quot;:[\u0026quot;./src/views/*\u0026quot;], \u0026quot;@C/*\u0026quot;:[\u0026quot;./src/components/*\u0026quot;] }  ",
+            "url": "https://www.notenough.top/posts/vue-%E8%B7%AF%E5%BE%84/"
+        },{
+            "@type":"ListItem",
+            "position":  2 ,
+            "name": "Vue2自动注册组件",
+            "description": "\u003cp\u003eVue 的组件要在其他地方使用得通过这三步\u003c/p\u003e",
+            "url": "https://www.notenough.top/posts/vue%E8%87%AA%E5%8A%A8%E6%B3%A8%E5%86%8C%E7%BB%84%E4%BB%B6/"
+        },{
+            "@type":"ListItem",
+            "position":  3 ,
+            "name": "ES6笔记",
+            "description": "\u003ch2 id=\"一let-和-var-的区别以及-const\"\u003e一、let 和 var 的区别以及 const\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003elet 声明的变量\u003cstrong\u003e只在所在块中生效\u003c/strong\u003e；\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003elet 声明的变量可以解决 var 与 for 循环结合使用产生的无法取得最新变量值的问题（以往都需要通过闭包来解决这个问题）；\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e",
+            "url": "https://www.notenough.top/posts/es6/"
+        },{
+            "@type":"ListItem",
+            "position":  4 ,
             "name": "排序算法总结",
             "description": "\u003ch3 id=\"归并排序\"\u003e归并排序\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e归并排序（MERGE-SORT）是利用归并的思想实现的排序方法，该算法采用经典的分治（divide-and-conquer）策略（分治法将问题分(divide)成一些小的问题然后递归求解，而治(conquer)的阶段则将分的阶段得到的各答案\u0026quot;修补\u0026quot;在一起，即分而治之)。\u003c/li\u003e\n\u003c/ul\u003e",
             "url": "https://www.notenough.top/posts/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/"
         },{
             "@type":"ListItem",
-            "position":  2 ,
+            "position":  5 ,
             "name": "css陋习和误区",
             "description": "常常出现按钮中文字高度不对之类的事，平时老是喜欢给这些元素设定宽高，假如内容变化，则要调整宽高，实际上应该让宽高自动适应内容，然后给内容设定 padding 和 margin\n  一些并列元素总想着用 div，万物皆可 div，实际上 ul 和 li 更好用些。\n  加载 cdn 文件，script 标签应该要带上 async 属性，异步加载 cdn，不阻塞文本流的解析。\n  \u0026ndash;待更新",
             "url": "https://www.notenough.top/posts/css%E9%99%8B%E4%B9%A0%E5%92%8C%E8%AF%AF%E5%8C%BA/"
         },{
             "@type":"ListItem",
-            "position":  3 ,
+            "position":  6 ,
             "name": "垂直居中方案",
             "description": "\u003cp\u003e**可以用一个自然高度的容器吗？**给容器加上相等的上下内边距让内容居中。\u003c/p\u003e\n\u003cp\u003e**容器需要指定高度或者避免使用内边距吗？**对容器使用 display：table-cell 和 vertical-align:middle。\u003c/p\u003e",
             "url": "https://www.notenough.top/posts/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%96%B9%E6%A1%88/"
         },{
             "@type":"ListItem",
-            "position":  4 ,
+            "position":  7 ,
             "name": "《深入解析css》笔记",
             "description": "\u003ch3 id=\"第一章层叠优先级和继承\"\u003e第一章：层叠、优先级和继承\u003c/h3\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003e优先级：！important\u0026gt;行内样式\u0026gt;id 选择器\u0026gt;类选择器\u0026gt;标签选择器\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e两条经验法则：选择器少用 id；少用!important。\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e使用 inherit 属性使元素属性继承自父元素，方便修改。\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e",
             "url": "https://www.notenough.top/posts/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90css%E7%AC%94%E8%AE%B0/"
         },{
             "@type":"ListItem",
-            "position":  5 ,
+            "position":  8 ,
             "name": "《css揭秘》笔记",
             "description": "\u003cp\u003e粗读了《css 揭秘》这本书，里面提到的很多技巧和操作暂时用不到，可以在用到时当工具书看，目前对我有帮助的几个技巧做了个笔记。\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003e尽量使用相对单位。line-height 与 font-size 的比例而不要使用绝对值。em 单位（相对于当前元素的字体大小）可以在修改字体尺寸同时修改其他的数值。rem 则是根据根元素的字体大小。vw 单位是窗口宽度的 1%，因此需要某个元素在浏览器窗口改变时保持一定的比例，就用 vw 作单位。vh 则是窗口高度的 1%。\u003c/li\u003e\n\u003c/ol\u003e",
             "url": "https://www.notenough.top/posts/css%E6%8F%AD%E7%A7%98%E7%AC%94%E8%AE%B0/"
         },{
             "@type":"ListItem",
-            "position":  6 ,
+            "position":  9 ,
             "name": "css常用技巧",
             "description": "\u003cp\u003e1、多行文本溢出隐藏\u003c/p\u003e",
             "url": "https://www.notenough.top/posts/css%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/"
         },{
             "@type":"ListItem",
-            "position":  7 ,
+            "position":  10 ,
             "name": "vue路由参数改变后不刷新的问题",
             "description": "\u003cp\u003e问题：跳转到同一个页面，但是传入不同的路由参数，而 data 内数据从 route.params 拿的并不会在路由跳转后再次获取，即不会跟随刷新。\u003c/p\u003e",
             "url": "https://www.notenough.top/posts/vue%E8%B7%AF%E7%94%B1%E5%8F%82%E6%95%B0%E6%94%B9%E5%8F%98%E5%90%8E%E4%B8%8D%E5%88%B7%E6%96%B0%E7%9A%84%E9%97%AE%E9%A2%98/"
-        },{
-            "@type":"ListItem",
-            "position":  8 ,
-            "name": "展开按钮总结",
-            "description": "\u003cp\u003e需求：一段文本，不定长，需要在页面中有展开按钮，假如它少于固定行，展示按钮不可见，假如多于固定行，则出现按钮，点击后，显示全部长度。\u003c/p\u003e",
-            "url": "https://www.notenough.top/posts/zhankai/"
-        },{
-            "@type":"ListItem",
-            "position":  9 ,
-            "name": "Node.js笔记(一)",
-            "description": "\u003cp\u003e今天初步了解了 http、fs、querystring、url 四个包以及本地服务器部署的内容，记录一下。\u003c/p\u003e\n\u003ch3 id=\"引入包\"\u003e引入包\u003c/h3\u003e\n\u003cp\u003e首先需要的包要下载，使用 npm 工具，（cnpm 更快也行），npm i module 安装。\u003c/p\u003e\n\u003cp\u003e在该文件下目录下会自动生成 node_modules 文件夹，里面包含了很多模块。\u003c/p\u003e",
-            "url": "https://www.notenough.top/posts/nodejs%E7%AC%94%E8%AE%B0%E4%B8%80/"
-        },{
-            "@type":"ListItem",
-            "position":  10 ,
-            "name": "正则表达式小结",
-            "description": "\u003cp\u003e正则表达式是由一个字符序列形成的搜索模式。可以用来搜索也可以用来替换。\u003c/p\u003e\n\u003cblockquote\u003e\n\u003cp\u003e语法：/正则表达式主体/修饰符(可选)\u003c/p\u003e\n\u003c/blockquote\u003e\n\u003cp\u003e//是定界符，内容则是需要查找或替换的内容。比如/runoob/就是查找 runoob 这个词\u003c/p\u003e",
-            "url": "https://www.notenough.top/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B0%8F%E7%BB%93/"
         }
     ]
 }
@@ -161,7 +161,7 @@
 
 
 
-<meta property="og:updated_time" content="2021-11-10T21:13:05&#43;08:00" />
+<meta property="og:updated_time" content="2021-11-21T17:18:23&#43;08:00" />
 
 
 
@@ -246,6 +246,128 @@
 </article>
 <div class="bg-secondary-bg rounded px-6">
     <div class="overflow-hidden divide-y">
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/vue-%E8%B7%AF%E5%BE%84/" class="font-bold text-xl hover:text-eureka">Vue@路径别名设置</a>
+</div>
+<div class="content">
+  路径别名，省去相对路径的麻烦，直接用@views 来作为路径开头更加的方便
+Vue2&#43;Vue-Cli 写法 在 vue.config.js 里写入
+module.exports = { ... chainWebpack: config =&gt; { config.resolve.symlinks(true) config.resolve.alias .set(&#39;@&#39;, resolve(&#39;src&#39;)) .set(&#39;@assets&#39;, resolve(&#39;src/assets&#39;)) .set(&#39;@components&#39;, resolve(&#39;src/components&#39;)) .set(&#39;@views&#39;, resolve(&#39;src/views&#39;)) } }  Vue3&#43;Vite&#43;Ts 写法 // vite.config.js resolve:{ alias: { &#34;@&#34;: path.resolve(__dirname, &#34;src&#34;), &#34;@V&#34;: path.resolve(__dirname, &#34;src/views&#34;), &#34;@C&#34;: path.resolve(__dirname,&#34;src/components&#34;) } } } // tsconfig.json &#34;paths&#34;:{ &#34;@/*&#34;:[&#34;./src/*&#34;], &#34;@V/*&#34;:[&#34;./src/views/*&#34;], &#34;@C/*&#34;:[&#34;./src/components/*&#34;] }  
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-06-06</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/solution/" class="hover:text-eureka">solution</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/vue%E8%87%AA%E5%8A%A8%E6%B3%A8%E5%86%8C%E7%BB%84%E4%BB%B6/" class="font-bold text-xl hover:text-eureka">Vue2自动注册组件</a>
+</div>
+<div class="content">
+  Vue 的组件要在其他地方使用得通过这三步
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-06-06</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/solution/" class="hover:text-eureka">solution</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/es6/" class="font-bold text-xl hover:text-eureka">ES6笔记</a>
+</div>
+<div class="content">
+  一、let 和 var 的区别以及 const   let 声明的变量只在所在块中生效；
+  let 声明的变量可以解决 var 与 for 循环结合使用产生的无法取得最新变量值的问题（以往都需要通过闭包来解决这个问题）；
+ 
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-05-21</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>4分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
   
   <div class="py-6">
     <div class="flex flex-col-reverse lg:flex-row justify-between">
@@ -518,130 +640,6 @@
         <i class="fas fa-folder mr-1"></i>
         
         <a href="https://www.notenough.top/categories/vue/" class="hover:text-eureka">Vue</a>
-        
-    </div>
-    
-
-    
-</div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="https://www.notenough.top/posts/zhankai/" class="font-bold text-xl hover:text-eureka">展开按钮总结</a>
-</div>
-<div class="content">
-  需求：一段文本，不定长，需要在页面中有展开按钮，假如它少于固定行，展示按钮不可见，假如多于固定行，则出现按钮，点击后，显示全部长度。
-
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar mr-1"></i>
-        <span>2020-12-15</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-clock mr-1"></i>
-        <span>1分钟阅读时长</span>
-    </div>
-    
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-folder mr-1"></i>
-        
-        <a href="https://www.notenough.top/categories/solution/" class="hover:text-eureka">solution</a>
-        
-    </div>
-    
-
-    
-</div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="https://www.notenough.top/posts/nodejs%E7%AC%94%E8%AE%B0%E4%B8%80/" class="font-bold text-xl hover:text-eureka">Node.js笔记(一)</a>
-</div>
-<div class="content">
-  今天初步了解了 http、fs、querystring、url 四个包以及本地服务器部署的内容，记录一下。
-引入包 首先需要的包要下载，使用 npm 工具，（cnpm 更快也行），npm i module 安装。
-在该文件下目录下会自动生成 node_modules 文件夹，里面包含了很多模块。
-
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar mr-1"></i>
-        <span>2019-10-02</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-clock mr-1"></i>
-        <span>2分钟阅读时长</span>
-    </div>
-    
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-folder mr-1"></i>
-        
-        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
-        
-    </div>
-    
-
-    
-</div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="https://www.notenough.top/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B0%8F%E7%BB%93/" class="font-bold text-xl hover:text-eureka">正则表达式小结</a>
-</div>
-<div class="content">
-  正则表达式是由一个字符序列形成的搜索模式。可以用来搜索也可以用来替换。
- 语法：/正则表达式主体/修饰符(可选)
- //是定界符，内容则是需要查找或替换的内容。比如/runoob/就是查找 runoob 这个词
-
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar mr-1"></i>
-        <span>2019-09-22</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-clock mr-1"></i>
-        <span>1分钟阅读时长</span>
-    </div>
-    
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-folder mr-1"></i>
-        
-        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
         
     </div>
     

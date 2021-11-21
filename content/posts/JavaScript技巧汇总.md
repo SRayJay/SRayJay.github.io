@@ -1,7 +1,7 @@
 ---
-title: "JavaScript技巧汇总"
+title: JavaScript技巧汇总
 date: 2021-11-21T17:04:32+08:00
-draft: true
+draft: false
 categories: note
 tag: JavaScript
 ---

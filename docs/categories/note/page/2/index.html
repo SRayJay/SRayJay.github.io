@@ -85,63 +85,63 @@
     "itemListElement":[{
             "@type":"ListItem",
             "position":  1 ,
+            "name": "css陋习和误区",
+            "description": "常常出现按钮中文字高度不对之类的事，平时老是喜欢给这些元素设定宽高，假如内容变化，则要调整宽高，实际上应该让宽高自动适应内容，然后给内容设定 padding 和 margin\n  一些并列元素总想着用 div，万物皆可 div，实际上 ul 和 li 更好用些。\n  加载 cdn 文件，script 标签应该要带上 async 属性，异步加载 cdn，不阻塞文本流的解析。\n  \u0026ndash;待更新",
+            "url": "https://www.notenough.top/posts/css%E9%99%8B%E4%B9%A0%E5%92%8C%E8%AF%AF%E5%8C%BA/"
+        },{
+            "@type":"ListItem",
+            "position":  2 ,
+            "name": "《深入解析css》笔记",
+            "description": "\u003ch3 id=\"第一章层叠优先级和继承\"\u003e第一章：层叠、优先级和继承\u003c/h3\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003e优先级：！important\u0026gt;行内样式\u0026gt;id 选择器\u0026gt;类选择器\u0026gt;标签选择器\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e两条经验法则：选择器少用 id；少用!important。\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e使用 inherit 属性使元素属性继承自父元素，方便修改。\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e",
+            "url": "https://www.notenough.top/posts/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90css%E7%AC%94%E8%AE%B0/"
+        },{
+            "@type":"ListItem",
+            "position":  3 ,
+            "name": "《css揭秘》笔记",
+            "description": "\u003cp\u003e粗读了《css 揭秘》这本书，里面提到的很多技巧和操作暂时用不到，可以在用到时当工具书看，目前对我有帮助的几个技巧做了个笔记。\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003e尽量使用相对单位。line-height 与 font-size 的比例而不要使用绝对值。em 单位（相对于当前元素的字体大小）可以在修改字体尺寸同时修改其他的数值。rem 则是根据根元素的字体大小。vw 单位是窗口宽度的 1%，因此需要某个元素在浏览器窗口改变时保持一定的比例，就用 vw 作单位。vh 则是窗口高度的 1%。\u003c/li\u003e\n\u003c/ol\u003e",
+            "url": "https://www.notenough.top/posts/css%E6%8F%AD%E7%A7%98%E7%AC%94%E8%AE%B0/"
+        },{
+            "@type":"ListItem",
+            "position":  4 ,
             "name": "css常用技巧",
             "description": "\u003cp\u003e1、多行文本溢出隐藏\u003c/p\u003e",
             "url": "https://www.notenough.top/posts/css%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/"
         },{
             "@type":"ListItem",
-            "position":  2 ,
+            "position":  5 ,
             "name": "Node.js笔记(一)",
             "description": "\u003cp\u003e今天初步了解了 http、fs、querystring、url 四个包以及本地服务器部署的内容，记录一下。\u003c/p\u003e\n\u003ch3 id=\"引入包\"\u003e引入包\u003c/h3\u003e\n\u003cp\u003e首先需要的包要下载，使用 npm 工具，（cnpm 更快也行），npm i module 安装。\u003c/p\u003e\n\u003cp\u003e在该文件下目录下会自动生成 node_modules 文件夹，里面包含了很多模块。\u003c/p\u003e",
             "url": "https://www.notenough.top/posts/nodejs%E7%AC%94%E8%AE%B0%E4%B8%80/"
         },{
             "@type":"ListItem",
-            "position":  3 ,
+            "position":  6 ,
             "name": "正则表达式小结",
             "description": "\u003cp\u003e正则表达式是由一个字符序列形成的搜索模式。可以用来搜索也可以用来替换。\u003c/p\u003e\n\u003cblockquote\u003e\n\u003cp\u003e语法：/正则表达式主体/修饰符(可选)\u003c/p\u003e\n\u003c/blockquote\u003e\n\u003cp\u003e//是定界符，内容则是需要查找或替换的内容。比如/runoob/就是查找 runoob 这个词\u003c/p\u003e",
             "url": "https://www.notenough.top/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B0%8F%E7%BB%93/"
         },{
             "@type":"ListItem",
-            "position":  4 ,
+            "position":  7 ,
             "name": "Python爬取用户所有博客",
             "description": "\u003cp\u003eCSDN 的爬取比较简单，没有知乎那种反爬虫需要 ip 代理模拟登录那么麻烦。在确认一个用户之后，找到目录的 url，再通过 css 选择器找到每一篇博客的 url 再分别保存为 markdown 格式。\u003c/p\u003e",
             "url": "https://www.notenough.top/posts/python%E7%88%AC%E5%8F%96csdn/"
         },{
             "@type":"ListItem",
-            "position":  5 ,
+            "position":  8 ,
             "name": "VueNote2",
             "description": "\u003ch2 id=\"vue-实例购物车\"\u003eVue 实例——购物车\u003c/h2\u003e\n\u003cp\u003e之前照书上题目打得一个例子，模拟一个购物车，要求选中商品再计算总价。\u003c/p\u003e\n\u003cp\u003e1.对于每个条目，给其 list 对象中加入一条 chose：false 表示其初始状态是非选中的，然后再 html 中该条目的 checkbox 中用 v-model 绑定该条目的 chose 值。当其 checkbox 选中后会将 chose 值变为真。首先实现了一个数据绑定。\u003c/p\u003e",
             "url": "https://www.notenough.top/posts/vuenote2/"
         },{
             "@type":"ListItem",
-            "position":  6 ,
+            "position":  9 ,
             "name": "VueNote1",
             "description": "\u003cp\u003e每个 vue 应用都需要实例化 vue\u003c/p\u003e\n\u003cp\u003e对于 html 中 id 为 app 的元素，对其实例化。\u003c/p\u003e",
             "url": "https://www.notenough.top/posts/vuenote/"
         },{
             "@type":"ListItem",
-            "position":  7 ,
+            "position":  10 ,
             "name": "JavaScript基础",
             "description": "\u003cp\u003e1.在标签中填写 onclick 事件调用函数时，不是 onclick=函数名， 而是 onclick=\u0026ldquo;函数名+()\u0026rdquo;\u003c/p\u003e\n\u003cp\u003e2.script 中用到的函数中带 document.write 会覆盖之前的文本。\u003c/p\u003e\n\u003cp\u003e3.js 输出数据：\u003c/p\u003e",
             "url": "https://www.notenough.top/posts/jsnote/"
-        },{
-            "@type":"ListItem",
-            "position":  8 ,
-            "name": "FlutterNote3",
-            "description": "\u003ch1 id=\"flutter-导航\"\u003eFlutter 导航\u003c/h1\u003e\n\u003ch2 id=\"父子级导航页面的跳转\"\u003e父子级导航页面的跳转\u003c/h2\u003e\n\u003cp\u003e因为 app 中包含不止一个界面，void main()后面不能用箭头函数，需要设定首页。\u003c/p\u003e\n\u003cp\u003e对于每个页面，用 class 分别定义，页面作为 home，return 的是 Scaffold 类，当然也可以是其他。在按钮上添加跳转到另一个页面的功能。\u003c/p\u003e",
-            "url": "https://www.notenough.top/posts/flutternote3/"
-        },{
-            "@type":"ListItem",
-            "position":  9 ,
-            "name": "FlutterNote2",
-            "description": "\u003ch1 id=\"flutter-布局\"\u003eFlutter 布局\u003c/h1\u003e\n\u003ch2 id=\"水平布局\"\u003e水平布局\u003c/h2\u003e\n\u003cp\u003ebody:Row()中间内容比如说要放上按钮，直接 new 一个 RaisedButton，它的宽高是固定的，如果在它外面套上一个 Expanded(),子元素再放按钮，就能达到自适应长度的效果，不至于边上漏出一块白的那么丑。\u003c/p\u003e",
-            "url": "https://www.notenough.top/posts/flutternote2/"
-        },{
-            "@type":"ListItem",
-            "position":  10 ,
-            "name": "FlutterNote1",
-            "description": "\u003ch1 id=\"flutter-基本结构\"\u003eFlutter 基本结构\u003c/h1\u003e\n\u003cp\u003e以一个 helloworld 程序展示一个 flutter 应用的基本结构。\u003c/p\u003e",
-            "url": "https://www.notenough.top/posts/flutternote1/"
         }
     ]
 }
@@ -176,7 +176,7 @@
 
 
 
-<meta property="og:updated_time" content="2021-11-10T21:13:05&#43;08:00" />
+<meta property="og:updated_time" content="2021-11-21T17:18:23&#43;08:00" />
 
 
 
@@ -261,6 +261,130 @@
 </article>
 <div class="bg-secondary-bg rounded px-6">
     <div class="overflow-hidden divide-y">
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/css%E9%99%8B%E4%B9%A0%E5%92%8C%E8%AF%AF%E5%8C%BA/" class="font-bold text-xl hover:text-eureka">css陋习和误区</a>
+</div>
+<div class="content">
+  常常出现按钮中文字高度不对之类的事，平时老是喜欢给这些元素设定宽高，假如内容变化，则要调整宽高，实际上应该让宽高自动适应内容，然后给内容设定 padding 和 margin
+  一些并列元素总想着用 div，万物皆可 div，实际上 ul 和 li 更好用些。
+  加载 cdn 文件，script 标签应该要带上 async 属性，异步加载 cdn，不阻塞文本流的解析。
+  –待更新
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-03-14</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90css%E7%AC%94%E8%AE%B0/" class="font-bold text-xl hover:text-eureka">《深入解析css》笔记</a>
+</div>
+<div class="content">
+  第一章：层叠、优先级和继承   优先级：！important&gt;行内样式&gt;id 选择器&gt;类选择器&gt;标签选择器
+  两条经验法则：选择器少用 id；少用!important。
+  使用 inherit 属性使元素属性继承自父元素，方便修改。
+ 
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-03-10</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>3分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://www.notenough.top/posts/css%E6%8F%AD%E7%A7%98%E7%AC%94%E8%AE%B0/" class="font-bold text-xl hover:text-eureka">《css揭秘》笔记</a>
+</div>
+<div class="content">
+  粗读了《css 揭秘》这本书，里面提到的很多技巧和操作暂时用不到，可以在用到时当工具书看，目前对我有帮助的几个技巧做了个笔记。
+ 尽量使用相对单位。line-height 与 font-size 的比例而不要使用绝对值。em 单位（相对于当前元素的字体大小）可以在修改字体尺寸同时修改其他的数值。rem 则是根据根元素的字体大小。vw 单位是窗口宽度的 1%，因此需要某个元素在浏览器窗口改变时保持一定的比例，就用 vw 作单位。vh 则是窗口高度的 1%。 
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-03-09</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
   
   <div class="py-6">
     <div class="flex flex-col-reverse lg:flex-row justify-between">
@@ -530,127 +654,6 @@
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
         <span>1分钟阅读时长</span>
-    </div>
-    
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-folder mr-1"></i>
-        
-        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
-        
-    </div>
-    
-
-    
-</div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="https://www.notenough.top/posts/flutternote3/" class="font-bold text-xl hover:text-eureka">FlutterNote3</a>
-</div>
-<div class="content">
-  Flutter 导航 父子级导航页面的跳转 因为 app 中包含不止一个界面，void main()后面不能用箭头函数，需要设定首页。
-对于每个页面，用 class 分别定义，页面作为 home，return 的是 Scaffold 类，当然也可以是其他。在按钮上添加跳转到另一个页面的功能。
-
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar mr-1"></i>
-        <span>2019-05-19</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-clock mr-1"></i>
-        <span>1分钟阅读时长</span>
-    </div>
-    
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-folder mr-1"></i>
-        
-        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
-        
-    </div>
-    
-
-    
-</div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="https://www.notenough.top/posts/flutternote2/" class="font-bold text-xl hover:text-eureka">FlutterNote2</a>
-</div>
-<div class="content">
-  Flutter 布局 水平布局 body:Row()中间内容比如说要放上按钮，直接 new 一个 RaisedButton，它的宽高是固定的，如果在它外面套上一个 Expanded(),子元素再放按钮，就能达到自适应长度的效果，不至于边上漏出一块白的那么丑。
-
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar mr-1"></i>
-        <span>2019-05-13</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-clock mr-1"></i>
-        <span>1分钟阅读时长</span>
-    </div>
-    
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-folder mr-1"></i>
-        
-        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
-        
-    </div>
-    
-
-    
-</div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="https://www.notenough.top/posts/flutternote1/" class="font-bold text-xl hover:text-eureka">FlutterNote1</a>
-</div>
-<div class="content">
-  Flutter 基本结构 以一个 helloworld 程序展示一个 flutter 应用的基本结构。
-
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar mr-1"></i>
-        <span>2019-05-03</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-clock mr-1"></i>
-        <span>2分钟阅读时长</span>
     </div>
     
     

@@ -6,7 +6,38 @@
     <description>Recent content on NotEnough</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 10 Nov 2021 21:13:05 +0800</lastBuildDate><atom:link href="https://www.notenough.top/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Nov 2021 17:18:23 +0800</lastBuildDate><atom:link href="https://www.notenough.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JS对象的直接赋值、浅拷贝深拷贝</title>
+      <link>https://www.notenough.top/posts/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%9B%B4%E6%8E%A5%E8%B5%8B%E5%80%BC%E6%B5%85%E6%8B%B7%E8%B4%9D%E6%B7%B1%E6%8B%B7%E8%B4%9D/</link>
+      <pubDate>Sun, 21 Nov 2021 17:18:23 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%9B%B4%E6%8E%A5%E8%B5%8B%E5%80%BC%E6%B5%85%E6%8B%B7%E8%B4%9D%E6%B7%B1%E6%8B%B7%E8%B4%9D/</guid>
+      <description>&lt;h3 id=&#34;直接赋值&#34;&gt;直接赋值&lt;/h3&gt;
+&lt;p&gt;把一个对象a赋值给一个对象b相当于把一个对象b的地址指向对象a的地址，所以，他们实际上是同一个对象。由于内存地址我们很难监测到，但是我们可以通过严格相等运算符&amp;quot;===&amp;ldquo;来检测二者是否指向同一个地址。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JavaScript技巧汇总</title>
+      <link>https://www.notenough.top/posts/javascript%E6%8A%80%E5%B7%A7%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Sun, 21 Nov 2021 17:04:32 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/javascript%E6%8A%80%E5%B7%A7%E6%B1%87%E6%80%BB/</guid>
+      <description>&lt;h2 id=&#34;1consolelog-变量包装&#34;&gt;&lt;strong&gt;1、console.log 变量包装&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;您在 console.log() 的时候，将参数用大括号括起来，这样可以同时看到变量名和变量值。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JS工具函数集合</title>
+      <link>https://www.notenough.top/posts/js%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E9%9B%86%E5%90%88/</link>
+      <pubDate>Wed, 10 Nov 2021 21:22:10 +0800</pubDate>
+      
+      <guid>https://www.notenough.top/posts/js%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E9%9B%86%E5%90%88/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;Url参数提取&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
     <item>
       <title>Vue3添加公共方法方式</title>
       <link>https://www.notenough.top/posts/vue3%E6%B7%BB%E5%8A%A0%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95%E6%96%B9%E5%BC%8F/</link>

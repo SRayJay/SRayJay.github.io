@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>NotEnough</title>
+<title>JavaScript技巧汇总 | NotEnough</title>
 
 <meta name="generator" content="Hugo Eureka 0.8.2" />
 <link rel="stylesheet" href="https://www.notenough.top/css/eureka.min.css">
@@ -58,25 +58,61 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://www.notenough.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png">
 
 <meta name="description"
-  content="Eureka is a elegant and powerful theme for Hugo.">
+  content="1、console.log 变量包装
+您在 console.log() 的时候，将参数用大括号括起来，这样可以同时看到变量名和变量值。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Posts",
+      "item":"https://www.notenough.top/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"JavaScript技巧汇总",
+      "item":"https://www.notenough.top/posts/javascript%E6%8A%80%E5%B7%A7%E6%B1%87%E6%80%BB/"}]
+}
+</script>
 
 
 
-<meta property="og:title" content="NotEnough" />
-<meta property="og:type" content="website" />
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.notenough.top/posts/javascript%E6%8A%80%E5%B7%A7%E6%B1%87%E6%80%BB/"
+    },
+    "headline": "JavaScript技巧汇总 | NotEnough","datePublished": "2021-11-21T17:04:32+08:00",
+    "dateModified": "2021-11-21T17:04:32+08:00",
+    "wordCount":  122 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "C. Wang",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.notenough.top/images/icon.png"
+        }
+        },
+    "description": "\u003ch2 id=\u00221consolelog-变量包装\u0022\u003e\u003cstrong\u003e1、console.log 变量包装\u003c\/strong\u003e\u003c\/h2\u003e\n\u003cp\u003e您在 console.log() 的时候，将参数用大括号括起来，这样可以同时看到变量名和变量值。\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="JavaScript技巧汇总 | NotEnough" />
+<meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="https://www.notenough.top/images/icon.png">
 
 
-<meta property="og:url" content="https://www.notenough.top/categories/" />
+<meta property="og:url" content="https://www.notenough.top/posts/javascript%E6%8A%80%E5%B7%A7%E6%B1%87%E6%80%BB/" />
 
 
 
 
-
-<meta property="og:description" content="Eureka is a elegant and powerful theme for Hugo." />
-
+<meta property="og:description" content="1、console.log 变量包装
+您在 console.log() 的时候，将参数用大括号括起来，这样可以同时看到变量名和变量值。" />
 
 
 
@@ -93,14 +129,17 @@
 
 
 
-<meta property="og:updated_time" content="2021-11-21T17:18:23&#43;08:00" />
+<meta property="article:published_time" content="2021-11-21T17:04:32&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2021-11-21T17:04:32&#43;08:00" />
 
 
 
-<meta property="article:section" content="categories" />
+<meta property="article:section" content="posts" />
 
 
-<link rel="alternate" type="application/rss+xml" href="https://www.notenough.top/categories/index.xml" title="NotEnough" />
+
 
 <body class="flex flex-col min-h-screen">
   <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
@@ -120,7 +159,7 @@
         class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
         <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
             <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">About</a>
-            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Posts</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">Posts</a>
             <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Docs</a>
         </div>
 
@@ -172,29 +211,130 @@
   <main class="flex-grow pt-16">
     <div class="pl-scrollbar">
       <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
-<article class="mx-6 my-8">
-    <h1 class="font-bold text-3xl text-primary-text">Categories</h1>
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">JavaScript技巧汇总</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-11-21</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
     
-</article>
-<div class="bg-secondary-bg rounded px-6 py-8">
     
-    <h2 class="text-lg text-primary-text my-2">
-        <a href="https://www.notenough.top/categories/note/" class="text-eureka hover:underline">note</a>
-    </h2>
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://www.notenough.top/categories/note/" class="hover:text-eureka">note</a>
+        
+    </div>
     
-    <h2 class="text-lg text-primary-text my-2">
-        <a href="https://www.notenough.top/categories/solution/" class="text-eureka hover:underline">solution</a>
-    </h2>
-    
-    <h2 class="text-lg text-primary-text my-2">
-        <a href="https://www.notenough.top/categories/vue/" class="text-eureka hover:underline">Vue</a>
-    </h2>
-    
-    <h2 class="text-lg text-primary-text my-2">
-        <a href="https://www.notenough.top/categories/project/" class="text-eureka hover:underline">project</a>
-    </h2>
+
     
 </div>
+        
+        
+        
+
+        <div class="content">
+            <h2 id="1consolelog-变量包装"><strong>1、console.log 变量包装</strong></h2>
+<p>您在 console.log() 的时候，将参数用大括号括起来，这样可以同时看到变量名和变量值。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/eXCSRjyNYcYgf5CdHRgsZBicdbx6PjIZ9avTWgaXc2X83CNyUdzJrknT86X4VLzXjb2GbotT5f0yhJpEFpprpiaw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></p>
+<h2 id="2从数组中获取最小值最大值"><strong>2、从数组中获取最小值/最大值</strong></h2>
+<p>您可以使用 Math.min() 或 Math.max() 结合扩展运算符来查找数组中的最小值或最大值。</p>
+<pre><code class="language-javascript">const numbers = [6, 8, 1, 3, 9];
+console.log(Math.max(...numbers)); // 9
+console.log(Math.min(...numbers)); // 1
+</code></pre>
+<h2 id="3简写条件判断语句"><strong>3、简写条件判断语句</strong></h2>
+<p>如果仅在判断条件为 true 时才执行函数，则可以使用 &amp;&amp; 简写。</p>
+<pre><code class="language-js">// 普通写法
+if (condition) {
+    doSomething();
+}
+
+// 简写
+condition &amp;&amp; doSomething();
+</code></pre>
+<h2 id="4数组去重"><strong>4、数组去重</strong></h2>
+<pre><code class="language-js">function unique1(arr) {
+    return [...new Set(arr)]
+}
+
+function unique2(arr) {
+    var obj = {};
+    return arr.filter(ele =&gt; {
+        if (!obj[ele]) {
+            obj[ele] = true;
+            return true;
+        }
+    })
+}
+
+function unique3(arr) {
+    var result = [];
+    arr.forEach(ele =&gt; {
+        if (result.indexOf(ele) == -1) {
+            result.push(ele)
+        }
+    })
+    return result;
+}
+</code></pre>
+<h2 id="5将字符串转换为数字"><strong>5、将字符串转换为数字</strong></h2>
+<pre><code class="language-js">const str = '404';
+console.log(+str) // 404;
+</code></pre>
+<h2 id="6从数组中过滤所有虚值"><strong>6、从数组中过滤所有虚值</strong></h2>
+<pre><code class="language-js">const myArray = [1, undefined, NaN, 2, null, '@denicmarko', true, 3, false];
+console.log(myArray.filter(Boolean)); // [1, 2, &quot;@denicmarko&quot;, true, 3]
+</code></pre>
+        </div>
+        
+        
+        
+
+
+        
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://www.notenough.top/posts/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%9B%B4%E6%8E%A5%E8%B5%8B%E5%80%BC%E6%B5%85%E6%8B%B7%E8%B4%9D%E6%B7%B1%E6%8B%B7%E8%B4%9D/" class="block">JS对象的直接赋值、浅拷贝深拷贝</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://www.notenough.top/posts/js%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E9%9B%86%E5%90%88/" class="block">JS工具函数集合</a>
+        
+    </div>
+</div>
+
+        
+
+
+
+    </div>
+    
+
+    
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
 
       </div>
     </div>
