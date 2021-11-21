@@ -12,7 +12,11 @@ tag: JavaScript
 
 <!--more-->
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/eXCSRjyNYcYgf5CdHRgsZBicdbx6PjIZ9avTWgaXc2X83CNyUdzJrknT86X4VLzXjb2GbotT5f0yhJpEFpprpiaw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+```js
+const number = 123
+console.log({number})
+//{number:123}
+```
 
 ## **2、从数组中获取最小值/最大值**
 

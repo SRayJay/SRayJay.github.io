@@ -88,7 +88,7 @@
     },
     "headline": "JavaScript技巧汇总 | NotEnough","datePublished": "2021-11-21T17:04:32+08:00",
     "dateModified": "2021-11-21T17:04:32+08:00",
-    "wordCount":  122 ,
+    "wordCount":  128 ,
     "publisher": {
         "@type": "Person",
         "name": "C. Wang",
@@ -245,7 +245,10 @@
         <div class="content">
             <h2 id="1consolelog-变量包装"><strong>1、console.log 变量包装</strong></h2>
 <p>您在 console.log() 的时候，将参数用大括号括起来，这样可以同时看到变量名和变量值。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/eXCSRjyNYcYgf5CdHRgsZBicdbx6PjIZ9avTWgaXc2X83CNyUdzJrknT86X4VLzXjb2GbotT5f0yhJpEFpprpiaw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></p>
+<pre><code class="language-js">const number = 123
+console.log({number})
+//{number:123}
+</code></pre>
 <h2 id="2从数组中获取最小值最大值"><strong>2、从数组中获取最小值/最大值</strong></h2>
 <p>您可以使用 Math.min() 或 Math.max() 结合扩展运算符来查找数组中的最小值或最大值。</p>
 <pre><code class="language-javascript">const numbers = [6, 8, 1, 3, 9];
