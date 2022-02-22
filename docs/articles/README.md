@@ -1,5 +1,3 @@
 nothing
 
 sss
-
-t
