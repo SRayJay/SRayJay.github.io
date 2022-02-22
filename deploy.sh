@@ -3,7 +3,7 @@
 set -e
 
 # 生成静态文件
-npm run build
+pnpm run docs:build
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
@@ -12,7 +12,7 @@ cd docs/.vuepress/dist
 # echo 'www.notenough.top' > CNAME
 
 # git init
-git add -A
+git add -a
 git commit -m 'deploy'
 
 # 如果你想要部署到 https://USERNAME.github.io
